@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>TechCart | Panel</title>
+
+    <link rel="stylesheet"
+          href="../css/panel.css">
+</head>
+
+
+<body>
+
+
+<div class="app-layout">
+
+
+    <!-- ========================================= -->
+    <!-- SIDEBAR -->
+    <!-- ========================================= -->
+
+    <aside class="sidebar"
+           id="sidebar">
+
+
+        <div class="sidebar-header">
+
+            <a href="#"
+               class="sidebar-logo">
+
+                🛒
+
+                <span>
+                    Tech<strong>Cart</strong>
+                </span>
+
+            </a>
+
+
+            <button
+                    class="sidebar-close"
+                    id="sidebarClose">
+
+                ✕
+            </button>
+
+        </div>
+
+
+        <!-- USUARIO -->
+
+        <div class="sidebar-user">
+
+            <div class="user-avatar"
+                 id="userAvatar">
+
+                U
+
+            </div>
+
+
+            <div>
+
+                <strong id="sidebarUserName">
+                    Usuario
+                </strong>
+
+                <small id="sidebarUserEmail">
+                    usuario@email.com
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- MENÚ -->
+
+        <nav class="sidebar-menu">
+
+
+            <button
+                    class="menu-item active"
+                    data-view="inicio">
+
+                <span class="menu-icon">
+                    🏠
+                </span>
+
+                <span>
+                    Inicio
+                </span>
+
+            </button>
+
+
+            <button
+                    class="menu-item"
+                    data-view="productos">
+
+                <span class="menu-icon">
+                    💻
+                </span>
+
+                <span>
+                    Productos
+                </span>
+
+            </button>
+
+
+            <button
+                    class="menu-item"
+                    data-view="categorias">
+
+                <span class="menu-icon">
+                    🗂️
+                </span>
+
+                <span>
+                    Categorías
+                </span>
+
+            </button>
+
+
+            <button
+                    class="menu-item"
+                    data-view="carrito">
+
+                <span class="menu-icon">
+                    🛒
+                </span>
+
+                <span>
+                    Mi carrito
+                </span>
+
+                <span class="sidebar-badge">
+                    0
+                </span>
+
+            </button>
+
+
+            <button
+                    class="menu-item"
+                    data-view="compras">
+
+                <span class="menu-icon">
+                    📦
+                </span>
+
+                <span>
+                    Mis compras
+                </span>
+
+            </button>
+
+
+            <button
+                    class="menu-item"
+                    data-view="perfil">
+
+                <span class="menu-icon">
+                    👤
+                </span>
+
+                <span>
+                    Mi perfil
+                </span>
+
+            </button>
+
+
+        </nav>
+
+
+        <!-- LOGOUT -->
+
+        <div class="sidebar-footer">
+
+            <button
+                    class="logout-button"
+                    id="logoutButton">
+
+                <span>
+                    🚪
+                </span>
+
+                Cerrar sesión
+
+            </button>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- ========================================= -->
+    <!-- CONTENIDO PRINCIPAL -->
+    <!-- ========================================= -->
+
+    <div class="main-area">
+
+
+        <!-- HEADER -->
+
+        <header class="topbar">
+
+
+            <div class="topbar-left">
+
+                <button
+                        class="menu-toggle"
+                        id="menuToggle">
+
+                    ☰
+
+                </button>
+
+
+                <div>
+
+                    <h1 id="pageTitle">
+                        Inicio
+                    </h1>
+
+                    <p id="pageSubtitle">
+                        Bienvenido a tu espacio TechCart
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+
+                <div class="topbar-search">
+
+                    🔎
+
+                    <input
+                            type="text"
+                            placeholder="Buscar en TechCart..."
+                    >
+
+                </div>
+
+
+                <button
+                        class="topbar-icon"
+                        data-view-target="carrito">
+
+                    🛒
+
+                    <span class="notification">
+                        0
+                    </span>
+
+                </button>
+
+
+                <button
+                        class="profile-button"
+                        data-view-target="perfil">
+
+                    <div class="mini-avatar"
+                         id="topbarAvatar">
+
+                        U
+
+                    </div>
+
+
+                    <span id="topbarUserName">
+                        Usuario
+                    </span>
+
+                </button>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- ========================================= -->
+        <!-- CONTENEDOR SPA -->
+        <!-- ========================================= -->
+
+        <main class="spa-content"
+              id="spaContent">
+
+
+            <!-- ========================================= -->
+            <!-- INICIO -->
+            <!-- ========================================= -->
+
+            <section
+                    class="spa-view active-view"
+                    id="view-inicio">
+
+
+                <!-- BIENVENIDA -->
+
+                <section class="welcome-card">
+
+
+                    <div class="welcome-copy">
+
+                        <span class="welcome-label">
+                            TECHCART
+                        </span>
+
+
+                        <h2>
+
+                            Hola,
+                            <span id="welcomeUser">
+                                Usuario
+                            </span>
+                            👋
+
+                        </h2>
+
+
+                        <p>
+
+                            Explora productos tecnológicos,
+                            administra tu carrito y revisa
+                            tus compras desde un solo lugar.
+
+                        </p>
+
+
+                        <button
+                                class="primary-button"
+                                data-view-target="productos">
+
+                            Explorar productos →
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="welcome-visual">
+
+                        💻 📱 🎧
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- RESUMEN -->
+
+                <section class="summary-grid">
+
+
+                    <article class="summary-card">
+
+                        <div class="summary-icon blue">
+                            🛒
+                        </div>
+
+                        <div>
+
+                            <small>
+                                Productos en carrito
+                            </small>
+
+                            <strong id="dashboardCartCount">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="summary-card">
+
+                        <div class="summary-icon green">
+                            📦
+                        </div>
+
+                        <div>
+
+                            <small>
+                                Compras realizadas
+                            </small>
+
+                            <strong>
+                                0
+                            </strong>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="summary-card">
+
+                        <div class="summary-icon orange">
+                            🏷️
+                        </div>
+
+                        <div>
+
+                            <small>
+                                Ofertas disponibles
+                            </small>
+
+                            <strong>
+                                4
+                            </strong>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="summary-card">
+
+                        <div class="summary-icon purple">
+                            ⭐
+                        </div>
+
+                        <div>
+
+                            <small>
+                                Productos destacados
+                            </small>
+
+                            <strong>
+                                4
+                            </strong>
+
+                        </div>
+
+                    </article>
+
+
+                </section>
+
+
+
+                <!-- ACCESO RÁPIDO -->
+
+                <section class="dashboard-section">
+
+
+                    <div class="section-title">
+
+                        <div>
+
+                            <h3>
+                                Accesos rápidos
+                            </h3>
+
+                            <p>
+                                ¿Qué quieres hacer?
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="quick-grid">
+
+
+                        <button
+                                class="quick-card"
+                                data-view-target="productos">
+
+                            <span>
+                                💻
+                            </span>
+
+                            <strong>
+                                Ver productos
+                            </strong>
+
+                            <small>
+                                Explora nuestro catálogo
+                            </small>
+
+                        </button>
+
+
+                        <button
+                                class="quick-card"
+                                data-view-target="carrito">
+
+                            <span>
+                                🛒
+                            </span>
+
+                            <strong>
+                                Mi carrito
+                            </strong>
+
+                            <small>
+                                Revisa tus productos
+                            </small>
+
+                        </button>
+
+
+                        <button
+                                class="quick-card"
+                                data-view-target="compras">
+
+                            <span>
+                                📦
+                            </span>
+
+                            <strong>
+                                Mis compras
+                            </strong>
+
+                            <small>
+                                Consulta tus órdenes
+                            </small>
+
+                        </button>
+
+
+                        <button
+                                class="quick-card"
+                                data-view-target="perfil">
+
+                            <span>
+                                👤
+                            </span>
+
+                            <strong>
+                                Mi perfil
+                            </strong>
+
+                            <small>
+                                Actualiza tus datos
+                            </small>
+
+                        </button>
+
+
+                    </div>
+
+
+                </section>
+
+
+            </section>
+
+
+
+            <!-- ========================================= -->
+            <!-- PRODUCTOS -->
+            <!-- ========================================= -->
+
+            <section
+                    class="spa-view"
+                    id="view-productos">
+
+
+                <div class="section-title">
+
+                    <div>
+
+                        <h2>
+                            Productos
+                        </h2>
+
+                        <p>
+                            Explora nuestro catálogo tecnológico.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="internal-products-grid">
+
+
+                    <article class="internal-product-card">
+
+                        <img
+                                src="../img/laptop.png"
+                                alt="Laptop TechBook Pro"
+                        >
+
+                        <h3>
+                            Laptop TechBook Pro
+                        </h3>
+
+                        <p>
+                            8GB RAM · 256GB SSD
+                        </p>
+
+                        <strong>
+                            $3.899.900
+                        </strong>
+
+                        <button>
+                            🛒 Agregar al carrito
+                        </button>
+
+                    </article>
+
+
+                    <article class="internal-product-card">
+
+                        <img
+                                src="../img/smartphone.png"
+                                alt="Smartphone Nova X"
+                        >
+
+                        <h3>
+                            Smartphone Nova X
+                        </h3>
+
+                        <p>
+                            Cámara avanzada · OLED
+                        </p>
+
+                        <strong>
+                            $2.999.900
+                        </strong>
+
+                        <button>
+                            🛒 Agregar al carrito
+                        </button>
+
+                    </article>
+
+
+                    <article class="internal-product-card">
+
+                        <img
+                                src="../img/headphones.png"
+                                alt="Audífonos SoundMax"
+                        >
+
+                        <h3>
+                            Audífonos SoundMax
+                        </h3>
+
+                        <p>
+                            Cancelación de ruido
+                        </p>
+
+                        <strong>
+                            $749.900
+                        </strong>
+
+                        <button>
+                            🛒 Agregar al carrito
+                        </button>
+
+                    </article>
+
+
+                    <article class="internal-product-card">
+
+                        <img
+                                src="../img/smartwatch.png"
+                                alt="SmartWatch Fit Pro"
+                        >
+
+                        <h3>
+                            SmartWatch Fit Pro
+                        </h3>
+
+                        <p>
+                            Actividad y salud
+                        </p>
+
+                        <strong>
+                            $649.900
+                        </strong>
+
+                        <button>
+                            🛒 Agregar al carrito
+                        </button>
+
+                    </article>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ========================================= -->
+            <!-- CATEGORÍAS -->
+            <!-- ========================================= -->
+
+            <section
+                    class="spa-view"
+                    id="view-categorias">
+
+
+                <div class="section-title">
+
+                    <div>
+
+                        <h2>
+                            Categorías
+                        </h2>
+
+                        <p>
+                            Encuentra productos según tus intereses.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="categories-panel">
+
+
+                    <article>
+                        <span>💻</span>
+                        <strong>Laptops</strong>
+                    </article>
+
+
+                    <article>
+                        <span>📱</span>
+                        <strong>Smartphones</strong>
+                    </article>
+
+
+                    <article>
+                        <span>🎧</span>
+                        <strong>Accesorios</strong>
+                    </article>
+
+
+                    <article>
+                        <span>⌚</span>
+                        <strong>Smartwatches</strong>
+                    </article>
+
+
+                    <article>
+                        <span>🔊</span>
+                        <strong>Audio</strong>
+                    </article>
+
+
+                    <article>
+                        <span>🎮</span>
+                        <strong>Gaming</strong>
+                    </article>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ========================================= -->
+            <!-- CARRITO -->
+            <!-- ========================================= -->
+
+            <section
+                    class="spa-view"
+                    id="view-carrito">
+
+
+                <div class="empty-state">
+
+                    <div class="empty-icon">
+                        🛒
+                    </div>
+
+                    <h2>
+                        Tu carrito está vacío
+                    </h2>
+
+                    <p>
+                        Agrega productos para comenzar tu compra.
+                    </p>
+
+                    <button
+                            class="primary-button"
+                            data-view-target="productos">
+
+                        Explorar productos
+
+                    </button>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ========================================= -->
+            <!-- COMPRAS -->
+            <!-- ========================================= -->
+
+            <section
+                    class="spa-view"
+                    id="view-compras">
+
+
+                <div class="empty-state">
+
+                    <div class="empty-icon">
+                        📦
+                    </div>
+
+                    <h2>
+                        Aún no tienes compras
+                    </h2>
+
+                    <p>
+                        Aquí aparecerán tus órdenes realizadas.
+                    </p>
+
+                    <button
+                            class="primary-button"
+                            data-view-target="productos">
+
+                        Ir al catálogo
+
+                    </button>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ========================================= -->
+            <!-- PERFIL -->
+            <!-- ========================================= -->
+
+            <section
+                    class="spa-view"
+                    id="view-perfil">
+
+
+                <div class="profile-panel">
+
+
+                    <!-- ================================= -->
+                    <!-- INFORMACIÓN DEL USUARIO -->
+                    <!-- ================================= -->
+
+                    <div class="profile-header">
+
+
+                        <div
+                                class="profile-avatar"
+                                id="profileAvatar">
+
+                            U
+
+                        </div>
+
+
+                        <div>
+
+                            <h2 id="profileName">
+                                Usuario
+                            </h2>
+
+                            <p id="profileEmail">
+                                usuario@email.com
+                            </p>
+
+                        </div>
+
+
+                        <button
+                                type="button"
+                                class="edit-profile-button"
+                                id="editProfileButton">
+
+                            ✏️ Cambiar datos
+
+                        </button>
+
+
+                    </div>
+
+
+
+                    <!-- ================================= -->
+                    <!-- FORMULARIO -->
+                    <!-- ================================= -->
+
+                    <form
+                            class="profile-form"
+                            id="profileForm">
+
+
+                        <!-- NOMBRE -->
+
+                        <div class="profile-field">
+
+                            <label for="profileNameInput">
+                                Nombre
+                            </label>
+
+                            <input
+                                    type="text"
+                                    id="profileNameInput"
+                                    disabled
+                            >
+
+                        </div>
+
+
+
+                        <!-- USUARIO -->
+
+                        <div class="profile-field">
+
+                            <label for="profileUserInput">
+                                Usuario
+                            </label>
+
+                            <input
+                                    type="text"
+                                    id="profileUserInput"
+                                    disabled
+                            >
+
+                        </div>
+
+
+
+                        <!-- CORREO -->
+
+                        <div class="profile-field">
+
+                            <label for="profileEmailInput">
+                                Correo electrónico
+                            </label>
+
+                            <input
+                                    type="email"
+                                    id="profileEmailInput"
+                                    disabled
+                            >
+
+                        </div>
+
+
+
+                        <!-- DIRECCIÓN -->
+
+                        <div class="profile-field">
+
+                            <label for="profileAddressInput">
+                                Dirección de envío
+                            </label>
+
+                            <input
+                                    type="text"
+                                    id="profileAddressInput"
+                                    disabled
+                            >
+
+                        </div>
+
+
+
+                        <!-- ================================= -->
+                        <!-- CONTRASEÑA -->
+                        <!-- ================================= -->
+
+                        <div
+                                class="password-change-section"
+                                id="passwordChangeSection">
+
+
+                            <div class="password-title">
+
+                                <div>
+
+                                    <strong>
+                                        🔐 Cambiar contraseña
+                                    </strong>
+
+                                    <p>
+                                        Déjala vacía si no deseas modificarla.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-row">
+
+
+                                <div class="profile-field">
+
+                                    <label for="newPasswordInput">
+                                        Nueva contraseña
+                                    </label>
+
+                                    <input
+                                            type="password"
+                                            id="newPasswordInput"
+                                            placeholder="Nueva contraseña"
+                                            disabled
+                                    >
+
+                                </div>
+
+
+                                <div class="profile-field">
+
+                                    <label for="confirmNewPasswordInput">
+                                        Confirmar nueva contraseña
+                                    </label>
+
+                                    <input
+                                            type="password"
+                                            id="confirmNewPasswordInput"
+                                            placeholder="Repite la contraseña"
+                                            disabled
+                                    >
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- ================================= -->
+                        <!-- BOTONES -->
+                        <!-- ================================= -->
+
+                        <div
+                                class="profile-actions"
+                                id="profileActions">
+
+
+                            <button
+                                    type="button"
+                                    class="cancel-profile-button"
+                                    id="cancelProfileButton"
+                                    hidden>
+
+                                Cancelar
+
+                            </button>
+
+
+                            <button
+                                    type="button"
+                                    class="primary-button"
+                                    id="saveProfileButton"
+                                    hidden>
+
+                                Guardar cambios
+
+                            </button>
+
+
+                        </div>
+
+
+                    </form>
+
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- ========================================= -->
+<!-- OVERLAY MÓVIL -->
+<!-- ========================================= -->
+
+<div class="sidebar-overlay"
+     id="sidebarOverlay">
+</div>
+
+
+
+<!-- ========================================= -->
+<!-- CHATBOT -->
+<!-- ========================================= -->
+
+<div class="chatbot"
+     id="chatbot">
+
+
+    <!-- VENTANA -->
+
+    <div class="chat-window"
+         id="chatWindow">
+
+
+        <div class="chat-header">
+
+
+            <div class="chat-bot-avatar">
+
+                🤖
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    TechBot
+                </strong>
+
+                <span>
+                    ● En línea
+                </span>
+
+            </div>
+
+
+            <button
+                    id="closeChat">
+
+                ✕
+            </button>
+
+
+        </div>
+
+
+
+        <!-- MENSAJES -->
+
+        <div class="chat-messages"
+             id="chatMessages">
+
+
+            <div class="bot-message">
+
+                👋 ¡Hola!
+                Soy TechBot.
+
+                <br><br>
+
+                ¿En qué puedo ayudarte?
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- OPCIONES -->
+
+        <div class="chat-options">
+
+
+            <button data-chat-action="productos">
+                💻 Ver productos
+            </button>
+
+
+            <button data-chat-action="carrito">
+                🛒 Mi carrito
+            </button>
+
+
+            <button data-chat-action="compras">
+                📦 Mis compras
+            </button>
+
+
+            <button data-chat-action="envios">
+                🚚 Envíos
+            </button>
+
+
+            <button data-chat-action="pagos">
+                💳 Métodos de pago
+            </button>
+
+
+            <button data-chat-action="perfil">
+                👤 Mi perfil
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- BOTÓN FLOTANTE -->
+
+    <button
+            class="chat-button"
+            id="chatButton"
+            aria-label="Abrir chat">
+
+        💬
+
+        <span class="chat-notification">
+            1
+        </span>
+
+    </button>
+
+
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script
+        type="module"
+        src="../js/panel/PanelApp.js">
+</script>
+
+
+</body>
+
+</html>

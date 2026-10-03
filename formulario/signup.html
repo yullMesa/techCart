@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Crear cuenta | TechCart</title>
+
+    <link rel="stylesheet"
+          href="../css/auth.css">
+
+</head>
+
+
+<body>
+
+
+<div class="auth-page">
+
+
+    <!-- ================================= -->
+    <!-- PANEL IZQUIERDO -->
+    <!-- ================================= -->
+
+    <section class="auth-brand">
+
+
+        <a href="../index.html"
+           class="auth-logo">
+
+            🛒
+
+            <span>
+                Tech<strong>Cart</strong>
+            </span>
+
+        </a>
+
+
+        <div class="brand-content">
+
+
+            <span class="brand-tag">
+                ÚNETE A TECHCART
+            </span>
+
+
+            <h1>
+
+                Crea tu cuenta y descubre un mundo
+
+                <span>
+                    tecnológico
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                Regístrate para acceder al catálogo completo,
+                crear tu carrito y realizar tus compras.
+
+            </p>
+
+
+            <div class="brand-benefits">
+
+
+                <div>
+
+                    <span>✓</span>
+
+                    Registro rápido
+
+                </div>
+
+
+                <div>
+
+                    <span>✓</span>
+
+                    Compra de forma segura
+
+                </div>
+
+
+                <div>
+
+                    <span>✓</span>
+
+                    Administra tus datos
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <!-- IMAGEN TECNOLÓGICA -->
+
+        <div class="login-tech-image">
+
+            <img
+                    src="../img/login-tech.png"
+                    alt="Tecnología TechCart"
+            >
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ================================= -->
+    <!-- REGISTRO -->
+    <!-- ================================= -->
+
+    <section class="auth-form-section">
+
+
+        <div class="auth-card signup-card">
+
+
+            <div class="auth-card-header">
+
+                <h2>
+                    Crear una cuenta
+                </h2>
+
+                <p>
+                    Completa tus datos para registrarte.
+                </p>
+
+            </div>
+
+
+
+            <form id="signupForm">
+
+
+                <!-- NOMBRE Y USUARIO -->
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label for="signupName">
+                            Nombre
+                        </label>
+
+                        <input
+                                type="text"
+                                id="signupName"
+                                placeholder="Tu nombre"
+                                required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="signupUser">
+                            Usuario
+                        </label>
+
+                        <input
+                                type="text"
+                                id="signupUser"
+                                placeholder="Crea un usuario"
+                                required
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- CORREO -->
+
+                <div class="form-group">
+
+                    <label for="signupEmail">
+                        Correo electrónico
+                    </label>
+
+                    <input
+                            type="email"
+                            id="signupEmail"
+                            placeholder="correo@ejemplo.com"
+                            required
+                    >
+
+                </div>
+
+
+
+                <!-- DIRECCIÓN -->
+
+                <div class="form-group">
+
+                    <label for="signupAddress">
+                        Dirección de envío
+                    </label>
+
+                    <input
+                            type="text"
+                            id="signupAddress"
+                            placeholder="Ingresa tu dirección"
+                            required
+                    >
+
+                </div>
+
+
+
+                <!-- CONTRASEÑAS -->
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label for="signupPassword">
+                            Contraseña
+                        </label>
+
+
+                        <div class="password-container">
+
+                            <input
+                                    type="password"
+                                    id="signupPassword"
+                                    placeholder="Crea una contraseña"
+                                    required
+                            >
+
+                            <button
+                                    type="button"
+                                    class="toggle-password"
+                                    data-target="signupPassword">
+
+                                👁
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="confirmPassword">
+                            Confirmar contraseña
+                        </label>
+
+
+                        <div class="password-container">
+
+                            <input
+                                    type="password"
+                                    id="confirmPassword"
+                                    placeholder="Repite la contraseña"
+                                    required
+                            >
+
+                            <button
+                                    type="button"
+                                    class="toggle-password"
+                                    data-target="confirmPassword">
+
+                                👁
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- TÉRMINOS -->
+
+                <label class="terms">
+
+                    <input
+                            type="checkbox"
+                            id="acceptTerms"
+                            required
+                    >
+
+                    <span>
+
+                        Acepto los
+
+                        <a href="#">
+                            términos y condiciones
+                        </a>
+
+                        y la política de privacidad.
+
+                    </span>
+
+                </label>
+
+
+
+                <!-- BOTÓN -->
+
+                <button
+                        type="submit"
+                        class="auth-submit">
+
+                    Crear cuenta
+
+                </button>
+
+
+            </form>
+
+
+
+            <p class="auth-switch">
+
+                ¿Ya tienes una cuenta?
+
+                <a href="login.html">
+                    Inicia sesión
+                </a>
+
+            </p>
+
+
+
+            <a
+                    href="../index.html"
+                    class="back-home">
+
+                ← Volver a la tienda
+
+            </a>
+
+
+        </div>
+
+
+    </section>
+
+
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="../js/auth.js"></script>
+
+
+</body>
+
+</html>
