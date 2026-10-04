@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2b0a5cc-824e-442c-b748-4fa52235ce43" name="Changes" comment="feat: completar HU-06 con orden y recibo descargable en PDF">
-      <change afterPath="$PROJECT_DIR$/js/panel/HistoryView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/panel.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/panel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/panel/PanelApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/panel/PanelApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/panel/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/panel/Chatbot.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/panel/Chatbot.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,75 +30,85 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;recentNewPullRequestHead&quot;: {
-    &quot;server&quot;: {
-      &quot;useHttp&quot;: false,
-      &quot;host&quot;: &quot;github.com&quot;,
-      &quot;port&quot;: null,
-      &quot;suffix&quot;: null
-    },
-    &quot;owner&quot;: &quot;yullMesa&quot;,
-    &quot;repository&quot;: &quot;techCart&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "yullMesa"
   }
-}</component>
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/yullMesa/techCart.git",
+    "accountId": "f48b1cdb-0b71-4b5d-814f-c152b385f017"
+  },
+  "recentNewPullRequestHead": {
+    "server": {
+      "useHttp": false,
+      "host": "github.com",
+      "port": null,
+      "suffix": null
+    },
+    "owner": "yullMesa",
+    "repository": "techCart"
+  }
+}]]></component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.1218207032428393" />
-      <entry key="MS500" value="2.289664575644146" />
-      <entry key="S2" value="5.164644013222557" />
-      <entry key="S5" value="7.872785697804436" />
-      <entry key="S10" value="10.009270296021414" />
-      <entry key="S30" value="12.366352928772084" />
-      <entry key="S60" value="13.266015563412424" />
-      <entry key="M2" value="14.392868616959518" />
-      <entry key="M5" value="17.192003413850063" />
-      <entry key="M10" value="20.807009612503812" />
-      <entry key="M15" value="23.55608875985644" />
-      <entry key="M30" value="29.321252291474213" />
-      <entry key="H1" value="35.225562363578454" />
-      <entry key="H2" value="39.76355370707451" />
-      <entry key="H4" value="42.62799564999061" />
-      <entry key="D1" value="45.398510470528954" />
-      <entry key="W1" value="45.91304484122409" />
+      <entry key="MS100" value="1.0516301786330502" />
+      <entry key="MS500" value="2.125871001957381" />
+      <entry key="S2" value="3.812497636511873" />
+      <entry key="S5" value="4.466630033756785" />
+      <entry key="S10" value="4.892681014514971" />
+      <entry key="S30" value="8.095036833907258" />
+      <entry key="S60" value="11.690368669657046" />
+      <entry key="M2" value="15.233777557847418" />
+      <entry key="M5" value="20.004154413659247" />
+      <entry key="M10" value="24.439455864201054" />
+      <entry key="M15" value="27.512790054977764" />
+      <entry key="M30" value="33.665021808912485" />
+      <entry key="H1" value="39.829319127442695" />
+      <entry key="H2" value="44.539330947242725" />
+      <entry key="H4" value="47.50765339054135" />
+      <entry key="D1" value="50.377126969108886" />
+      <entry key="W1" value="50.90995486592261" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
-      <entry key="S2" value="8.897284057931544E-167" />
-      <entry key="S5" value="5.709739624516072E-67" />
-      <entry key="S10" value="1.0670783426201738E-33" />
-      <entry key="S30" value="1.6312463015914334E-11" />
-      <entry key="S60" value="6.13372550551259E-6" />
-      <entry key="M2" value="0.00431182385959535" />
-      <entry key="M5" value="0.2507998748935332" />
-      <entry key="M10" value="1.1432178780082827" />
-      <entry key="M15" value="2.251906922134887" />
-      <entry key="M30" value="5.612852403510897" />
-      <entry key="H1" value="9.93725677654434" />
-      <entry key="H2" value="13.614455692132713" />
-      <entry key="H4" value="16.047333880142613" />
-      <entry key="D1" value="18.46697824098737" />
-      <entry key="W1" value="18.922782312221052" />
+      <entry key="S2" value="1.3307963110821652E-175" />
+      <entry key="S5" value="1.684837254286425E-70" />
+      <entry key="S10" value="1.8330196979624774E-35" />
+      <entry key="S30" value="4.208976318026645E-12" />
+      <entry key="S60" value="3.115679721930397E-6" />
+      <entry key="M2" value="0.003073089770057633" />
+      <entry key="M5" value="0.21902465742706853" />
+      <entry key="M10" value="1.06834581863632" />
+      <entry key="M15" value="2.152479384348993" />
+      <entry key="M30" value="5.4875425968675335" />
+      <entry key="H1" value="9.8257034655869" />
+      <entry key="H2" value="13.537823680693188" />
+      <entry key="H4" value="16.002107142671118" />
+      <entry key="D1" value="18.458293686727963" />
+      <entry key="W1" value="18.921510783437277" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.0694803636418726" />
-      <entry key="MS500" value="2.243343827667945" />
-      <entry key="S2" value="5.122173746606269" />
-      <entry key="S5" value="7.848878692279127" />
-      <entry key="S10" value="9.995511275587392" />
-      <entry key="S30" value="12.361230367817885" />
-      <entry key="S60" value="13.263372824024607" />
-      <entry key="M2" value="14.395775712672128" />
-      <entry key="M5" value="17.441203836911154" />
-      <entry key="M10" value="21.94717621684589" />
-      <entry key="M15" value="25.803668690398283" />
-      <entry key="M30" value="34.928082915340504" />
-      <entry key="H1" value="45.157271183786385" />
-      <entry key="H2" value="53.37416373259896" />
-      <entry key="H4" value="58.673054945288584" />
-      <entry key="D1" value="63.86505168099362" />
-      <entry key="W1" value="64.83576316732972" />
+      <entry key="MS100" value="1.014803337330849" />
+      <entry key="MS500" value="2.107809785667105" />
+      <entry key="S2" value="3.8042563309276516" />
+      <entry key="S5" value="4.4627738163180055" />
+      <entry key="S10" value="4.890412478852226" />
+      <entry key="S30" value="8.093012149231981" />
+      <entry key="S60" value="11.688671488665072" />
+      <entry key="M2" value="15.23567125735722" />
+      <entry key="M5" value="20.221710772038115" />
+      <entry key="M10" value="25.504914465420853" />
+      <entry key="M15" value="29.661109635550652" />
+      <entry key="M30" value="39.14666513166148" />
+      <entry key="H1" value="49.64953094891686" />
+      <entry key="H2" value="58.07332762337336" />
+      <entry key="H4" value="63.50749086677298" />
+      <entry key="D1" value="68.83498358214155" />
+      <entry key="W1" value="69.83140163201573" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -122,7 +129,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "HU-07",
+    "git-widget-placeholder": "HU-08",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/yulls/Documents/proyectos/techCart/js/services",
