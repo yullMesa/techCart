@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2b0a5cc-824e-442c-b748-4fa52235ce43" name="Changes" comment="feat: completar HU-06 con orden y recibo descargable en PDF">
-      <change afterPath="$PROJECT_DIR$/js/panel/GlobalSearch.js" afterDir="false" />
+    <list default="true" id="e2b0a5cc-824e-442c-b748-4fa52235ce43" name="Changes" comment="&quot;feat: completar HU-09 con diseño responsive y buscador global">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/panel.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/panel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/panel/PanelApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/panel/PanelApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/panel/ProductsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/panel/ProductsView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/panel/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/panel/Router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/panel/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/models/Producto.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/models/Producto.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +129,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "HU-09",
+    "git-widget-placeholder": "#10 on HU-09",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/yulls/Documents/proyectos/techCart/js/services",
@@ -204,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1791118146861</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="&quot;feat: completar HU-09 con diseño responsive y buscador global">
+      <option name="closed" value="true" />
+      <created>1791119660014</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1791119660014</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +218,7 @@
     <MESSAGE value="feat: add category filtering and clear filter option" />
     <MESSAGE value="feat: completar HU-06 con orden y recibo descargable en PDF" />
     <MESSAGE value="feat: completar HU-08 con chatbot interactivo y navegación asistida" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: completar HU-08 con chatbot interactivo y navegación asistida" />
+    <MESSAGE value="&quot;feat: completar HU-09 con diseño responsive y buscador global" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;feat: completar HU-09 con diseño responsive y buscador global" />
   </component>
 </project>
