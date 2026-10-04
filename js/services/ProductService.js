@@ -10,6 +10,11 @@ import Accesorio
 
 class ProductService {
 
+
+    // =========================================
+    // OBTENER TODOS LOS PRODUCTOS
+    // =========================================
+
     static async getProductos() {
 
         try {
@@ -39,11 +44,15 @@ class ProductService {
 
 
             return data
-                .map(producto =>
-                    this.crearProducto(producto)
+                .map(
+                    producto =>
+                        this.crearProducto(
+                            producto
+                        )
                 )
-                .filter(producto =>
-                    producto !== null
+                .filter(
+                    producto =>
+                        producto !== null
                 );
 
         }
@@ -55,6 +64,7 @@ class ProductService {
                 error
             );
 
+
             return [];
 
         }
@@ -62,61 +72,133 @@ class ProductService {
     }
 
 
+    // =========================================
+    // CREAR OBJETO PRODUCTO
+    // =========================================
+
     static crearProducto(data) {
 
+        if (
+            !data ||
+            !data.tipo
+        ) {
+
+            console.warn(
+                "Producto inválido:",
+                data
+            );
+
+
+            return null;
+
+        }
+
+
+        let producto =
+            null;
+
+
         switch (
-            data.tipo.toLowerCase()
+            data.tipo
+                .toLowerCase()
             ) {
 
 
+            // =================================
+            // LAPTOP
+            // =================================
+
             case "laptop":
 
-                return new Laptop(
+                producto =
+                    new Laptop(
 
-                    data.idProducto,
-                    data.nombre,
-                    data.descripcion,
-                    data.precio,
-                    data.stock,
-                    data.imagen,
-                    data.procesador,
-                    data.memoriaRAM,
-                    data.almacenamiento
+                        data.idProducto,
 
-                );
+                        data.nombre,
 
+                        data.descripcion,
+
+                        data.precio,
+
+                        data.stock,
+
+                        data.imagen,
+
+                        data.procesador,
+
+                        data.memoriaRAM,
+
+                        data.almacenamiento
+
+                    );
+
+                break;
+
+
+            // =================================
+            // SMARTPHONE
+            // =================================
 
             case "smartphone":
 
-                return new Smartphone(
+                producto =
+                    new Smartphone(
 
-                    data.idProducto,
-                    data.nombre,
-                    data.descripcion,
-                    data.precio,
-                    data.stock,
-                    data.imagen,
-                    data.sistemaOperativo,
-                    data.pantalla,
-                    data.camara
+                        data.idProducto,
 
-                );
+                        data.nombre,
 
+                        data.descripcion,
+
+                        data.precio,
+
+                        data.stock,
+
+                        data.imagen,
+
+                        data.sistemaOperativo,
+
+                        data.pantalla,
+
+                        data.camara
+
+                    );
+
+                break;
+
+
+            // =================================
+            // ACCESORIO
+            // =================================
 
             case "accesorio":
 
-                return new Accesorio(
+                producto =
+                    new Accesorio(
 
-                    data.idProducto,
-                    data.nombre,
-                    data.descripcion,
-                    data.precio,
-                    data.stock,
-                    data.imagen,
-                    data.tipoAccesorio
+                        data.idProducto,
 
-                );
+                        data.nombre,
 
+                        data.descripcion,
+
+                        data.precio,
+
+                        data.stock,
+
+                        data.imagen,
+
+                        data.tipoAccesorio
+
+                    );
+
+                break;
+
+
+            // =================================
+            // DESCONOCIDO
+            // =================================
 
             default:
 
@@ -125,9 +207,141 @@ class ProductService {
                     data.tipo
                 );
 
+
                 return null;
 
         }
+
+
+        // =========================================
+        // DATOS COMUNES ADICIONALES
+        // =========================================
+
+        producto.categoria =
+            data.categoria || "";
+
+
+        /*
+         Guardamos también el tipo original.
+         Esto puede servir después para filtros,
+         búsqueda o depuración.
+        */
+
+        producto.tipo =
+            data.tipo;
+
+
+        return producto;
+
+    }
+
+
+    // =========================================
+    // OBTENER PRODUCTOS POR CATEGORÍA
+    // =========================================
+
+    static async getProductosPorCategoria(
+        categoria
+    ) {
+
+        const productos =
+            await this.getProductos();
+
+
+        if (!categoria) {
+
+            return productos;
+
+        }
+
+
+        const categoriaBuscada =
+            String(categoria)
+                .trim()
+                .toLowerCase();
+
+
+        return productos.filter(
+            producto =>
+
+                String(
+                    producto.categoria || ""
+                )
+                    .trim()
+                    .toLowerCase() ===
+                categoriaBuscada
+        );
+
+    }
+
+
+    // =========================================
+    // BUSCAR PRODUCTOS
+    // =========================================
+
+    static async buscarProductos(
+        termino
+    ) {
+
+        const productos =
+            await this.getProductos();
+
+
+        const busqueda =
+            String(
+                termino || ""
+            )
+                .trim()
+                .toLowerCase();
+
+
+        if (!busqueda) {
+
+            return productos;
+
+        }
+
+
+        return productos.filter(
+            producto => {
+
+
+                const contenido = [
+
+                    producto.nombre,
+
+                    producto.descripcion,
+
+                    producto.categoria,
+
+                    producto.tipo,
+
+                    producto.procesador,
+
+                    producto.memoriaRAM,
+
+                    producto.almacenamiento,
+
+                    producto.sistemaOperativo,
+
+                    producto.pantalla,
+
+                    producto.camara,
+
+                    producto.tipoAccesorio
+
+                ]
+                    .filter(Boolean)
+                    .join(" ")
+                    .toLowerCase();
+
+
+                return contenido.includes(
+                    busqueda
+                );
+
+            }
+        );
 
     }
 

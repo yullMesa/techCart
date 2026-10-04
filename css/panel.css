@@ -1611,6 +1611,72 @@ a {
 
 
 /* ========================================= */
+/* FILTRO DE CATEGORÍAS */
+/* ========================================= */
+
+.products-filter-bar {
+    grid-column: 1 / -1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 12px 15px;
+
+    margin-bottom: 4px;
+
+    border: 1px solid #dce8f7;
+    border-radius: 10px;
+
+    background: #eef6ff;
+
+    color: #40516c;
+
+    font-size: 12px;
+}
+
+.products-filter-bar strong {
+    color: #0875ec;
+}
+
+.clear-filter-button {
+    flex-shrink: 0;
+
+    padding: 8px 13px;
+
+    border: 1px solid #0875ec;
+    border-radius: 7px;
+
+    background: white;
+    color: #0875ec;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.clear-filter-button:hover {
+    background: #0875ec;
+    color: white;
+}
+
+@media (max-width: 600px) {
+
+    .products-filter-bar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .clear-filter-button {
+        width: 100%;
+    }
+
+}
+
+/* ========================================= */
 /* MÓVIL PEQUEÑO */
 /* ========================================= */
 
