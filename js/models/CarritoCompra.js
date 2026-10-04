@@ -1,52 +1,135 @@
 class CarritoCompra {
 
-    constructor(items = []) {
+    constructor(
+        listaProductos = []
+    ) {
 
-        this.listaProductos = items;
+        this.listaProductos =
+            Array.isArray(listaProductos)
+                ? listaProductos
+                : [];
+
+
+        this.total =
+            this.calcularTotal();
 
     }
 
 
-    agregarProducto(producto) {
+    // =========================================
+    // AGREGAR PRODUCTO
+    // =========================================
+
+    agregarProducto(
+        producto,
+        cantidad = 1
+    ) {
+
+        if (!producto) {
+            return false;
+        }
+
+
+        const cantidadNueva =
+            Math.max(
+                1,
+                Number(cantidad) || 1
+            );
+
 
         const existente =
             this.listaProductos.find(
                 item =>
-                    item.producto.idProducto ===
-                    producto.idProducto
+                    Number(
+                        item.producto?.idProducto
+                    ) ===
+                    Number(
+                        producto.idProducto
+                    )
             );
 
 
         if (existente) {
 
-            existente.cantidad++;
+            const stock =
+                Number(
+                    existente.producto?.stock
+                    ?? Infinity
+                );
 
-        } else {
+
+            existente.cantidad =
+                Math.min(
+                    Number(existente.cantidad || 1)
+                    + cantidadNueva,
+                    stock
+                );
+
+        }
+
+        else {
 
             this.listaProductos.push({
 
-                producto: producto,
+                producto:
+                    producto,
 
-                cantidad: 1
+                cantidad:
+                    cantidadNueva
 
             });
 
         }
 
+
+        this.total =
+            this.calcularTotal();
+
+
+        return true;
+
     }
 
 
-    eliminarProducto(idProducto) {
+    // =========================================
+    // ELIMINAR PRODUCTO
+    // =========================================
+
+    eliminarProducto(
+        idProducto
+    ) {
+
+        const cantidadAnterior =
+            this.listaProductos.length;
+
 
         this.listaProductos =
             this.listaProductos.filter(
                 item =>
-                    item.producto.idProducto !==
-                    idProducto
+                    Number(
+                        item.producto?.idProducto
+                    ) !==
+                    Number(
+                        idProducto
+                    )
             );
+
+
+        this.total =
+            this.calcularTotal();
+
+
+        return (
+            this.listaProductos.length
+            !== cantidadAnterior
+        );
 
     }
 
+
+    // =========================================
+    // ACTUALIZAR CANTIDAD
+    // =========================================
 
     actualizarCantidad(
         idProducto,
@@ -55,67 +138,138 @@ class CarritoCompra {
 
         const item =
             this.listaProductos.find(
-                item =>
-                    item.producto.idProducto ===
-                    idProducto
+                productoCarrito =>
+                    Number(
+                        productoCarrito.producto?.idProducto
+                    ) ===
+                    Number(
+                        idProducto
+                    )
             );
 
 
         if (!item) {
-            return;
+            return false;
         }
 
 
-        if (nuevaCantidad <= 0) {
-
-            this.eliminarProducto(
-                idProducto
+        const cantidad =
+            Number(
+                nuevaCantidad
             );
 
-            return;
+
+        if (
+            !Number.isFinite(cantidad)
+            ||
+            cantidad < 1
+        ) {
+
+            return false;
+
         }
+
+
+        const stock =
+            Number(
+                item.producto?.stock
+                ?? Infinity
+            );
 
 
         item.cantidad =
-            nuevaCantidad;
+            Math.min(
+                cantidad,
+                stock
+            );
+
+
+        this.total =
+            this.calcularTotal();
+
+
+        return true;
 
     }
 
+
+    // =========================================
+    // CALCULAR TOTAL
+    // =========================================
 
     calcularTotal() {
 
         return this.listaProductos.reduce(
+            (
+                acumulado,
+                item
+            ) => {
 
-            (total, item) => {
+                const precio =
+                    Number(
+                        item.producto?.precio
+                        || 0
+                    );
 
-                return total +
-                    (
-                        item.producto.precio *
+
+                const cantidad =
+                    Number(
                         item.cantidad
+                        || 0
+                    );
+
+
+                return acumulado
+                    + (
+                        precio
+                        * cantidad
                     );
 
             },
-
             0
-
         );
 
     }
 
 
-    cantidadTotal() {
+    // =========================================
+    // CONTAR UNIDADES
+    // =========================================
+
+    contarProductos() {
 
         return this.listaProductos.reduce(
-
-            (total, item) =>
-                total + item.cantidad,
-
+            (
+                total,
+                item
+            ) =>
+                total
+                + Number(
+                    item.cantidad
+                    || 0
+                ),
             0
-
         );
+
+    }
+
+
+    // =========================================
+    // VACIAR
+    // =========================================
+
+    vaciar() {
+
+        this.listaProductos =
+            [];
+
+
+        this.total =
+            0;
 
     }
 
 }
+
 
 export default CarritoCompra;

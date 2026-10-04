@@ -1,73 +1,173 @@
 class StorageService {
 
-    static getClientes() {
-        return JSON.parse(
-            localStorage.getItem("techCartClientes")
-        ) || [];
-    }
+    static SESSION_KEY = "techCartSesion";
+    static CART_KEY = "techCartCarrito";
+    static ORDERS_KEY = "techCartOrdenes";
 
-    static saveClientes(clientes) {
-        localStorage.setItem(
-            "techCartClientes",
-            JSON.stringify(clientes)
-        );
-    }
+
+    // ===============================
+    // SESIÓN
+    // ===============================
 
     static getSession() {
-        return JSON.parse(
-            localStorage.getItem("techCartSesion")
-        );
+
+        const data =
+            localStorage.getItem(
+                this.SESSION_KEY
+            );
+
+        if (!data) {
+            return null;
+        }
+
+        try {
+
+            return JSON.parse(data);
+
+        } catch (error) {
+
+            console.error(
+                "Error leyendo sesión:",
+                error
+            );
+
+            return null;
+        }
+
     }
 
+
     static saveSession(session) {
+
         localStorage.setItem(
-            "techCartSesion",
+            this.SESSION_KEY,
             JSON.stringify(session)
         );
 
-        localStorage.setItem(
-            "isLoggedIn",
-            "true"
-        );
     }
 
-    static clearSession() {
-        localStorage.removeItem("techCartSesion");
-        localStorage.removeItem("isLoggedIn");
-    }
+
+    // ===============================
+    // CARRITO
+    // ===============================
 
     static getCart() {
 
         const data =
             localStorage.getItem(
-                "techCartCarrito"
+                this.CART_KEY
             );
 
+        if (!data) {
+            return [];
+        }
 
-        return data
-            ? JSON.parse(data)
-            : [];
+        try {
+
+            const cart =
+                JSON.parse(data);
+
+            return Array.isArray(cart)
+                ? cart
+                : [];
+
+        } catch (error) {
+
+            console.error(
+                "Error leyendo carrito:",
+                error
+            );
+
+            return [];
+        }
 
     }
 
 
-    static saveCart(items) {
+    static saveCart(cart) {
+
+        const carrito =
+            Array.isArray(cart)
+                ? cart
+                : [];
 
         localStorage.setItem(
-            "techCartCarrito",
-            JSON.stringify(items)
+            this.CART_KEY,
+            JSON.stringify(carrito)
         );
 
+        return carrito;
     }
 
 
     static clearCart() {
 
         localStorage.removeItem(
-            "techCartCarrito"
+            this.CART_KEY
         );
 
     }
+
+
+    // ===============================
+    // ÓRDENES
+    // ===============================
+
+    static getOrders() {
+
+        const data =
+            localStorage.getItem(
+                this.ORDERS_KEY
+            );
+
+        if (!data) {
+            return [];
+        }
+
+        try {
+
+            const orders =
+                JSON.parse(data);
+
+            return Array.isArray(orders)
+                ? orders
+                : [];
+
+        } catch (error) {
+
+            return [];
+        }
+
+    }
+
+
+    static saveOrders(orders) {
+
+        localStorage.setItem(
+            this.ORDERS_KEY,
+            JSON.stringify(
+                Array.isArray(orders)
+                    ? orders
+                    : []
+            )
+        );
+
+    }
+
+
+    static addOrder(order) {
+
+        const orders =
+            this.getOrders();
+
+        orders.unshift(order);
+
+        this.saveOrders(orders);
+
+        return order;
+    }
+
 }
+
 
 export default StorageService;

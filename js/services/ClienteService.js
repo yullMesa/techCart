@@ -1,84 +1,228 @@
-import StorageService
-    from "./StorageService.js";
-
-
 class ClienteService {
 
+    static STORAGE_KEY =
+        "techCartClientes";
+
 
     // =========================================
-    // BUSCAR CLIENTE
+    // NORMALIZAR TEXTO
     // =========================================
 
-    static getClienteById(clienteId) {
+    static normalizar(
+        valor
+    ) {
+
+        return String(
+            valor ?? ""
+        )
+            .trim()
+            .toLowerCase();
+
+    }
+
+
+    // =========================================
+    // OBTENER TODOS LOS CLIENTES
+    // =========================================
+
+    static getClientes() {
+
+        const data =
+            localStorage.getItem(
+                this.STORAGE_KEY
+            );
+
+
+        if (!data) {
+
+            return [];
+
+        }
+
+
+        try {
+
+            const clientes =
+                JSON.parse(data);
+
+
+            return Array.isArray(
+                clientes
+            )
+                ? clientes
+                : [];
+
+        }
+
+        catch (error) {
+
+            console.error(
+                "Error leyendo clientes:",
+                error
+            );
+
+
+            return [];
+
+        }
+
+    }
+
+
+    // =========================================
+    // BUSCAR CLIENTE POR ID
+    // =========================================
+
+    static getClienteById(
+        idCliente
+    ) {
 
         const clientes =
-            StorageService.getClientes();
+            this.getClientes();
 
 
         return clientes.find(
             cliente =>
-                String(cliente.id) ===
-                String(clienteId)
+                String(
+                    cliente.id
+                ) ===
+                String(
+                    idCliente
+                )
         ) || null;
 
     }
 
 
+    // =========================================
+    // BUSCAR CLIENTE POR USUARIO
+    // =========================================
+
+    static getClienteByUsuario(
+        usuario
+    ) {
+
+        const clientes =
+            this.getClientes();
+
+
+        const usuarioBuscado =
+            this.normalizar(
+                usuario
+            );
+
+
+        return clientes.find(
+            cliente =>
+                this.normalizar(
+                    cliente.usuario
+                ) ===
+                usuarioBuscado
+        ) || null;
+
+    }
+
 
     // =========================================
-    // VALIDAR USUARIO/CORREO DUPLICADO
+    // BUSCAR CLIENTE POR CORREO
+    // =========================================
+
+    static getClienteByCorreo(
+        correo
+    ) {
+
+        const clientes =
+            this.getClientes();
+
+
+        const correoBuscado =
+            this.normalizar(
+                correo
+            );
+
+
+        return clientes.find(
+            cliente =>
+                this.normalizar(
+                    cliente.correo
+                ) ===
+                correoBuscado
+        ) || null;
+
+    }
+
+
+    // =========================================
+    // VALIDAR DISPONIBILIDAD DE DATOS
     // =========================================
 
     static datosDisponibles(
-        clienteId,
+        idCliente,
         usuario,
         correo
     ) {
 
         const clientes =
-            StorageService.getClientes();
+            this.getClientes();
 
 
-        const usuarioDuplicado =
-            clientes.some(cliente => {
+        const usuarioBuscado =
+            this.normalizar(
+                usuario
+            );
 
-                return (
-                    String(cliente.id) !==
-                    String(clienteId)
+
+        const correoBuscado =
+            this.normalizar(
+                correo
+            );
+
+
+        const usuarioOcupado =
+            clientes.some(
+                cliente =>
+                    String(
+                        cliente.id
+                    ) !==
+                    String(
+                        idCliente
+                    )
                     &&
-                    cliente.usuario.toLowerCase() ===
-                    usuario.toLowerCase()
-                );
+                    this.normalizar(
+                        cliente.usuario
+                    ) ===
+                    usuarioBuscado
+            );
 
-            });
 
-
-        const correoDuplicado =
-            clientes.some(cliente => {
-
-                return (
-                    String(cliente.id) !==
-                    String(clienteId)
+        const correoOcupado =
+            clientes.some(
+                cliente =>
+                    String(
+                        cliente.id
+                    ) !==
+                    String(
+                        idCliente
+                    )
                     &&
-                    cliente.correo.toLowerCase() ===
-                    correo.toLowerCase()
-                );
-
-            });
+                    this.normalizar(
+                        cliente.correo
+                    ) ===
+                    correoBuscado
+            );
 
 
         return {
 
             usuarioDisponible:
-                !usuarioDuplicado,
+                !usuarioOcupado,
 
             correoDisponible:
-                !correoDuplicado
+                !correoOcupado
 
         };
 
     }
-
 
 
     // =========================================
@@ -86,19 +230,23 @@ class ClienteService {
     // =========================================
 
     static actualizarCliente(
-        clienteId,
+        idCliente,
         nuevosDatos
     ) {
 
         const clientes =
-            StorageService.getClientes();
+            this.getClientes();
 
 
         const index =
             clientes.findIndex(
                 cliente =>
-                    String(cliente.id) ===
-                    String(clienteId)
+                    String(
+                        cliente.id
+                    ) ===
+                    String(
+                        idCliente
+                    )
             );
 
 
@@ -118,12 +266,35 @@ class ClienteService {
         };
 
 
-        StorageService.saveClientes(
-            clientes
+        localStorage.setItem(
+            this.STORAGE_KEY,
+            JSON.stringify(
+                clientes
+            )
         );
 
 
         return clientes[index];
+
+    }
+
+
+    // =========================================
+    // GUARDAR CLIENTES
+    // =========================================
+
+    static guardarClientes(
+        clientes
+    ) {
+
+        localStorage.setItem(
+            this.STORAGE_KEY,
+            JSON.stringify(
+                Array.isArray(clientes)
+                    ? clientes
+                    : []
+            )
+        );
 
     }
 
