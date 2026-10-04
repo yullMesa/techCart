@@ -11,17 +11,11 @@ class Cliente {
         termsAcceptedAt = null,
         termsVersion = null
     ) {
-
         this.id = id;
-
         this.nombre = nombre;
-
         this.correo = correo;
-
         this.direccionEnvio = direccionEnvio;
-
         this.usuario = usuario;
-
         this.password = password;
 
         this.termsAccepted = termsAccepted;
@@ -39,6 +33,7 @@ class Cliente {
         return String(valor ?? "")
             .trim()
             .toLowerCase();
+
     }
 
 
@@ -55,9 +50,7 @@ class Cliente {
 
 
         if (!data) {
-
             return [];
-
         }
 
 
@@ -79,7 +72,6 @@ class Cliente {
                 "Error leyendo techCartClientes:",
                 error
             );
-
 
             return [];
 
@@ -113,7 +105,7 @@ class Cliente {
 
 
     // =========================================
-    // INICIAR SESIÓN
+    // LOGIN
     // =========================================
 
     static iniciarSesion(
@@ -153,12 +145,8 @@ class Cliente {
 
 
                 const coincidePassword =
-                    String(
-                        cliente.password
-                    ) ===
-                    String(
-                        password
-                    );
+                    String(cliente.password) ===
+                    String(password);
 
 
                 return (
@@ -220,11 +208,6 @@ class Cliente {
                     );
 
 
-                /*
-                 Permite encontrar cuentas antiguas
-                 tanto por usuario como por nombre.
-                */
-
                 const coincideIdentificador =
                     usuarioGuardado ===
                     identificadorBuscado
@@ -251,60 +234,48 @@ class Cliente {
 
 
     // =========================================
-    // USUARIO EXISTE
+    // USUARIO DUPLICADO
     // =========================================
 
-    static usuarioExiste(
-        usuario
-    ) {
+    static usuarioExiste(usuario) {
 
         const clientes =
             Cliente.obtenerClientes();
 
 
         const usuarioBuscado =
-            Cliente.normalizar(
-                usuario
-            );
+            Cliente.normalizar(usuario);
 
 
         return clientes.some(
             cliente =>
-
                 Cliente.normalizar(
                     cliente.usuario
-                ) ===
-                usuarioBuscado
+                ) === usuarioBuscado
         );
 
     }
 
 
     // =========================================
-    // CORREO EXISTE
+    // CORREO DUPLICADO
     // =========================================
 
-    static correoExiste(
-        correo
-    ) {
+    static correoExiste(correo) {
 
         const clientes =
             Cliente.obtenerClientes();
 
 
         const correoBuscado =
-            Cliente.normalizar(
-                correo
-            );
+            Cliente.normalizar(correo);
 
 
         return clientes.some(
             cliente =>
-
                 Cliente.normalizar(
                     cliente.correo
-                ) ===
-                correoBuscado
+                ) === correoBuscado
         );
 
     }
@@ -314,9 +285,7 @@ class Cliente {
     // BUSCAR POR ID
     // =========================================
 
-    static buscarPorId(
-        idCliente
-    ) {
+    static buscarPorId(idCliente) {
 
         const clientes =
             Cliente.obtenerClientes();
@@ -324,14 +293,8 @@ class Cliente {
 
         return clientes.find(
             cliente =>
-
-                String(
-                    cliente.id
-                ) ===
-                String(
-                    idCliente
-                )
-
+                String(cliente.id) ===
+                String(idCliente)
         ) || null;
 
     }
@@ -353,22 +316,13 @@ class Cliente {
         const index =
             clientes.findIndex(
                 cliente =>
-
-                    String(
-                        cliente.id
-                    ) ===
-                    String(
-                        idCliente
-                    )
+                    String(cliente.id) ===
+                    String(idCliente)
             );
 
 
-        if (
-            index === -1
-        ) {
-
+        if (index === -1) {
             return null;
-
         }
 
 
@@ -383,9 +337,7 @@ class Cliente {
 
         localStorage.setItem(
             "techCartClientes",
-            JSON.stringify(
-                clientes
-            )
+            JSON.stringify(clientes)
         );
 
 

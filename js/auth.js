@@ -1,6 +1,4 @@
 import Cliente from "./models/Cliente.js";
-import Cliente
-    from "./models/Cliente.js";
 
 
 document.addEventListener(
@@ -8,16 +6,9 @@ document.addEventListener(
     () => {
 
 
-        // =========================================
-        // CONFIGURACIÓN
-        // =========================================
-
         const COLOR_PRINCIPAL =
             "#0875ec";
 
-
-        const TERMS_VERSION =
-            "1.0";
 
         const TERMS_VERSION =
             "1.0";
@@ -36,6 +27,7 @@ document.addEventListener(
         passwordButtons.forEach(
             button => {
 
+
                 button.addEventListener(
                     "click",
                     () => {
@@ -43,8 +35,6 @@ document.addEventListener(
 
                         const targetId =
                             button.dataset.target;
-                        const targetId =
-                            button.dataset.target;
 
 
                         const input =
@@ -54,29 +44,7 @@ document.addEventListener(
 
 
                         if (!input) {
-
-                        const input =
-                            document.getElementById(
-                                targetId
-                            );
-
-
-                        if (!input) {
-
                             return;
-
-                        }
-
-
-                        if (
-                            input.type ===
-                            "password"
-                        ) {
-
-                            input.type =
-                                "text";
-                            return;
-
                         }
 
 
@@ -88,15 +56,6 @@ document.addEventListener(
                             input.type =
                                 "text";
 
-                            button.textContent =
-                                "🙈";
-
-                        }
-
-                        else {
-
-                            input.type =
-                                "password";
 
                             button.textContent =
                                 "🙈";
@@ -110,10 +69,6 @@ document.addEventListener(
 
 
                             button.textContent =
-                                "👁";
-
-                        }
-
                                 "👁";
 
                         }
@@ -129,21 +84,6 @@ document.addEventListener(
         // TÉRMINOS Y CONDICIONES
         // =========================================
 
-        // =========================================
-        // TÉRMINOS
-        // =========================================
-
-        const termsButton =
-            document.getElementById(
-                "termsButton"
-            );
-
-
-        if (termsButton) {
-
-            termsButton.addEventListener(
-                "click",
-                () => {
         const termsButton =
             document.getElementById(
                 "termsButton"
@@ -156,10 +96,6 @@ document.addEventListener(
                 "click",
                 () => {
 
-                    Swal.fire({
-
-                        title:
-                            "Términos y condiciones de TechCart",
 
                     Swal.fire({
 
@@ -188,47 +124,6 @@ document.addEventListener(
                                 <h3>
                                     1. Naturaleza del servicio
                                 </h3>
-                        width:
-                            760,
-
-                        confirmButtonText:
-                            "Entendido",
-
-                        confirmButtonColor:
-                        COLOR_PRINCIPAL,
-
-                        html: `
-
-                            <div style="
-                                text-align:left;
-                                line-height:1.6;
-                                max-height:420px;
-                                overflow-y:auto;
-                                padding-right:12px;
-                            ">
-
-                                <h3>
-                                    1. Naturaleza de TechCart
-                                </h3>
-
-                                <p>
-                                    TechCart es una plataforma ficticia
-                                    desarrollada con fines académicos
-                                    para simular una tienda tecnológica.
-                                </p>
-
-
-                                <h3>
-                                    2. Registro
-                                </h3>
-
-                                <p>
-                                    Para utilizar las funciones privadas
-                                    de la aplicación, el usuario debe
-                                    crear una cuenta proporcionando
-                                    nombre, usuario, correo electrónico,
-                                    dirección y contraseña.
-                                </p>
 
                                 <p>
                                     TechCart es una aplicación ficticia
@@ -245,7 +140,8 @@ document.addEventListener(
                                 <p>
                                     El usuario debe crear una cuenta
                                     proporcionando nombre, usuario,
-                                    correo, dirección y contraseña.
+                                    correo electrónico, dirección
+                                    y contraseña.
                                 </p>
 
 
@@ -254,8 +150,9 @@ document.addEventListener(
                                 </h3>
 
                                 <p>
-                                    Productos, precios, promociones y
-                                    existencias son datos ficticios.
+                                    Los productos, precios,
+                                    promociones y existencias
+                                    mostrados son ficticios.
                                 </p>
 
 
@@ -264,42 +161,8 @@ document.addEventListener(
                                 </h3>
 
                                 <p>
-                                    TechCart no procesa pagos ni
-                                <h3>
-                                    3. Cuenta de usuario
-                                </h3>
-
-                                <p>
-                                    Cada usuario y correo electrónico
-                                    deben ser únicos dentro de TechCart.
-                                    El usuario es responsable de sus
-                                    credenciales de acceso dentro de
-                                    esta simulación.
-                                </p>
-
-
-                                <h3>
-                                    4. Productos
-                                </h3>
-
-                                <p>
-                                    Los nombres, precios, existencias,
-                                    ofertas y características de los
-                                    productos son ficticios y se usan
-                                    únicamente para demostrar el
-                                    funcionamiento del proyecto.
-                                </p>
-
-
-                                <h3>
-                                    5. Compras
-                                </h3>
-
-                                <p>
-                                    TechCart simula el proceso de compra,
-                                    carrito y generación de órdenes.
-                                    No se realizan cobros, pagos ni
-                                    transacciones financieras reales.
+                                    TechCart no procesa pagos
+                                    ni transacciones financieras reales.
                                 </p>
 
 
@@ -318,11 +181,9 @@ document.addEventListener(
                                 </h3>
 
                                 <p>
-                                    La modificación de información
-                                    personal requiere verificar la
-                                    El usuario podrá modificar sus datos
-                                    personales después de verificar su
-                                    contraseña actual.
+                                    Para modificar información personal
+                                    el usuario deberá verificar
+                                    su contraseña.
                                 </p>
 
 
@@ -335,39 +196,21 @@ document.addEventListener(
                                     localmente mediante LocalStorage.
                                 </p>
 
-                                <p>
-                                    La información de esta aplicación
-                                    académica se almacena localmente
-                                    mediante LocalStorage en el navegador.
-                                </p>
-
 
                                 <h3>
                                     8. Aceptación
                                 </h3>
 
                                 <p>
-                                    Al registrarse, el usuario acepta
-                                    estos términos para efectos de
-                                    la simulación académica.
+                                    Al crear una cuenta y seleccionar
+                                    la casilla correspondiente,
+                                    el usuario acepta estos términos.
                                 </p>
 
 
                                 <strong>
                                     Versión ${TERMS_VERSION}
                                 </strong>
-                                    Al marcar la casilla de aceptación,
-                                    el usuario declara haber leído y
-                                    aceptado estos términos y condiciones.
-                                </p>
-
-
-                                <p>
-                                    <strong>
-                                        Versión de términos:
-                                        ${TERMS_VERSION}
-                                    </strong>
-                                </p>
 
                             </div>
 
@@ -380,10 +223,6 @@ document.addEventListener(
 
         }
 
-
-        // =========================================
-        // POLÍTICA DE PRIVACIDAD
-        // =========================================
 
         // =========================================
         // PRIVACIDAD
@@ -400,83 +239,15 @@ document.addEventListener(
             privacyButton.addEventListener(
                 "click",
                 () => {
-        const privacyButton =
-            document.getElementById(
-                "privacyButton"
-            );
 
-
-        if (privacyButton) {
-
-            privacyButton.addEventListener(
-                "click",
-                () => {
 
                     Swal.fire({
 
                         title:
                             "Política de privacidad",
 
-                    Swal.fire({
-
-                        title:
-                            "Política de privacidad",
-
-                        confirmButtonText:
-                            "Entendido",
-
-                        confirmButtonColor:
-                        COLOR_PRINCIPAL,
-
-                        html: `
-
-                            <div style="
-                                text-align:left;
-                                line-height:1.6;
-                            ">
-
-                                <h3>
-                                    Datos almacenados
-                                </h3>
-
-                                <p>
-                                    TechCart almacena los datos
-                                    necesarios para simular registro,
-                                    inicio de sesión, perfil y compras.
-                                </p>
-
-
-                                <h3>
-                                    Persistencia
-                                </h3>
-
-                                <p>
-                                    La información se almacena mediante
-                                    LocalStorage del navegador.
-                                </p>
-
-
-                                <h3>
-                                    Uso académico
-                                </h3>
-
-                                <p>
-                                    No deben utilizarse datos personales
-                                    sensibles ni contraseñas reales.
-                                </p>
-
-                            </div>
-
-                        `
-
-                    });
-
-                }
-            );
-
-        }
                         width:
-                            720,
+                            700,
 
                         confirmButtonText:
                             "Entendido",
@@ -489,9 +260,6 @@ document.addEventListener(
                             <div style="
                                 text-align:left;
                                 line-height:1.6;
-                                max-height:400px;
-                                overflow-y:auto;
-                                padding-right:12px;
                             ">
 
                                 <h3>
@@ -501,9 +269,7 @@ document.addEventListener(
                                 <p>
                                     TechCart almacena nombre,
                                     usuario, correo electrónico,
-                                    dirección de envío y contraseña
-                                    para simular las funciones de
-                                    registro y autenticación.
+                                    dirección y contraseña.
                                 </p>
 
 
@@ -512,10 +278,9 @@ document.addEventListener(
                                 </h3>
 
                                 <p>
-                                    La información se utiliza únicamente
-                                    dentro del proyecto para permitir
-                                    iniciar sesión, administrar el perfil,
-                                    utilizar el carrito y generar órdenes.
+                                    Estos datos se utilizan únicamente
+                                    para simular registro, autenticación,
+                                    perfil, carrito y compras.
                                 </p>
 
 
@@ -524,10 +289,8 @@ document.addEventListener(
                                 </h3>
 
                                 <p>
-                                    Los datos se almacenan en
-                                    LocalStorage del navegador.
-                                    TechCart no utiliza un servidor
-                                    externo ni una base de datos real.
+                                    La información permanece almacenada
+                                    en LocalStorage del navegador.
                                 </p>
 
 
@@ -536,32 +299,11 @@ document.addEventListener(
                                 </h3>
 
                                 <p>
-                                    Debido a que TechCart es una
-                                    aplicación académica, no deben
-                                    ingresarse datos personales
-                                    sensibles ni contraseñas utilizadas
+                                    No deben ingresarse datos sensibles
+                                    ni contraseñas utilizadas
                                     en servicios reales.
                                 </p>
 
-
-                                <h3>
-                                    Eliminación
-                                </h3>
-
-                                <p>
-                                    Los datos pueden eliminarse limpiando
-                                    el almacenamiento local del navegador.
-                                </p>
-
-
-        // =========================================
-        // REGISTRO
-        // =========================================
-
-        const signupForm =
-            document.getElementById(
-                "signupForm"
-            );
                             </div>
 
                         `
@@ -571,14 +313,6 @@ document.addEventListener(
                 }
             );
 
-        if (signupForm) {
-
-            signupForm.addEventListener(
-                "submit",
-                async event => {
-
-
-                    event.preventDefault();
         }
 
 
@@ -593,6 +327,14 @@ document.addEventListener(
 
 
         if (signupForm) {
+
+            signupForm.addEventListener(
+                "submit",
+                async event => {
+
+
+                    event.preventDefault();
+
 
                     const nombre =
                         document
@@ -628,34 +370,7 @@ document.addEventListener(
                             )
                             .value
                             .trim();
-            signupForm.addEventListener(
-                "submit",
-                async event => {
 
-
-                    event.preventDefault();
-
-
-                    // =================================
-                    // OBTENER DATOS
-                    // =================================
-
-                    const nombre =
-                        document
-                            .getElementById(
-                                "signupName"
-                            )
-                            .value
-                            .trim();
-
-
-                    const usuario =
-                        document
-                            .getElementById(
-                                "signupUser"
-                            )
-                            .value
-                            .trim();
 
                     const password =
                         document
@@ -664,13 +379,6 @@ document.addEventListener(
                             )
                             .value;
 
-                    const correo =
-                        document
-                            .getElementById(
-                                "signupEmail"
-                            )
-                            .value
-                            .trim();
 
                     const confirmation =
                         document
@@ -692,9 +400,8 @@ document.addEventListener(
                             : false;
 
 
-
                     // =================================
-                    // CAMPOS
+                    // CAMPOS OBLIGATORIOS
                     // =================================
 
                     if (
@@ -705,7 +412,6 @@ document.addEventListener(
                         !password ||
                         !confirmation
                     ) {
-
 
                         await Swal.fire({
 
@@ -729,7 +435,6 @@ document.addEventListener(
                     }
 
 
-
                     // =================================
                     // NOMBRE
                     // =================================
@@ -737,7 +442,6 @@ document.addEventListener(
                     if (
                         nombre.length < 3
                     ) {
-
 
                         await Swal.fire({
 
@@ -761,7 +465,6 @@ document.addEventListener(
                     }
 
 
-
                     // =================================
                     // USUARIO
                     // =================================
@@ -769,7 +472,6 @@ document.addEventListener(
                     if (
                         usuario.length < 4
                     ) {
-
 
                         await Swal.fire({
 
@@ -793,7 +495,6 @@ document.addEventListener(
                     }
 
 
-
                     // =================================
                     // CORREO
                     // =================================
@@ -808,7 +509,6 @@ document.addEventListener(
                         )
                     ) {
 
-
                         await Swal.fire({
 
                             icon:
@@ -818,7 +518,7 @@ document.addEventListener(
                                 "Correo inválido",
 
                             text:
-                                "Ingresa un correo válido.",
+                                "Ingresa una dirección de correo válida.",
 
                             confirmButtonColor:
                             COLOR_PRINCIPAL
@@ -831,42 +531,19 @@ document.addEventListener(
                     }
 
 
-
                     // =================================
-                    // PASSWORD
+                    // CONTRASEÑA
                     // =================================
 
                     const passwordRegex =
                         /^(?=.*[A-Za-z])(?=.*\d).{6,}$/;
 
-                    const direccion =
-                        document
-                            .getElementById(
-                                "signupAddress"
-                            )
-                            .value
-                            .trim();
-
-
-                    const password =
-                        document
-                            .getElementById(
-                                "signupPassword"
-                            )
-                            .value;
 
                     if (
                         !passwordRegex.test(
                             password
                         )
                     ) {
-
-                    const confirmation =
-                        document
-                            .getElementById(
-                                "confirmPassword"
-                            )
-                            .value;
 
                         await Swal.fire({
 
@@ -877,7 +554,7 @@ document.addEventListener(
                                 "Contraseña no válida",
 
                             text:
-                                "Debe tener mínimo 6 caracteres, una letra y un número.",
+                                "Debe tener mínimo 6 caracteres e incluir una letra y un número.",
 
                             confirmButtonColor:
                             COLOR_PRINCIPAL
@@ -890,7 +567,6 @@ document.addEventListener(
                     }
 
 
-
                     // =================================
                     // CONFIRMACIÓN
                     // =================================
@@ -899,7 +575,6 @@ document.addEventListener(
                         password !==
                         confirmation
                     ) {
-
 
                         await Swal.fire({
 
@@ -923,7 +598,6 @@ document.addEventListener(
                     }
 
 
-
                     // =================================
                     // TÉRMINOS
                     // =================================
@@ -931,7 +605,6 @@ document.addEventListener(
                     if (
                         !acceptedTerms
                     ) {
-
 
                         await Swal.fire({
 
@@ -955,518 +628,9 @@ document.addEventListener(
                     }
 
 
-
                     // =================================
-                    // DUPLICADOS
+                    // USUARIO DUPLICADO
                     // =================================
-
-                    if (
-                        Cliente.usuarioExiste(
-                            usuario
-                        )
-                    ) {
-
-                    const acceptedTerms =
-                        document
-                            .getElementById(
-                                "acceptTerms"
-                            )
-                            .checked;
-
-                        await Swal.fire({
-
-                            icon:
-                                "error",
-
-                            title:
-                                "Usuario no disponible",
-
-                            text:
-                                "Ese usuario ya está registrado.",
-
-                            confirmButtonColor:
-                            COLOR_PRINCIPAL
-
-                        });
-
-
-                        return;
-
-                    }
-                    // =================================
-                    // VALIDAR CAMPOS
-                    // =================================
-
-                    if (
-                        !nombre ||
-                        !usuario ||
-                        !correo ||
-                        !direccion ||
-                        !password ||
-                        !confirmation
-                    ) {
-
-                        await Swal.fire({
-
-                            icon:
-                                "warning",
-
-                            title:
-                                "Completa todos los campos",
-
-                            text:
-                                "Todos los datos son obligatorios para crear tu cuenta.",
-
-                            confirmButtonColor:
-                            COLOR_PRINCIPAL
-
-                        });
-
-
-                        return;
-
-                    if (
-                        Cliente.correoExiste(
-                            correo
-                        )
-                    ) {
-
-
-                        await Swal.fire({
-
-                            icon:
-                                "error",
-
-                            title:
-                                "Correo registrado",
-
-                            text:
-                                "Ya existe una cuenta con ese correo.",
-
-                            confirmButtonColor:
-                            COLOR_PRINCIPAL
-
-                        });
-
-
-                        return;
-
-                    }
-
-
-                    }
-
-
-                    // =================================
-                    // VALIDAR NOMBRE
-                    // =================================
-
-                    if (
-                        nombre.length < 3
-                    ) {
-
-                        await Swal.fire({
-
-                            icon:
-                                "warning",
-
-                            title:
-                                "Nombre no válido",
-
-                            text:
-                                "El nombre debe tener al menos 3 caracteres.",
-
-                            confirmButtonColor:
-                            COLOR_PRINCIPAL
-
-                        });
-
-
-                        return;
-
-                    }
-
-                    // =================================
-                    // CREAR CLIENTE
-                    // =================================
-
-                    const nuevoCliente =
-                        new Cliente(
-
-                            Date.now(),
-
-                            nombre,
-
-                            correo,
-
-                            direccion,
-
-                            usuario,
-
-                            password,
-
-                            true,
-
-                            new Date()
-                                .toISOString(),
-
-                            TERMS_VERSION
-
-                        );
-
-
-                    nuevoCliente.registrar();
-
-
-
-                    await Swal.fire({
-
-                        icon:
-                            "success",
-
-                        title:
-                            "¡Cuenta creada!",
-
-                        html: `
-
-                            Bienvenido,
-                            <strong>
-                                ${nombre}
-                            </strong>.
-
-                            <br><br>
-
-                            Ahora puedes iniciar sesión.
-
-                        `,
-
-                        confirmButtonText:
-                            "Iniciar sesión",
-
-                        confirmButtonColor:
-                        COLOR_PRINCIPAL,
-
-                        allowOutsideClick:
-                            false
-                    // =================================
-                    // VALIDAR USUARIO
-                    // =================================
-
-                    if (
-                        usuario.length < 4
-                    ) {
-
-                        await Swal.fire({
-
-                            icon:
-                                "warning",
-
-                            title:
-                                "Usuario muy corto",
-
-                            text:
-                                "El nombre de usuario debe tener al menos 4 caracteres.",
-
-                            confirmButtonColor:
-                            COLOR_PRINCIPAL
-
-                        });
-
-
-                        return;
-
-                    }
-
-
-                    // =================================
-                    // VALIDAR CORREO
-                    // =================================
-
-                    const emailRegex =
-                        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-
-                    window.location.href =
-                        "login.html";
-
-                }
-            );
-
-        }
-
-                    if (
-                        !emailRegex.test(correo)
-                    ) {
-
-                        await Swal.fire({
-
-                            icon:
-                                "warning",
-
-
-        // =========================================
-        // RECUPERAR CONTRASEÑA
-        // =========================================
-
-        const forgotPasswordButton =
-            document.getElementById(
-                "forgotPasswordButton"
-            );
-
-                            title:
-                                "Correo no válido",
-
-                            text:
-                                "Ingresa una dirección de correo válida.",
-
-                            confirmButtonColor:
-                            COLOR_PRINCIPAL
-
-                        });
-
-        if (forgotPasswordButton) {
-
-            forgotPasswordButton
-                .addEventListener(
-                    "click",
-                    async () => {
-                        return;
-
-                    }
-
-                        const result =
-                            await Swal.fire({
-
-                                icon:
-                                    "question",
-
-                                title:
-                                    "Recuperar contraseña",
-
-                                html: `
-
-                                    <p style="
-                                        margin-bottom:18px;
-                                        color:#667389;
-                                    ">
-
-                                        Ingresa el usuario y correo
-                                        asociados a tu cuenta.
-
-                                    </p>
-
-
-                                    <div style="
-                                        text-align:left;
-                                    ">
-                    // =================================
-                    // VALIDAR CONTRASEÑA
-                    // =================================
-
-                    const passwordRegex =
-                        /^(?=.*[A-Za-z])(?=.*\d).{6,}$/;
-
-
-                    if (
-                        !passwordRegex.test(
-                            password
-                        )
-                    ) {
-
-                        await Swal.fire({
-
-                            icon:
-                                "warning",
-
-                            title:
-                                "Contraseña poco segura",
-
-                            text:
-                                "La contraseña debe tener mínimo 6 caracteres e incluir al menos una letra y un número.",
-
-                            confirmButtonColor:
-                            COLOR_PRINCIPAL
-
-                                        <label style="
-                                            display:block;
-                                            margin-bottom:6px;
-                                            font-weight:bold;
-                                        ">
-
-                                            Usuario
-
-                                        </label>
-                        });
-
-
-                        return;
-
-                    }
-
-                                        <input
-                                            id="recoveryUser"
-                                            class="swal2-input"
-                                            placeholder="Ingresa tu usuario"
-                                            style="
-                                                width:100%;
-                                                margin:0 0 15px 0;
-                                            "
-                                        >
-
-                    // =================================
-                    // CONFIRMAR CONTRASEÑA
-                    // =================================
-
-                                        <label style="
-                                            display:block;
-                                            margin-bottom:6px;
-                                            font-weight:bold;
-                                        ">
-
-                                            Correo electrónico
-
-                                        </label>
-
-
-                                        <input
-                                            id="recoveryEmail"
-                                            type="email"
-                                            class="swal2-input"
-                                            placeholder="correo@ejemplo.com"
-                                            style="
-                                                width:100%;
-                                                margin:0;
-                                            "
-                                        >
-
-
-                                    </div>
-
-                                `,
-
-                                showCancelButton:
-                                    true,
-                    if (
-                        password !==
-                        confirmation
-                    ) {
-
-                        await Swal.fire({
-
-                            icon:
-                                "error",
-
-                            title:
-                                "Las contraseñas no coinciden",
-
-                            text:
-                                "Verifica nuevamente las contraseñas ingresadas.",
-
-                            confirmButtonColor:
-                            COLOR_PRINCIPAL
-
-                        });
-
-
-                        return;
-
-                    }
-
-                                confirmButtonText:
-                                    "Verificar cuenta",
-
-                                cancelButtonText:
-                                    "Cancelar",
-
-                                confirmButtonColor:
-                                COLOR_PRINCIPAL,
-
-                                focusConfirm:
-                                    false,
-
-
-                                preConfirm: () => {
-
-
-                                    const usuario =
-                                        document
-                                            .getElementById(
-                                                "recoveryUser"
-                                            )
-                                            .value
-                                            .trim();
-
-
-                                    const correo =
-                                        document
-                                            .getElementById(
-                                                "recoveryEmail"
-                                            )
-                                            .value
-                                            .trim();
-
-                    // =================================
-                    // TÉRMINOS
-                    // =================================
-
-                    if (
-                        !acceptedTerms
-                    ) {
-
-                        await Swal.fire({
-
-                            icon:
-                                "warning",
-
-                            title:
-                                "Aceptación requerida",
-
-                            text:
-                                "Debes aceptar los términos y condiciones y la política de privacidad para crear tu cuenta.",
-
-                            confirmButtonColor:
-                            COLOR_PRINCIPAL
-
-                        });
-
-
-                        return;
-
-                    }
-
-                                    if (
-                                        !usuario ||
-                                        !correo
-                                    ) {
-
-                    // =================================
-                    // VERIFICAR USUARIO DUPLICADO
-                    // =================================
-
-                                        Swal
-                                            .showValidationMessage(
-                                                "Debes ingresar usuario y correo."
-                                            );
-
-
-                                        return false;
-
-                                    }
-
-
-                                    return {
-
-                                        usuario:
-                                        usuario,
-
-                                        correo:
-                                        correo
-
-                                    };
-
-                                }
-
-                            });
 
                     if (
                         Cliente.usuarioExiste(
@@ -1497,7 +661,7 @@ document.addEventListener(
 
 
                     // =================================
-                    // VERIFICAR CORREO DUPLICADO
+                    // CORREO DUPLICADO
                     // =================================
 
                     if (
@@ -1506,13 +670,6 @@ document.addEventListener(
                         )
                     ) {
 
-                        if (
-                            !result.isConfirmed
-                        ) {
-
-                            return;
-
-                        }
                         await Swal.fire({
 
                             icon:
@@ -1522,41 +679,8 @@ document.addEventListener(
                                 "Correo registrado",
 
                             text:
-                                "Ya existe una cuenta asociada a ese correo electrónico.",
+                                "Ya existe una cuenta asociada a ese correo.",
 
-
-                        const cliente =
-                            Cliente
-                                .recuperarPassword(
-
-                                    result.value
-                                        .usuario,
-
-                                    result.value
-                                        .correo
-
-                                );
-
-
-
-                        if (!cliente) {
-
-
-                            await Swal.fire({
-
-                                icon:
-                                    "error",
-
-                                title:
-                                    "Cuenta no encontrada",
-
-                                text:
-                                    "El usuario y correo no corresponden a una cuenta registrada.",
-
-                                confirmButtonColor:
-                                COLOR_PRINCIPAL
-
-                            });
                             confirmButtonColor:
                             COLOR_PRINCIPAL
 
@@ -1592,49 +716,13 @@ document.addEventListener(
                             new Date()
                                 .toISOString(),
 
-                            return;
-
-                        }
-
-
-
-                        await Swal.fire({
                             TERMS_VERSION
 
                         );
 
 
-                    // =================================
-                    // GUARDAR CLIENTE
-                    // =================================
-
                     nuevoCliente.registrar();
 
-                            icon:
-                                "success",
-
-                            title:
-                                "Cuenta verificada",
-
-                            html: `
-
-                                <p>
-                                    Tu contraseña registrada es:
-                                </p>
-
-
-                                <div style="
-                                    margin-top:15px;
-                                    padding:15px;
-                                    background:#f2f6fb;
-                                    color:#0875ec;
-                                    border-radius:8px;
-                                    font-size:20px;
-                                    font-weight:bold;
-                                ">
-                    // =================================
-                    // CONFIRMACIÓN
-                    // =================================
 
                     await Swal.fire({
 
@@ -1646,19 +734,14 @@ document.addEventListener(
 
                         html: `
 
-                            <p>
-                                Bienvenido a TechCart,
-                                <strong>
-                                    ${nombre}
-                                </strong>.
-                            </p>
+                            Bienvenido,
+                            <strong>
+                                ${nombre}
+                            </strong>.
 
-                            <p style="
-                                margin-top:8px;
-                            ">
-                                Tu cuenta está lista.
-                                Ahora puedes iniciar sesión.
-                            </p>
+                            <br><br>
+
+                            Ahora puedes iniciar sesión.
 
                         `,
 
@@ -1671,17 +754,9 @@ document.addEventListener(
                         allowOutsideClick:
                             false
 
-                                    ${cliente.password}
+                    });
 
-                                </div>
 
-                            `,
-
-                            confirmButtonText:
-                                "Volver al inicio de sesión",
-
-                            confirmButtonColor:
-                            COLOR_PRINCIPAL,
                     window.location.href =
                         "login.html";
 
@@ -1690,42 +765,282 @@ document.addEventListener(
 
         }
 
-                            allowOutsideClick:
-                                false
+
+        // =========================================
+        // RECUPERAR CONTRASEÑA
+        // =========================================
+
+        const forgotPasswordButton =
+            document.getElementById(
+                "forgotPasswordButton"
+            );
+
+
+        if (forgotPasswordButton) {
+
+            forgotPasswordButton.addEventListener(
+                "click",
+                async () => {
+
+
+                    const result =
+                        await Swal.fire({
+
+                            icon:
+                                "question",
+
+                            title:
+                                "Recuperar contraseña",
+
+                            html: `
+
+                                <p style="
+                                    margin-bottom:18px;
+                                    color:#667389;
+                                ">
+
+                                    Ingresa tu usuario o nombre
+                                    y el correo asociado a tu cuenta.
+
+                                </p>
+
+
+                                <div style="
+                                    text-align:left;
+                                ">
+
+
+                                    <label style="
+                                        display:block;
+                                        margin-bottom:6px;
+                                        font-weight:bold;
+                                    ">
+
+                                        Usuario o nombre
+
+                                    </label>
+
+
+                                    <input
+                                        id="recoveryUser"
+                                        class="swal2-input"
+                                        placeholder="Usuario o nombre"
+                                        style="
+                                            width:100%;
+                                            margin:0 0 15px 0;
+                                        "
+                                    >
+
+
+                                    <label style="
+                                        display:block;
+                                        margin-bottom:6px;
+                                        font-weight:bold;
+                                    ">
+
+                                        Correo electrónico
+
+                                    </label>
+
+
+                                    <input
+                                        id="recoveryEmail"
+                                        type="email"
+                                        class="swal2-input"
+                                        placeholder="correo@ejemplo.com"
+                                        style="
+                                            width:100%;
+                                            margin:0;
+                                        "
+                                    >
+
+
+                                </div>
+
+                            `,
+
+                            showCancelButton:
+                                true,
+
+                            confirmButtonText:
+                                "Verificar cuenta",
+
+                            cancelButtonText:
+                                "Cancelar",
+
+                            confirmButtonColor:
+                            COLOR_PRINCIPAL,
+
+                            focusConfirm:
+                                false,
+
+
+                            preConfirm: () => {
+
+
+                                const usuario =
+                                    document
+                                        .getElementById(
+                                            "recoveryUser"
+                                        )
+                                        .value
+                                        .trim();
+
+
+                                const correo =
+                                    document
+                                        .getElementById(
+                                            "recoveryEmail"
+                                        )
+                                        .value
+                                        .trim();
+
+
+                                if (
+                                    !usuario ||
+                                    !correo
+                                ) {
+
+                                    Swal.showValidationMessage(
+                                        "Debes ingresar usuario o nombre y correo."
+                                    );
+
+
+                                    return false;
+
+                                }
+
+
+                                return {
+
+                                    usuario:
+                                    usuario,
+
+                                    correo:
+                                    correo
+
+                                };
+
+                            }
 
                         });
 
 
+                    if (
+                        !result.isConfirmed
+                    ) {
 
-                        const loginUser =
-                            document.getElementById(
-                                "loginUser"
-                            );
-
-
-                        if (loginUser) {
-
-                            loginUser.value =
-                                cliente.usuario;
-
-                        }
-
-
-
-                        const loginPassword =
-                            document.getElementById(
-                                "loginPassword"
-                            );
-
-
-                        if (loginPassword) {
-
-                            loginPassword.focus();
-
-                        }
+                        return;
 
                     }
-                );
+
+
+                    const cliente =
+                        Cliente.recuperarPassword(
+
+                            result.value.usuario,
+
+                            result.value.correo
+
+                        );
+
+
+                    if (!cliente) {
+
+                        await Swal.fire({
+
+                            icon:
+                                "error",
+
+                            title:
+                                "Cuenta no encontrada",
+
+                            text:
+                                "El usuario/nombre y correo no corresponden a una cuenta registrada.",
+
+                            confirmButtonColor:
+                            COLOR_PRINCIPAL
+
+                        });
+
+
+                        return;
+
+                    }
+
+
+                    await Swal.fire({
+
+                        icon:
+                            "success",
+
+                        title:
+                            "Cuenta verificada",
+
+                        html: `
+
+                            <p>
+                                Tu contraseña registrada es:
+                            </p>
+
+
+                            <div style="
+                                margin-top:15px;
+                                padding:15px;
+                                background:#f2f6fb;
+                                color:#0875ec;
+                                border-radius:8px;
+                                font-size:20px;
+                                font-weight:bold;
+                            ">
+
+                                ${cliente.password}
+
+                            </div>
+
+                        `,
+
+                        confirmButtonText:
+                            "Volver al inicio de sesión",
+
+                        confirmButtonColor:
+                        COLOR_PRINCIPAL,
+
+                        allowOutsideClick:
+                            false
+
+                    });
+
+
+                    const loginUser =
+                        document.getElementById(
+                            "loginUser"
+                        );
+
+
+                    if (loginUser) {
+
+                        loginUser.value =
+                            cliente.usuario ||
+                            cliente.correo;
+
+                    }
+
+
+                    const loginPassword =
+                        document.getElementById(
+                            "loginPassword"
+                        );
+
+
+                    if (loginPassword) {
+
+                        loginPassword.focus();
+
+                    }
+
+                }
+            );
 
         }
 
@@ -1745,9 +1060,11 @@ document.addEventListener(
 
             let intentos =
                 Number(
+
                     sessionStorage.getItem(
                         "techCartLoginAttempts"
                     )
+
                 ) || 0;
 
 
@@ -1757,10 +1074,6 @@ document.addEventListener(
                 );
 
 
-            // =====================================
-            // SI YA ESTÁ BLOQUEADO
-            // =====================================
-
             if (
                 intentos >= 3 &&
                 submitButton
@@ -1780,84 +1093,10 @@ document.addEventListener(
 
                     event.preventDefault();
 
-        // =========================================
-        // LOGIN
-        // =========================================
-
-        const loginForm =
-            document.getElementById(
-                "loginForm"
-            );
-
-
-        if (loginForm) {
-                    // =================================
-                    // MÁXIMO DE INTENTOS
-                    // =================================
 
                     if (
                         intentos >= 3
                     ) {
-
-                        await Swal.fire({
-
-                            icon:
-                                "error",
-
-            let intentos =
-                Number(
-
-                    sessionStorage
-                        .getItem(
-                            "techCartLoginAttempts"
-                        )
-
-                ) || 0;
-
-                        });
-
-
-            const submitButton =
-                loginForm
-                    .querySelector(
-                        ".auth-submit"
-                    );
-
-                    }
-
-
-            if (
-                intentos >= 3 &&
-                submitButton
-            ) {
-
-                bloquearLogin(
-                    submitButton
-                );
-
-            }
-
-
-
-            loginForm.addEventListener(
-                "submit",
-                async event => {
-
-
-                    event.preventDefault();
-
-
-                            title:
-                                "Completa los campos",
-
-                    // =================================
-                    // BLOQUEADO
-                    // =================================
-
-                    if (
-                        intentos >= 3
-                    ) {
-
 
                         await Swal.fire({
 
@@ -1881,11 +1120,6 @@ document.addEventListener(
                     }
 
 
-
-                    // =================================
-                    // DATOS
-                    // =================================
-
                     const usuarioOCorreo =
                         document
                             .getElementById(
@@ -1894,9 +1128,6 @@ document.addEventListener(
                             .value
                             .trim();
 
-                        sessionStorage.removeItem(
-                            "techCartLoginAttempts"
-                        );
 
                     const password =
                         document
@@ -1906,14 +1137,10 @@ document.addEventListener(
                             .value;
 
 
-                            id:
-                            cliente.id,
-
                     if (
                         !usuarioOCorreo ||
                         !password
                     ) {
-
 
                         await Swal.fire({
 
@@ -1937,11 +1164,6 @@ document.addEventListener(
                     }
 
 
-
-                    // =================================
-                    // VALIDAR
-                    // =================================
-
                     const cliente =
                         Cliente.iniciarSesion(
 
@@ -1952,19 +1174,16 @@ document.addEventListener(
                         );
 
 
-
                     // =================================
-                    // CORRECTO
+                    // LOGIN CORRECTO
                     // =================================
 
                     if (cliente) {
 
 
-                        sessionStorage
-                            .removeItem(
-                                "techCartLoginAttempts"
-                            );
-
+                        sessionStorage.removeItem(
+                            "techCartLoginAttempts"
+                        );
 
 
                         const sesion = {
@@ -1991,30 +1210,18 @@ document.addEventListener(
                         };
 
 
-
                         localStorage.setItem(
-
                             "techCartSesion",
-
                             JSON.stringify(
                                 sesion
                             )
-
                         );
 
-
-                    sessionStorage.setItem(
-                        "techCartLoginAttempts",
-                        intentos.toString()
-                    );
 
                         localStorage.setItem(
                             "isLoggedIn",
                             "true"
                         );
-
-                    const restantes =
-                        3 - intentos;
 
 
                         await Swal.fire({
@@ -2037,7 +1244,6 @@ document.addEventListener(
                         });
 
 
-
                         window.location.href =
                             "../panel/index.html";
 
@@ -2047,35 +1253,26 @@ document.addEventListener(
                     }
 
 
-
                     // =================================
-                    // INCORRECTO
+                    // LOGIN INCORRECTO
                     // =================================
 
                     intentos++;
 
 
-                        await Swal.fire({
-
                     sessionStorage.setItem(
-
                         "techCartLoginAttempts",
-
                         intentos.toString()
-
                     );
-
 
 
                     const restantes =
                         3 - intentos;
 
 
-
                     if (
                         restantes > 0
                     ) {
-
 
                         await Swal.fire({
 
@@ -2107,7 +1304,6 @@ document.addEventListener(
                             );
 
                         }
-
 
 
                         await Swal.fire({
@@ -2149,27 +1345,10 @@ document.addEventListener(
             button.textContent =
                 "Acceso bloqueado";
 
-        // =========================================
-        // BLOQUEAR LOGIN
-        // =========================================
-
-        function bloquearLogin(
-            button
-        ) {
-
-            button.disabled =
-                true;
-
-
-            button.textContent =
-                "Acceso bloqueado";
-
 
             button.style.opacity =
                 "0.6";
 
-            button.style.opacity =
-                "0.6";
 
             button.style.cursor =
                 "not-allowed";
