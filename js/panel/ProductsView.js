@@ -1,11 +1,5 @@
-import Laptop
-    from "../models/Laptop.js";
-
-import Smartphone
-    from "../models/Smartphone.js";
-
-import Accesorio
-    from "../models/Accesorio.js";
+import ProductService
+    from "../services/ProductService.js";
 
 import CarritoCompra
     from "../models/CarritoCompra.js";
@@ -23,10 +17,7 @@ class ProductsView {
                 ".internal-products-grid"
             );
 
-
-        this.productos =
-            this.crearProductos();
-
+        this.productos = [];
 
         this.carrito =
             new CarritoCompra(
@@ -36,119 +27,17 @@ class ProductsView {
     }
 
 
-    // =========================================
-    // PRODUCTOS
-    // =========================================
 
-    crearProductos() {
-
-        return [
-
-            new Laptop(
-                1,
-                "Laptop TechBook Pro",
-                "Laptop de alto rendimiento.",
-                3899900,
-                10,
-                "../img/laptop.png",
-                "Intel Core i7",
-                "8GB",
-                "256GB SSD"
-            ),
-
-
-            new Laptop(
-                2,
-                "Laptop TechBook Air",
-                "Ligera y perfecta para estudiar.",
-                2799900,
-                8,
-                "../img/laptop.png",
-                "Intel Core i5",
-                "8GB",
-                "512GB SSD"
-            ),
-
-
-            new Smartphone(
-                3,
-                "Smartphone Nova X",
-                "Pantalla OLED y cámara avanzada.",
-                2999900,
-                15,
-                "../img/smartphone.png",
-                "Android",
-                "6.7 pulgadas OLED",
-                "108 MP"
-            ),
-
-
-            new Smartphone(
-                4,
-                "Smartphone Nova Lite",
-                "Diseño compacto y gran autonomía.",
-                1799900,
-                20,
-                "../img/smartphone.png",
-                "Android",
-                "6.1 pulgadas",
-                "50 MP"
-            ),
-
-
-            new Accesorio(
-                5,
-                "Audífonos SoundMax",
-                "Cancelación activa de ruido.",
-                749900,
-                25,
-                "../img/headphones.png",
-                "Audífonos inalámbricos"
-            ),
-
-
-            new Accesorio(
-                6,
-                "SmartWatch Fit Pro",
-                "Monitoreo de salud y actividad.",
-                649900,
-                18,
-                "../img/smartwatch.png",
-                "Smartwatch"
-            ),
-
-
-            new Accesorio(
-                7,
-                "Mouse Tech Wireless",
-                "Mouse inalámbrico ergonómico.",
-                129900,
-                30,
-                "../img/headphones.png",
-                "Mouse"
-            ),
-
-
-            new Accesorio(
-                8,
-                "Teclado Tech RGB",
-                "Teclado mecánico para gaming.",
-                249900,
-                20,
-                "../img/laptop.png",
-                "Teclado"
-            )
-
-        ];
-
-    }
 
 
     // =========================================
     // INICIALIZAR
     // =========================================
 
-    init() {
+    async init() {
+
+        this.productos =
+            await ProductService.getProductos();
 
         this.render();
 

@@ -35,7 +35,7 @@ class PanelApp {
     }
 
 
-    init() {
+    async init() {
 
         this.protegerPanel();
 
@@ -45,14 +45,13 @@ class PanelApp {
 
         this.chatbot.init();
 
-        this.productsView.init();
+        await this.productsView.init();
 
         this.cartView.init();
 
         this.router.show("inicio");
 
     }
-
 
     protegerPanel() {
 

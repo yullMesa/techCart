@@ -1,0 +1,130 @@
+[
+  {
+    "tipo": "laptop",
+    "idProducto": 1,
+    "nombre": "Laptop TechBook Pro",
+    "descripcion": "Laptop profesional de alto rendimiento.",
+    "precio": 3899900,
+    "stock": 10,
+    "imagen": "../img/productos/laptop-techbook-pro.png",
+    "procesador": "Intel Core i7",
+    "memoriaRAM": "8GB",
+    "almacenamiento": "256GB SSD"
+  },
+  {
+    "tipo": "laptop",
+    "idProducto": 2,
+    "nombre": "Laptop TechBook Air",
+    "descripcion": "Laptop ligera para estudio y trabajo.",
+    "precio": 2799900,
+    "stock": 8,
+    "imagen": "../img/productos/laptop-techbook-air.png",
+    "procesador": "Intel Core i5",
+    "memoriaRAM": "8GB",
+    "almacenamiento": "512GB SSD"
+  },
+  {
+    "tipo": "smartphone",
+    "idProducto": 3,
+    "nombre": "Smartphone Nova X",
+    "descripcion": "Smartphone premium con pantalla OLED.",
+    "precio": 2999900,
+    "stock": 15,
+    "imagen": "../img/productos/smartphone-nova-x.png",
+    "sistemaOperativo": "Android",
+    "pantalla": "6.7 pulgadas OLED",
+    "camara": "108 MP"
+  },
+  {
+    "tipo": "smartphone",
+    "idProducto": 4,
+    "nombre": "Smartphone Nova Lite",
+    "descripcion": "Smartphone compacto con excelente autonomía.",
+    "precio": 1799900,
+    "stock": 20,
+    "imagen": "../img/productos/smartphone-nova-lite.png",
+    "sistemaOperativo": "Android",
+    "pantalla": "6.1 pulgadas",
+    "camara": "50 MP"
+  },
+  {
+    "tipo": "accesorio",
+    "idProducto": 5,
+    "nombre": "Audífonos SoundMax",
+    "descripcion": "Audífonos inalámbricos con cancelación de ruido.",
+    "precio": 749900,
+    "stock": 25,
+    "imagen": "../img/productos/headphones-soundmax.png",
+    "tipoAccesorio": "Audífonos inalámbricos"
+  },
+  {
+    "tipo": "accesorio",
+    "idProducto": 6,
+    "nombre": "SmartWatch Fit Pro",
+    "descripcion": "Reloj inteligente para salud y actividad física.",
+    "precio": 649900,
+    "stock": 18,
+    "imagen": "../img/productos/smartwatch-fit-pro.png",
+    "tipoAccesorio": "Smartwatch"
+  },
+  {
+    "tipo": "accesorio",
+    "idProducto": 7,
+    "nombre": "Mouse Tech Wireless",
+    "descripcion": "Mouse inalámbrico ergonómico.",
+    "precio": 129900,
+    "stock": 30,
+    "imagen": "../img/productos/mouse-tech-wireless.png",
+    "tipoAccesorio": "Mouse"
+  },
+  {
+    "tipo": "accesorio",
+    "idProducto": 8,
+    "nombre": "Teclado Tech RGB",
+    "descripcion": "Teclado mecánico RGB para gaming.",
+    "precio": 249900,
+    "stock": 20,
+    "imagen": "../img/productos/teclado-tech-rgb.png",
+    "tipoAccesorio": "Teclado"
+  },
+  {
+    "tipo": "accesorio",
+    "idProducto": 9,
+    "nombre": "WebCam Vision Pro",
+    "descripcion": "Cámara web Full HD para videollamadas.",
+    "precio": 219900,
+    "stock": 16,
+    "imagen": "../img/productos/webcam-vision-pro.png",
+    "tipoAccesorio": "Webcam"
+  },
+  {
+    "tipo": "accesorio",
+    "idProducto": 10,
+    "nombre": "Speaker Mini Boom",
+    "descripcion": "Parlante Bluetooth compacto.",
+    "precio": 189900,
+    "stock": 22,
+    "imagen": "../img/productos/speaker-mini-boom.png",
+    "tipoAccesorio": "Audio"
+  },
+  {
+    "tipo": "accesorio",
+    "idProducto": 11,
+    "nombre": "Gaming Controller X",
+    "descripcion": "Control inalámbrico para videojuegos.",
+    "precio": 299900,
+    "stock": 17,
+    "imagen": "../img/productos/gaming-controller-x.png",
+    "tipoAccesorio": "Gaming"
+  },
+  {
+    "tipo": "accesorio",
+    "idProducto": 12,
+    "nombre": "USB-C Hub Pro",
+    "descripcion": "Hub multipuerto USB-C para laptops.",
+    "precio": 159900,
+    "stock": 25,
+    "imagen": "../img/productos/usb-hub-pro.png",
+    "tipoAccesorio": "Conectividad"
+  }
+]
