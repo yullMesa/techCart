@@ -24,30 +24,37 @@ class Cliente {
 
         this.password = password;
 
-        this.termsAccepted =
-            termsAccepted;
-
-        this.termsAcceptedAt =
-            termsAcceptedAt;
-
-        this.termsVersion =
-            termsVersion;
+        this.termsAccepted = termsAccepted;
+        this.termsAcceptedAt = termsAcceptedAt;
+        this.termsVersion = termsVersion;
     }
 
 
     // =========================================
-    // OBTENER TODOS LOS CLIENTES
+    // NORMALIZAR TEXTO
+    // =========================================
+
+    static normalizar(valor) {
+
+        return String(valor ?? "")
+            .trim()
+            .toLowerCase();
+    }
+
+
+    // =========================================
+    // OBTENER CLIENTES
     // =========================================
 
     static obtenerClientes() {
 
-        const datos =
+        const data =
             localStorage.getItem(
                 "techCartClientes"
             );
 
 
-        if (!datos) {
+        if (!data) {
 
             return [];
 
@@ -56,16 +63,23 @@ class Cliente {
 
         try {
 
-            return JSON.parse(datos);
+            const clientes =
+                JSON.parse(data);
+
+
+            return Array.isArray(clientes)
+                ? clientes
+                : [];
 
         }
 
         catch (error) {
 
             console.error(
-                "Error al leer los clientes:",
+                "Error leyendo techCartClientes:",
                 error
             );
+
 
             return [];
 
@@ -75,7 +89,7 @@ class Cliente {
 
 
     // =========================================
-    // REGISTRAR CLIENTE
+    // REGISTRAR
     // =========================================
 
     registrar() {
@@ -94,29 +108,12 @@ class Cliente {
 
 
         return true;
+
     }
 
 
     // =========================================
-    // BUSCAR CLIENTE POR ID
-    // =========================================
-
-    static buscarPorId(idCliente) {
-
-        const clientes =
-            Cliente.obtenerClientes();
-
-
-        return clientes.find(
-            cliente =>
-                String(cliente.id) ===
-                String(idCliente)
-        ) || null;
-    }
-
-
-    // =========================================
-    // VALIDAR LOGIN
+    // INICIAR SESIÓN
     // =========================================
 
     static iniciarSesion(
@@ -129,84 +126,214 @@ class Cliente {
 
 
         const identificador =
-            usuarioOCorreo
-                .trim()
-                .toLowerCase();
+            Cliente.normalizar(
+                usuarioOCorreo
+            );
 
 
         return clientes.find(
             cliente => {
 
-                const coincideUsuario =
-                    cliente.usuario
-                        .toLowerCase() ===
-                    identificador;
+
+                const usuario =
+                    Cliente.normalizar(
+                        cliente.usuario
+                    );
 
 
-                const coincideCorreo =
-                    cliente.correo
-                        .toLowerCase() ===
-                    identificador;
+                const correo =
+                    Cliente.normalizar(
+                        cliente.correo
+                    );
+
+
+                const coincideIdentificador =
+                    usuario === identificador ||
+                    correo === identificador;
 
 
                 const coincidePassword =
-                    cliente.password ===
-                    password;
+                    String(
+                        cliente.password
+                    ) ===
+                    String(
+                        password
+                    );
 
 
                 return (
-                    (
-                        coincideUsuario ||
-                        coincideCorreo
-                    )
-                    &&
+                    coincideIdentificador &&
                     coincidePassword
                 );
 
             }
+
         ) || null;
+
     }
 
 
     // =========================================
-    // COMPROBAR USUARIO DUPLICADO
+    // RECUPERAR CONTRASEÑA
     // =========================================
 
-    static usuarioExiste(usuario) {
+    static recuperarPassword(
+        usuarioONombre,
+        correo
+    ) {
 
         const clientes =
             Cliente.obtenerClientes();
 
 
-        return clientes.some(
-            cliente =>
-                cliente.usuario
-                    .toLowerCase() ===
-                usuario
-                    .trim()
-                    .toLowerCase()
-        );
-    }
+        const identificadorBuscado =
+            Cliente.normalizar(
+                usuarioONombre
+            );
 
 
-    // =========================================
-    // COMPROBAR CORREO DUPLICADO
-    // =========================================
-
-    static correoExiste(correo) {
-
-        const clientes =
-            Cliente.obtenerClientes();
-
-
-        return clientes.some(
-            cliente =>
-                cliente.correo
-                    .toLowerCase() ===
+        const correoBuscado =
+            Cliente.normalizar(
                 correo
-                    .trim()
-                    .toLowerCase()
+            );
+
+
+        return clientes.find(
+            cliente => {
+
+
+                const usuarioGuardado =
+                    Cliente.normalizar(
+                        cliente.usuario
+                    );
+
+
+                const nombreGuardado =
+                    Cliente.normalizar(
+                        cliente.nombre
+                    );
+
+
+                const correoGuardado =
+                    Cliente.normalizar(
+                        cliente.correo
+                    );
+
+
+                /*
+                 Permite encontrar cuentas antiguas
+                 tanto por usuario como por nombre.
+                */
+
+                const coincideIdentificador =
+                    usuarioGuardado ===
+                    identificadorBuscado
+                    ||
+                    nombreGuardado ===
+                    identificadorBuscado;
+
+
+                const coincideCorreo =
+                    correoGuardado ===
+                    correoBuscado;
+
+
+                return (
+                    coincideIdentificador &&
+                    coincideCorreo
+                );
+
+            }
+
+        ) || null;
+
+    }
+
+
+    // =========================================
+    // USUARIO EXISTE
+    // =========================================
+
+    static usuarioExiste(
+        usuario
+    ) {
+
+        const clientes =
+            Cliente.obtenerClientes();
+
+
+        const usuarioBuscado =
+            Cliente.normalizar(
+                usuario
+            );
+
+
+        return clientes.some(
+            cliente =>
+
+                Cliente.normalizar(
+                    cliente.usuario
+                ) ===
+                usuarioBuscado
         );
+
+    }
+
+
+    // =========================================
+    // CORREO EXISTE
+    // =========================================
+
+    static correoExiste(
+        correo
+    ) {
+
+        const clientes =
+            Cliente.obtenerClientes();
+
+
+        const correoBuscado =
+            Cliente.normalizar(
+                correo
+            );
+
+
+        return clientes.some(
+            cliente =>
+
+                Cliente.normalizar(
+                    cliente.correo
+                ) ===
+                correoBuscado
+        );
+
+    }
+
+
+    // =========================================
+    // BUSCAR POR ID
+    // =========================================
+
+    static buscarPorId(
+        idCliente
+    ) {
+
+        const clientes =
+            Cliente.obtenerClientes();
+
+
+        return clientes.find(
+            cliente =>
+
+                String(
+                    cliente.id
+                ) ===
+                String(
+                    idCliente
+                )
+
+        ) || null;
+
     }
 
 
@@ -226,12 +353,19 @@ class Cliente {
         const index =
             clientes.findIndex(
                 cliente =>
-                    String(cliente.id) ===
-                    String(idCliente)
+
+                    String(
+                        cliente.id
+                    ) ===
+                    String(
+                        idCliente
+                    )
             );
 
 
-        if (index === -1) {
+        if (
+            index === -1
+        ) {
 
             return null;
 
@@ -249,11 +383,14 @@ class Cliente {
 
         localStorage.setItem(
             "techCartClientes",
-            JSON.stringify(clientes)
+            JSON.stringify(
+                clientes
+            )
         );
 
 
         return clientes[index];
+
     }
 
 }

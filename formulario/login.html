@@ -5,16 +5,19 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Iniciar sesión | TechCart</title>
 
-    <link rel="stylesheet"
-          href="../css/auth.css">
+    <link
+            rel="stylesheet"
+            href="../css/auth.css"
+    >
 
 </head>
-
 
 <body>
 
@@ -28,52 +31,77 @@
 
     <section class="auth-brand">
 
-        <a href="../index.html"
-           class="auth-logo">
+
+        <a
+                href="../index.html"
+                class="auth-logo"
+        >
 
             🛒
 
             <span>
-            Tech<strong>Cart</strong>
-        </span>
+                Tech<strong>Cart</strong>
+            </span>
 
         </a>
 
 
         <div class="brand-content">
 
-        <span class="brand-tag">
-            TECNOLOGÍA SIN LÍMITES
-        </span>
+
+            <span class="brand-tag">
+                TECNOLOGÍA SIN LÍMITES
+            </span>
+
 
             <h1>
+
                 Bienvenido de nuevo
                 a <span>TechCart</span>
+
             </h1>
 
+
             <p>
+
                 Inicia sesión para descubrir nuestros productos,
                 administrar tu carrito y realizar tus compras.
+
             </p>
+
 
             <div class="brand-benefits">
 
+
                 <div>
+
                     <span>✓</span>
+
                     Accede al catálogo completo
+
                 </div>
 
+
                 <div>
+
                     <span>✓</span>
+
                     Guarda productos en tu carrito
+
                 </div>
 
+
                 <div>
+
                     <span>✓</span>
+
                     Consulta tus compras
+
                 </div>
+
 
             </div>
+
 
         </div>
 
@@ -86,6 +114,7 @@
             >
 
         </div>
+
 
     </section>
 
@@ -114,14 +143,20 @@
             </div>
 
 
+
             <form id="loginForm">
 
+
+                <!-- USUARIO -->
 
                 <div class="form-group">
 
                     <label for="loginUser">
+
                         Usuario o correo
+
                     </label>
+
 
                     <input
                             type="text"
@@ -133,10 +168,15 @@
                 </div>
 
 
+
+                <!-- PASSWORD -->
+
                 <div class="form-group">
 
                     <label for="loginPassword">
+
                         Contraseña
+
                     </label>
 
 
@@ -149,10 +189,13 @@
                                 required
                         >
 
+
                         <button
                                 type="button"
                                 class="toggle-password"
-                                data-target="loginPassword">
+                                data-target="loginPassword"
+                                aria-label="Mostrar contraseña"
+                        >
 
                             👁
 
@@ -163,7 +206,11 @@
                 </div>
 
 
+
+                <!-- OPCIONES -->
+
                 <div class="form-options">
+
 
                     <label class="remember">
 
@@ -177,16 +224,29 @@
                     </label>
 
 
-                    <a href="#">
+                    <!-- YA NO HAY href="#" -->
+
+                    <button
+                            type="button"
+                            class="forgot-password-link"
+                            id="forgotPasswordButton"
+                    >
+
                         ¿Olvidaste tu contraseña?
-                    </a>
+
+                    </button>
+
 
                 </div>
 
 
+
+                <!-- LOGIN -->
+
                 <button
                         type="submit"
-                        class="auth-submit">
+                        class="auth-submit"
+                >
 
                     Iniciar sesión
 
@@ -196,6 +256,7 @@
             </form>
 
 
+
             <div class="auth-divider">
 
                 <span>
@@ -203,6 +264,7 @@
                 </span>
 
             </div>
+
 
 
             <p class="auth-switch">
@@ -216,9 +278,11 @@
             </p>
 
 
+
             <a
                     href="../index.html"
-                    class="back-home">
+                    class="back-home"
+            >
 
                 ← Volver a la tienda
 
@@ -227,15 +291,27 @@
 
         </div>
 
+
     </section>
 
 
 </div>
 
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<script src="../js/auth.js"></script>
+<!-- SWEETALERT -->
+
+<script
+        src="https://cdn.jsdelivr.net/npm/sweetalert2@11">
+</script>
+
+
+<!-- IMPORTANTE: TYPE MODULE -->
+
+<script
+        type="module"
+        src="../js/auth.js">
+</script>
 
 
 </body>

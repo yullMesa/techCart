@@ -670,6 +670,11 @@ input {
 
 }
 /* ========================================= */
+/* RECUPERAR CONTRASEÑA */
+/* ========================================= */
+
+.forgot-password-link {
+    border: none;
 /* ENLACES LEGALES */
 /* ========================================= */
 
@@ -682,6 +687,15 @@ input {
     background: transparent;
 
     color: #0875ec;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.forgot-password-link:hover {
+    text-decoration: underline;
 
     font: inherit;
 
