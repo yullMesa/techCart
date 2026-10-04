@@ -1715,6 +1715,415 @@ a {
 }
 
 
+/* ===================================================== */
+/* HU-06 - ÓRDENES Y RECIBOS */
+/* ===================================================== */
+
+.orders-container {
+    width: 100%;
+    max-width: 1000px;
+
+    display: grid;
+    gap: 25px;
+
+    margin: 0 auto;
+}
+
+
+/* ========================================= */
+/* RECIBO */
+/* ========================================= */
+
+.order-receipt {
+    overflow: hidden;
+
+    border: 1px solid #e3e9f1;
+    border-radius: 16px;
+
+    background: white;
+
+    box-shadow:
+            0 10px 30px
+            rgba(35, 54, 89, 0.05);
+}
+
+
+/* ========================================= */
+/* HEADER */
+/* ========================================= */
+
+.receipt-header {
+    padding: 20px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    border-bottom: 1px solid #edf0f4;
+}
+
+.receipt-brand {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.receipt-logo {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #edf6ff;
+
+    font-size: 21px;
+}
+
+.receipt-brand h3 {
+    color: #101b3d;
+
+    font-size: 19px;
+}
+
+.receipt-brand h3 span {
+    color: #0875ec;
+}
+
+.receipt-brand p {
+    margin-top: 3px;
+
+    color: #7e899b;
+
+    font-size: 10px;
+}
+
+
+/* ========================================= */
+/* ESTADO */
+/* ========================================= */
+
+.receipt-status-area {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.order-status {
+    padding: 7px 11px;
+
+    border-radius: 20px;
+
+    background: #dcf8f0;
+
+    color: #10917f;
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.new-order-badge {
+    padding: 7px 11px;
+
+    border-radius: 20px;
+
+    background: #e7f2ff;
+
+    color: #0875ec;
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* ========================================= */
+/* INFORMACIÓN */
+/* ========================================= */
+
+.receipt-info-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+    padding: 20px 24px;
+
+    background: #fafcff;
+}
+
+.receipt-info-grid small {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #8490a2;
+
+    font-size: 10px;
+}
+
+.receipt-info-grid strong {
+    color: #101b3d;
+
+    font-size: 12px;
+
+    word-break: break-word;
+}
+
+
+/* ========================================= */
+/* PRODUCTOS */
+/* ========================================= */
+
+.receipt-products {
+    padding: 20px 24px;
+}
+
+.receipt-table-header,
+.receipt-product-row {
+    display: grid;
+
+    grid-template-columns:
+        minmax(220px, 1fr)
+        70px
+        130px
+        140px;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.receipt-table-header {
+    padding: 10px 12px;
+
+    border-radius: 8px;
+
+    background: #f2f6fb;
+
+    color: #7c879a;
+
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.receipt-product-row {
+    min-height: 65px;
+
+    padding: 12px;
+
+    border-bottom: 1px solid #edf0f4;
+
+    color: #53617a;
+
+    font-size: 12px;
+}
+
+.receipt-product-name {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.receipt-product-icon {
+    width: 36px;
+    height: 36px;
+
+    flex: 0 0 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background: #f4f7fb;
+}
+
+.receipt-product-name strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #101b3d;
+
+    font-size: 12px;
+}
+
+.receipt-product-name small {
+    color: #8a95a7;
+
+    font-size: 9px;
+}
+
+
+/* ========================================= */
+/* TOTAL */
+/* ========================================= */
+
+.receipt-total-area {
+    padding: 18px 24px;
+
+    display: flex;
+    justify-content: flex-end;
+
+    border-top: 1px solid #edf0f4;
+
+    background: #fafcff;
+}
+
+.receipt-total-area div {
+    min-width: 230px;
+
+    text-align: right;
+}
+
+.receipt-total-area small {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #7e899b;
+
+    font-size: 11px;
+}
+
+.receipt-total-area strong {
+    color: #0875ec;
+
+    font-size: 24px;
+}
+
+
+/* ========================================= */
+/* FOOTER */
+/* ========================================= */
+
+.receipt-footer {
+    padding: 18px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.receipt-footer strong {
+    color: #101b3d;
+
+    font-size: 12px;
+}
+
+.receipt-footer p {
+    margin-top: 4px;
+
+    color: #8a95a7;
+
+    font-size: 10px;
+}
+
+.download-receipt-button {
+    flex-shrink: 0;
+
+    padding: 10px 16px;
+
+    border: 1px solid #0875ec;
+    border-radius: 8px;
+
+    background: white;
+
+    color: #0875ec;
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.download-receipt-button:hover {
+    background: #0875ec;
+
+    color: white;
+}
+
+
+/* ========================================= */
+/* RESPONSIVE */
+/* ========================================= */
+
+@media (max-width: 850px) {
+
+    .receipt-info-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .receipt-table-header {
+        display: none;
+    }
+
+    .receipt-product-row {
+        grid-template-columns:
+            1fr
+            auto;
+
+        gap: 8px;
+    }
+
+    .receipt-product-name {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .receipt-header,
+    .receipt-footer {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .receipt-status-area {
+        flex-wrap: wrap;
+    }
+
+    .receipt-info-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+    .receipt-products,
+    .receipt-header,
+    .receipt-info-grid,
+    .receipt-total-area,
+    .receipt-footer {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .download-receipt-button {
+        width: 100%;
+    }
+
+    .receipt-total-area div {
+        width: 100%;
+
+        text-align: left;
+    }
+
+}
+
 /* ========================================= */
 /* TABLET GRANDE */
 /* ========================================= */
