@@ -1,16 +1,25 @@
 <!DOCTYPE html>
+
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+    >
 
-    <title>TechCart | Panel</title>
+    <title>
+        TechCart | Panel
+    </title>
 
-    <link rel="stylesheet"
-          href="../css/panel.css">
+    <link
+            rel="stylesheet"
+            href="../css/panel.css"
+    >
+
 </head>
 
 
@@ -24,40 +33,61 @@
     <!-- SIDEBAR -->
     <!-- ========================================= -->
 
-    <aside class="sidebar"
-           id="sidebar">
+    <aside
+            class="sidebar"
+            id="sidebar"
+    >
 
+
+        <!-- ========================================= -->
+        <!-- LOGO -->
+        <!-- ========================================= -->
 
         <div class="sidebar-header">
 
-            <a href="#"
-               class="sidebar-logo">
+
+            <a
+                    href="#"
+                    class="sidebar-logo"
+            >
 
                 🛒
 
                 <span>
+
                     Tech<strong>Cart</strong>
+
                 </span>
 
             </a>
 
 
             <button
+                    type="button"
                     class="sidebar-close"
-                    id="sidebarClose">
+                    id="sidebarClose"
+            >
 
                 ✕
+
             </button>
+
 
         </div>
 
 
+
+        <!-- ========================================= -->
         <!-- USUARIO -->
+        <!-- ========================================= -->
 
         <div class="sidebar-user">
 
-            <div class="user-avatar"
-                 id="userAvatar">
+
+            <div
+                    class="user-avatar"
+                    id="userAvatar"
+            >
 
                 U
 
@@ -66,113 +96,189 @@
 
             <div>
 
+
                 <strong id="sidebarUserName">
+
                     Usuario
+
                 </strong>
 
+
                 <small id="sidebarUserEmail">
+
                     usuario@email.com
+
                 </small>
 
+
             </div>
+
 
         </div>
 
 
+
+        <!-- ========================================= -->
         <!-- MENÚ -->
+        <!-- ========================================= -->
 
         <nav class="sidebar-menu">
 
 
+            <!-- INICIO -->
+
             <button
+                    type="button"
                     class="menu-item active"
-                    data-view="inicio">
+                    data-view="inicio"
+            >
 
                 <span class="menu-icon">
+
                     🏠
+
                 </span>
 
+
                 <span>
+
                     Inicio
+
                 </span>
 
             </button>
 
 
+
+            <!-- PRODUCTOS -->
+
             <button
+                    type="button"
                     class="menu-item"
-                    data-view="productos">
+                    data-view="productos"
+            >
 
                 <span class="menu-icon">
+
                     💻
+
                 </span>
 
+
                 <span>
+
                     Productos
+
                 </span>
 
             </button>
 
 
+
+            <!-- CATEGORÍAS -->
+
             <button
+                    type="button"
                     class="menu-item"
-                    data-view="categorias">
+                    data-view="categorias"
+            >
 
                 <span class="menu-icon">
+
                     🗂️
+
                 </span>
 
+
                 <span>
+
                     Categorías
+
                 </span>
 
             </button>
 
 
+
+            <!-- CARRITO -->
+
             <button
+                    type="button"
                     class="menu-item"
-                    data-view="carrito">
+                    data-view="carrito"
+            >
 
                 <span class="menu-icon">
+
                     🛒
+
                 </span>
 
+
                 <span>
+
                     Mi carrito
+
                 </span>
 
-                <span class="sidebar-badge">
+
+                <span
+                        class="sidebar-badge"
+                        id="sidebarCartCount"
+                >
+
                     0
+
                 </span>
 
             </button>
 
 
+
+            <!-- COMPRAS -->
+
             <button
+                    type="button"
                     class="menu-item"
-                    data-view="compras">
+                    data-view="compras"
+            >
 
                 <span class="menu-icon">
+
                     📦
+
                 </span>
 
+
                 <span>
+
                     Mis compras
+
                 </span>
 
             </button>
 
 
+
+            <!-- PERFIL -->
+
             <button
+                    type="button"
                     class="menu-item"
-                    data-view="perfil">
+                    data-view="perfil"
+            >
 
                 <span class="menu-icon">
+
                     👤
+
                 </span>
 
+
                 <span>
+
                     Mi perfil
+
                 </span>
 
             </button>
@@ -181,21 +287,31 @@
         </nav>
 
 
-        <!-- LOGOUT -->
+
+        <!-- ========================================= -->
+        <!-- CERRAR SESIÓN -->
+        <!-- ========================================= -->
 
         <div class="sidebar-footer">
 
+
             <button
+                    type="button"
                     class="logout-button"
-                    id="logoutButton">
+                    id="logoutButton"
+            >
 
                 <span>
+
                     🚪
+
                 </span>
+
 
                 Cerrar sesión
 
             </button>
+
 
         </div>
 
@@ -211,16 +327,21 @@
     <div class="main-area">
 
 
-        <!-- HEADER -->
+        <!-- ========================================= -->
+        <!-- TOPBAR -->
+        <!-- ========================================= -->
 
         <header class="topbar">
 
 
             <div class="topbar-left">
 
+
                 <button
+                        type="button"
                         class="menu-toggle"
-                        id="menuToggle">
+                        id="menuToggle"
+                >
 
                     ☰
 
@@ -229,21 +350,36 @@
 
                 <div>
 
+
                     <h1 id="pageTitle">
+
                         Inicio
+
                     </h1>
 
+
                     <p id="pageSubtitle">
+
                         Bienvenido a tu espacio TechCart
+
                     </p>
 
+
                 </div>
+
 
             </div>
 
 
+
+            <!-- ========================================= -->
+            <!-- ACCIONES SUPERIORES -->
+            <!-- ========================================= -->
+
             <div class="topbar-actions">
 
+
+                <!-- BUSCADOR -->
 
                 <div class="topbar-search">
 
@@ -251,31 +387,52 @@
 
                     <input
                             type="text"
+                            id="globalSearchInput"
                             placeholder="Buscar en TechCart..."
                     >
 
                 </div>
 
 
+
+                <!-- CARRITO -->
+
                 <button
+                        type="button"
                         class="topbar-icon"
-                        data-view-target="carrito">
+                        data-view-target="carrito"
+                >
 
                     🛒
 
-                    <span class="notification">
+
+                    <span
+                            class="notification"
+                            id="topbarCartCount"
+                    >
+
                         0
+
                     </span>
+
 
                 </button>
 
 
-                <button
-                        class="profile-button"
-                        data-view-target="perfil">
 
-                    <div class="mini-avatar"
-                         id="topbarAvatar">
+                <!-- PERFIL -->
+
+                <button
+                        type="button"
+                        class="profile-button"
+                        data-view-target="perfil"
+                >
+
+
+                    <div
+                            class="mini-avatar"
+                            id="topbarAvatar"
+                    >
 
                         U
 
@@ -283,8 +440,11 @@
 
 
                     <span id="topbarUserName">
+
                         Usuario
+
                     </span>
+
 
                 </button>
 
@@ -297,11 +457,13 @@
 
 
         <!-- ========================================= -->
-        <!-- CONTENEDOR SPA -->
+        <!-- SPA -->
         <!-- ========================================= -->
 
-        <main class="spa-content"
-              id="spaContent">
+        <main
+                class="spa-content"
+                id="spaContent"
+        >
 
 
             <!-- ========================================= -->
@@ -310,27 +472,37 @@
 
             <section
                     class="spa-view active-view"
-                    id="view-inicio">
+                    id="view-inicio"
+            >
 
 
+                <!-- ========================================= -->
                 <!-- BIENVENIDA -->
+                <!-- ========================================= -->
 
                 <section class="welcome-card">
 
 
                     <div class="welcome-copy">
 
+
                         <span class="welcome-label">
+
                             TECHCART
+
                         </span>
 
 
                         <h2>
 
                             Hola,
+
                             <span id="welcomeUser">
+
                                 Usuario
+
                             </span>
+
                             👋
 
                         </h2>
@@ -346,14 +518,18 @@
 
 
                         <button
+                                type="button"
                                 class="primary-button"
-                                data-view-target="productos">
+                                data-view-target="productos"
+                        >
 
                             Explorar productos →
 
                         </button>
 
+
                     </div>
+
 
 
                     <div class="welcome-visual">
@@ -367,91 +543,152 @@
 
 
 
+                <!-- ========================================= -->
                 <!-- RESUMEN -->
+                <!-- ========================================= -->
 
                 <section class="summary-grid">
 
 
+                    <!-- PRODUCTOS CARRITO -->
+
                     <article class="summary-card">
+
 
                         <div class="summary-icon blue">
+
                             🛒
+
                         </div>
+
 
                         <div>
 
+
                             <small>
+
                                 Productos en carrito
+
                             </small>
+
 
                             <strong id="dashboardCartCount">
+
                                 0
+
                             </strong>
 
+
                         </div>
+
 
                     </article>
 
 
+
+                    <!-- COMPRAS -->
+
                     <article class="summary-card">
+
 
                         <div class="summary-icon green">
+
                             📦
+
                         </div>
+
 
                         <div>
 
+
                             <small>
+
                                 Compras realizadas
+
                             </small>
 
-                            <strong>
+
+                            <strong id="dashboardOrdersCount">
+
                                 0
+
                             </strong>
 
+
                         </div>
+
 
                     </article>
 
 
+
+                    <!-- OFERTAS -->
+
                     <article class="summary-card">
+
 
                         <div class="summary-icon orange">
+
                             🏷️
+
                         </div>
+
 
                         <div>
 
+
                             <small>
+
                                 Ofertas disponibles
+
                             </small>
 
+
                             <strong>
+
                                 4
+
                             </strong>
 
+
                         </div>
+
 
                     </article>
 
 
+
+                    <!-- DESTACADOS -->
+
                     <article class="summary-card">
 
+
                         <div class="summary-icon purple">
+
                             ⭐
+
                         </div>
+
 
                         <div>
 
+
                             <small>
+
                                 Productos destacados
+
                             </small>
 
+
                             <strong>
+
                                 4
+
                             </strong>
 
+
                         </div>
+
 
                     </article>
 
@@ -460,103 +697,170 @@
 
 
 
-                <!-- ACCESO RÁPIDO -->
+                <!-- ========================================= -->
+                <!-- ACCESOS RÁPIDOS -->
+                <!-- ========================================= -->
 
                 <section class="dashboard-section">
 
 
                     <div class="section-title">
 
+
                         <div>
 
+
                             <h3>
+
                                 Accesos rápidos
+
                             </h3>
 
+
                             <p>
+
                                 ¿Qué quieres hacer?
+
                             </p>
+
 
                         </div>
 
+
                     </div>
+
 
 
                     <div class="quick-grid">
 
 
+                        <!-- PRODUCTOS -->
+
                         <button
+                                type="button"
                                 class="quick-card"
-                                data-view-target="productos">
+                                data-view-target="productos"
+                        >
 
                             <span>
+
                                 💻
+
                             </span>
 
+
                             <strong>
+
                                 Ver productos
+
                             </strong>
 
+
                             <small>
+
                                 Explora nuestro catálogo
+
                             </small>
+
 
                         </button>
 
 
+
+                        <!-- CARRITO -->
+
                         <button
+                                type="button"
                                 class="quick-card"
-                                data-view-target="carrito">
+                                data-view-target="carrito"
+                        >
 
                             <span>
+
                                 🛒
+
                             </span>
 
+
                             <strong>
+
                                 Mi carrito
+
                             </strong>
 
+
                             <small>
+
                                 Revisa tus productos
+
                             </small>
+
 
                         </button>
 
 
+
+                        <!-- COMPRAS -->
+
                         <button
+                                type="button"
                                 class="quick-card"
-                                data-view-target="compras">
+                                data-view-target="compras"
+                        >
 
                             <span>
+
                                 📦
+
                             </span>
 
+
                             <strong>
+
                                 Mis compras
+
                             </strong>
 
+
                             <small>
+
                                 Consulta tus órdenes
+
                             </small>
+
 
                         </button>
 
 
+
+                        <!-- PERFIL -->
+
                         <button
+                                type="button"
                                 class="quick-card"
-                                data-view-target="perfil">
+                                data-view-target="perfil"
+                        >
 
                             <span>
+
                                 👤
+
                             </span>
 
+
                             <strong>
+
                                 Mi perfil
+
                             </strong>
 
+
                             <small>
+
                                 Actualiza tus datos
+
                             </small>
+
 
                         </button>
 
@@ -577,132 +881,45 @@
 
             <section
                     class="spa-view"
-                    id="view-productos">
+                    id="view-productos"
+            >
 
 
                 <div class="section-title">
 
+
                     <div>
 
+
                         <h2>
+
                             Productos
+
                         </h2>
 
-                        <p>
+
+                        <p id="productsSubtitle">
+
                             Explora nuestro catálogo tecnológico.
+
                         </p>
 
+
                     </div>
+
 
                 </div>
 
 
-                <div class="internal-products-grid">
 
+                <!-- ========================================= -->
+                <!-- PRODUCTOS DINÁMICOS -->
+                <!-- ========================================= -->
 
-                    <article class="internal-product-card">
-
-                        <img
-                                src="../img/laptop.png"
-                                alt="Laptop TechBook Pro"
-                        >
-
-                        <h3>
-                            Laptop TechBook Pro
-                        </h3>
-
-                        <p>
-                            8GB RAM · 256GB SSD
-                        </p>
-
-                        <strong>
-                            $3.899.900
-                        </strong>
-
-                        <button>
-                            🛒 Agregar al carrito
-                        </button>
-
-                    </article>
-
-
-                    <article class="internal-product-card">
-
-                        <img
-                                src="../img/smartphone.png"
-                                alt="Smartphone Nova X"
-                        >
-
-                        <h3>
-                            Smartphone Nova X
-                        </h3>
-
-                        <p>
-                            Cámara avanzada · OLED
-                        </p>
-
-                        <strong>
-                            $2.999.900
-                        </strong>
-
-                        <button>
-                            🛒 Agregar al carrito
-                        </button>
-
-                    </article>
-
-
-                    <article class="internal-product-card">
-
-                        <img
-                                src="../img/headphones.png"
-                                alt="Audífonos SoundMax"
-                        >
-
-                        <h3>
-                            Audífonos SoundMax
-                        </h3>
-
-                        <p>
-                            Cancelación de ruido
-                        </p>
-
-                        <strong>
-                            $749.900
-                        </strong>
-
-                        <button>
-                            🛒 Agregar al carrito
-                        </button>
-
-                    </article>
-
-
-                    <article class="internal-product-card">
-
-                        <img
-                                src="../img/smartwatch.png"
-                                alt="SmartWatch Fit Pro"
-                        >
-
-                        <h3>
-                            SmartWatch Fit Pro
-                        </h3>
-
-                        <p>
-                            Actividad y salud
-                        </p>
-
-                        <strong>
-                            $649.900
-                        </strong>
-
-                        <button>
-                            🛒 Agregar al carrito
-                        </button>
-
-                    </article>
-
+                <div
+                        class="internal-products-grid"
+                        id="productsGrid"
+                >
 
                 </div>
 
@@ -717,62 +934,186 @@
 
             <section
                     class="spa-view"
-                    id="view-categorias">
+                    id="view-categorias"
+            >
 
 
                 <div class="section-title">
 
+
                     <div>
 
+
                         <h2>
+
                             Categorías
+
                         </h2>
 
+
                         <p>
+
                             Encuentra productos según tus intereses.
+
                         </p>
+
 
                     </div>
 
+
                 </div>
+
 
 
                 <div class="categories-panel">
 
 
-                    <article>
-                        <span>💻</span>
-                        <strong>Laptops</strong>
+                    <!-- LAPTOPS -->
+
+                    <article
+                            class="category-card"
+                            data-category="laptops"
+                    >
+
+                        <span>
+
+                            💻
+
+                        </span>
+
+
+                        <strong>
+
+                            Laptops
+
+                        </strong>
+
+
                     </article>
 
 
-                    <article>
-                        <span>📱</span>
-                        <strong>Smartphones</strong>
+
+                    <!-- SMARTPHONES -->
+
+                    <article
+                            class="category-card"
+                            data-category="smartphones"
+                    >
+
+                        <span>
+
+                            📱
+
+                        </span>
+
+
+                        <strong>
+
+                            Smartphones
+
+                        </strong>
+
+
                     </article>
 
 
-                    <article>
-                        <span>🎧</span>
-                        <strong>Accesorios</strong>
+
+                    <!-- ACCESORIOS -->
+
+                    <article
+                            class="category-card"
+                            data-category="accesorios"
+                    >
+
+                        <span>
+
+                            🎧
+
+                        </span>
+
+
+                        <strong>
+
+                            Accesorios
+
+                        </strong>
+
+
                     </article>
 
 
-                    <article>
-                        <span>⌚</span>
-                        <strong>Smartwatches</strong>
+
+                    <!-- SMARTWATCHES -->
+
+                    <article
+                            class="category-card"
+                            data-category="smartwatches"
+                    >
+
+                        <span>
+
+                            ⌚
+
+                        </span>
+
+
+                        <strong>
+
+                            Smartwatches
+
+                        </strong>
+
+
                     </article>
 
 
-                    <article>
-                        <span>🔊</span>
-                        <strong>Audio</strong>
+
+                    <!-- AUDIO -->
+
+                    <article
+                            class="category-card"
+                            data-category="audio"
+                    >
+
+                        <span>
+
+                            🔊
+
+                        </span>
+
+
+                        <strong>
+
+                            Audio
+
+                        </strong>
+
+
                     </article>
 
 
-                    <article>
-                        <span>🎮</span>
-                        <strong>Gaming</strong>
+
+                    <!-- GAMING -->
+
+                    <article
+                            class="category-card"
+                            data-category="gaming"
+                    >
+
+                        <span>
+
+                            🎮
+
+                        </span>
+
+
+                        <strong>
+
+                            Gaming
+
+                        </strong>
+
+
                     </article>
 
 
@@ -789,30 +1130,42 @@
 
             <section
                     class="spa-view"
-                    id="view-carrito">
+                    id="view-carrito"
+            >
 
 
-                <div class="empty-state">
+                <div class="section-title">
 
-                    <div class="empty-icon">
-                        🛒
+
+                    <div>
+
+
+                        <h2>
+
+                            Mi carrito
+
+                        </h2>
+
+
+                        <p>
+
+                            Administra los productos seleccionados.
+
+                        </p>
+
+
                     </div>
 
-                    <h2>
-                        Tu carrito está vacío
-                    </h2>
 
-                    <p>
-                        Agrega productos para comenzar tu compra.
-                    </p>
+                </div>
 
-                    <button
-                            class="primary-button"
-                            data-view-target="productos">
 
-                        Explorar productos
 
-                    </button>
+                <!-- ========================================= -->
+                <!-- CARRITO DINÁMICO -->
+                <!-- ========================================= -->
+
+                <div id="cartContent">
 
                 </div>
 
@@ -827,30 +1180,42 @@
 
             <section
                     class="spa-view"
-                    id="view-compras">
+                    id="view-compras"
+            >
 
 
-                <div class="empty-state">
+                <div class="section-title">
 
-                    <div class="empty-icon">
-                        📦
+
+                    <div>
+
+
+                        <h2>
+
+                            Mis compras
+
+                        </h2>
+
+
+                        <p>
+
+                            Consulta tus órdenes realizadas.
+
+                        </p>
+
+
                     </div>
 
-                    <h2>
-                        Aún no tienes compras
-                    </h2>
 
-                    <p>
-                        Aquí aparecerán tus órdenes realizadas.
-                    </p>
+                </div>
 
-                    <button
-                            class="primary-button"
-                            data-view-target="productos">
 
-                        Ir al catálogo
 
-                    </button>
+                <!-- ========================================= -->
+                <!-- ÓRDENES DINÁMICAS -->
+                <!-- ========================================= -->
+
+                <div id="ordersContent">
 
                 </div>
 
@@ -865,7 +1230,8 @@
 
             <section
                     class="spa-view"
-                    id="view-perfil">
+                    id="view-perfil"
+            >
 
 
                 <div class="profile-panel">
@@ -880,30 +1246,41 @@
 
                         <div
                                 class="profile-avatar"
-                                id="profileAvatar">
+                                id="profileAvatar"
+                        >
 
                             U
 
                         </div>
 
 
+
                         <div>
 
+
                             <h2 id="profileName">
+
                                 Usuario
+
                             </h2>
 
+
                             <p id="profileEmail">
+
                                 usuario@email.com
+
                             </p>
 
+
                         </div>
+
 
 
                         <button
                                 type="button"
                                 class="edit-profile-button"
-                                id="editProfileButton">
+                                id="editProfileButton"
+                        >
 
                             ✏️ Cambiar datos
 
@@ -915,27 +1292,33 @@
 
 
                     <!-- ================================= -->
-                    <!-- FORMULARIO -->
+                    <!-- FORMULARIO PERFIL -->
                     <!-- ================================= -->
 
                     <form
                             class="profile-form"
-                            id="profileForm">
+                            id="profileForm"
+                    >
 
 
                         <!-- NOMBRE -->
 
                         <div class="profile-field">
 
+
                             <label for="profileNameInput">
+
                                 Nombre
+
                             </label>
+
 
                             <input
                                     type="text"
                                     id="profileNameInput"
                                     disabled
                             >
+
 
                         </div>
 
@@ -945,15 +1328,20 @@
 
                         <div class="profile-field">
 
+
                             <label for="profileUserInput">
+
                                 Usuario
+
                             </label>
+
 
                             <input
                                     type="text"
                                     id="profileUserInput"
                                     disabled
                             >
+
 
                         </div>
 
@@ -963,15 +1351,20 @@
 
                         <div class="profile-field">
 
+
                             <label for="profileEmailInput">
+
                                 Correo electrónico
+
                             </label>
+
 
                             <input
                                     type="email"
                                     id="profileEmailInput"
                                     disabled
                             >
+
 
                         </div>
 
@@ -981,9 +1374,13 @@
 
                         <div class="profile-field">
 
+
                             <label for="profileAddressInput">
+
                                 Dirección de envío
+
                             </label>
+
 
                             <input
                                     type="text"
@@ -991,34 +1388,46 @@
                                     disabled
                             >
 
+
                         </div>
 
 
 
                         <!-- ================================= -->
-                        <!-- CONTRASEÑA -->
+                        <!-- CAMBIAR CONTRASEÑA -->
                         <!-- ================================= -->
 
                         <div
                                 class="password-change-section"
-                                id="passwordChangeSection">
+                                id="passwordChangeSection"
+                        >
 
 
                             <div class="password-title">
 
+
                                 <div class="password-title-content">
+
 
                                     <div>
 
+
                                         <strong>
+
                                             🔐 Cambiar contraseña
+
                                         </strong>
 
+
                                         <p>
+
                                             Déjala vacía si no deseas modificarla.
+
                                         </p>
 
+
                                     </div>
+
 
 
                                     <button
@@ -1026,22 +1435,33 @@
                                             id="recoverProfilePasswordButton"
                                             class="recover-profile-password"
                                     >
+
                                         🔑 Recuperar contraseña
+
                                     </button>
+
 
                                 </div>
 
+
                             </div>
+
 
 
                             <div class="form-row">
 
 
+                                <!-- NUEVA CONTRASEÑA -->
+
                                 <div class="profile-field">
 
+
                                     <label for="newPasswordInput">
+
                                         Nueva contraseña
+
                                     </label>
+
 
                                     <input
                                             type="password"
@@ -1050,14 +1470,22 @@
                                             disabled
                                     >
 
+
                                 </div>
 
 
+
+                                <!-- CONFIRMAR CONTRASEÑA -->
+
                                 <div class="profile-field">
 
+
                                     <label for="confirmNewPasswordInput">
+
                                         Confirmar nueva contraseña
+
                                     </label>
+
 
                                     <input
                                             type="password"
@@ -1065,6 +1493,7 @@
                                             placeholder="Repite la contraseña"
                                             disabled
                                     >
+
 
                                 </div>
 
@@ -1077,30 +1506,34 @@
 
 
                         <!-- ================================= -->
-                        <!-- BOTONES -->
+                        <!-- BOTONES PERFIL -->
                         <!-- ================================= -->
 
                         <div
                                 class="profile-actions"
-                                id="profileActions">
+                                id="profileActions"
+                        >
 
 
                             <button
                                     type="button"
                                     class="cancel-profile-button"
                                     id="cancelProfileButton"
-                                    hidden>
+                                    hidden
+                            >
 
                                 Cancelar
 
                             </button>
 
 
+
                             <button
                                     type="button"
                                     class="primary-button"
                                     id="saveProfileButton"
-                                    hidden>
+                                    hidden
+                            >
 
                                 Guardar cambios
 
@@ -1133,8 +1566,10 @@
 <!-- OVERLAY MÓVIL -->
 <!-- ========================================= -->
 
-<div class="sidebar-overlay"
-     id="sidebarOverlay">
+<div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+>
 </div>
 
 
@@ -1143,14 +1578,20 @@
 <!-- CHATBOT -->
 <!-- ========================================= -->
 
-<div class="chatbot"
-     id="chatbot">
+<div
+        class="chatbot"
+        id="chatbot"
+>
 
 
-    <!-- VENTANA -->
+    <!-- ========================================= -->
+    <!-- VENTANA CHAT -->
+    <!-- ========================================= -->
 
-    <div class="chat-window"
-         id="chatWindow">
+    <div
+            class="chat-window"
+            id="chatWindow"
+    >
 
 
         <div class="chat-header">
@@ -1163,23 +1604,35 @@
             </div>
 
 
+
             <div>
 
+
                 <strong>
+
                     TechBot
+
                 </strong>
 
+
                 <span>
+
                     ● En línea
+
                 </span>
+
 
             </div>
 
 
+
             <button
-                    id="closeChat">
+                    type="button"
+                    id="closeChat"
+            >
 
                 ✕
+
             </button>
 
 
@@ -1187,15 +1640,20 @@
 
 
 
+        <!-- ========================================= -->
         <!-- MENSAJES -->
+        <!-- ========================================= -->
 
-        <div class="chat-messages"
-             id="chatMessages">
+        <div
+                class="chat-messages"
+                id="chatMessages"
+        >
 
 
             <div class="bot-message">
 
                 👋 ¡Hola!
+
                 Soy TechBot.
 
                 <br><br>
@@ -1209,38 +1667,70 @@
 
 
 
+        <!-- ========================================= -->
         <!-- OPCIONES -->
+        <!-- ========================================= -->
 
         <div class="chat-options">
 
 
-            <button data-chat-action="productos">
+            <button
+                    type="button"
+                    data-chat-action="productos"
+            >
+
                 💻 Ver productos
+
             </button>
 
 
-            <button data-chat-action="carrito">
+            <button
+                    type="button"
+                    data-chat-action="carrito"
+            >
+
                 🛒 Mi carrito
+
             </button>
 
 
-            <button data-chat-action="compras">
+            <button
+                    type="button"
+                    data-chat-action="compras"
+            >
+
                 📦 Mis compras
+
             </button>
 
 
-            <button data-chat-action="envios">
+            <button
+                    type="button"
+                    data-chat-action="envios"
+            >
+
                 🚚 Envíos
+
             </button>
 
 
-            <button data-chat-action="pagos">
+            <button
+                    type="button"
+                    data-chat-action="pagos"
+            >
+
                 💳 Métodos de pago
+
             </button>
 
 
-            <button data-chat-action="perfil">
+            <button
+                    type="button"
+                    data-chat-action="perfil"
+            >
+
                 👤 Mi perfil
+
             </button>
 
 
@@ -1251,18 +1741,26 @@
 
 
 
-    <!-- BOTÓN FLOTANTE -->
+    <!-- ========================================= -->
+    <!-- BOTÓN FLOTANTE CHAT -->
+    <!-- ========================================= -->
 
     <button
+            type="button"
             class="chat-button"
             id="chatButton"
-            aria-label="Abrir chat">
+            aria-label="Abrir chat"
+    >
 
         💬
 
+
         <span class="chat-notification">
+
             1
+
         </span>
+
 
     </button>
 
@@ -1271,11 +1769,25 @@
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- ========================================= -->
+<!-- SWEETALERT -->
+<!-- ========================================= -->
+
+<script
+        src="https://cdn.jsdelivr.net/npm/sweetalert2@11"
+>
+</script>
+
+
+
+<!-- ========================================= -->
+<!-- APLICACIÓN -->
+<!-- ========================================= -->
 
 <script
         type="module"
-        src="../js/panel/PanelApp.js">
+        src="../js/panel/PanelApp.js"
+>
 </script>
 
 

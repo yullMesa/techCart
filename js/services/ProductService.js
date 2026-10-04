@@ -5,7 +5,7 @@ import Smartphone
     from "../models/Smartphone.js";
 
 import Accesorio
-    from "../models/Accesorio.js";
+    from "../models/accesorio.js";
 
 
 class ProductService {
@@ -22,13 +22,18 @@ class ProductService {
 
 
             const response =
-                await fetch(jsonUrl);
+                await fetch(
+                    jsonUrl,
+                    {
+                        cache: "no-store"
+                    }
+                );
 
 
             if (!response.ok) {
 
                 throw new Error(
-                    `Error HTTP: ${response.status}`
+                    `Error HTTP ${response.status}`
                 );
 
             }
@@ -38,13 +43,23 @@ class ProductService {
                 await response.json();
 
 
-            return data
-                .map(producto =>
-                    this.crearProducto(producto)
-                )
-                .filter(producto =>
-                    producto !== null
+            if (!Array.isArray(data)) {
+
+                throw new Error(
+                    "productos.json debe contener un arreglo."
                 );
+
+            }
+
+
+            return data
+                .map(
+                    item =>
+                        this.crearProducto(
+                            item
+                        )
+                )
+                .filter(Boolean);
 
         }
 
@@ -55,6 +70,7 @@ class ProductService {
                 error
             );
 
+
             return [];
 
         }
@@ -62,72 +78,105 @@ class ProductService {
     }
 
 
-    static crearProducto(data) {
+    static crearProducto(
+        data
+    ) {
+
+        let producto =
+            null;
+
 
         switch (
-            data.tipo.toLowerCase()
+            String(data.tipo)
+                .toLowerCase()
             ) {
-
 
             case "laptop":
 
-                return new Laptop(
+                producto =
+                    new Laptop(
+                        data.idProducto,
+                        data.nombre,
+                        data.descripcion,
+                        data.precio,
+                        data.stock,
+                        data.imagen,
+                        data.procesador,
+                        data.memoriaRAM,
+                        data.almacenamiento
+                    );
 
-                    data.idProducto,
-                    data.nombre,
-                    data.descripcion,
-                    data.precio,
-                    data.stock,
-                    data.imagen,
-                    data.procesador,
-                    data.memoriaRAM,
-                    data.almacenamiento
-
-                );
+                break;
 
 
             case "smartphone":
 
-                return new Smartphone(
+                producto =
+                    new Smartphone(
+                        data.idProducto,
+                        data.nombre,
+                        data.descripcion,
+                        data.precio,
+                        data.stock,
+                        data.imagen,
+                        data.sistemaOperativo,
+                        data.pantalla,
+                        data.camara
+                    );
 
-                    data.idProducto,
-                    data.nombre,
-                    data.descripcion,
-                    data.precio,
-                    data.stock,
-                    data.imagen,
-                    data.sistemaOperativo,
-                    data.pantalla,
-                    data.camara
-
-                );
+                break;
 
 
             case "accesorio":
 
-                return new Accesorio(
+                producto =
+                    new Accesorio(
+                        data.idProducto,
+                        data.nombre,
+                        data.descripcion,
+                        data.precio,
+                        data.stock,
+                        data.imagen,
+                        data.tipoAccesorio
+                    );
 
-                    data.idProducto,
-                    data.nombre,
-                    data.descripcion,
-                    data.precio,
-                    data.stock,
-                    data.imagen,
-                    data.tipoAccesorio
-
-                );
+                break;
 
 
             default:
 
                 console.warn(
-                    "Tipo de producto desconocido:",
+                    "Tipo desconocido:",
                     data.tipo
                 );
 
                 return null;
 
         }
+
+
+        /*
+         * Estas propiedades son fundamentales
+         * para categorías, búsqueda y carrito.
+         */
+
+        producto.tipo =
+            data.tipo;
+
+
+        producto.categoria =
+            data.categoria;
+
+
+        producto.imagen =
+            data.imagen;
+
+
+        producto.stock =
+            data.stock;
+
+
+        return producto;
 
     }
 
