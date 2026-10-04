@@ -10,18 +10,15 @@ import ClienteService
 
 class ProfileView {
 
-
     constructor() {
 
         this.session =
             StorageService.getSession();
 
-
         this.editing =
             false;
 
     }
-
 
 
     // =========================================
@@ -31,11 +28,8 @@ class ProfileView {
     init() {
 
         if (!this.session) {
-
             return;
-
         }
-
 
         this.cacheElements();
 
@@ -48,7 +42,6 @@ class ProfileView {
         this.bindEvents();
 
     }
-
 
 
     // =========================================
@@ -110,8 +103,13 @@ class ProfileView {
                 "cancelProfileButton"
             );
 
-    }
 
+        this.recoverPasswordButton =
+            document.getElementById(
+                "recoverProfilePasswordButton"
+            );
+
+    }
 
 
     // =========================================
@@ -127,16 +125,9 @@ class ProfileView {
 
 
         if (!cliente) {
-
             return;
-
         }
 
-
-        /*
-         Utilizamos los datos guardados
-         del cliente como fuente principal.
-        */
 
         this.session = {
 
@@ -167,7 +158,6 @@ class ProfileView {
     }
 
 
-
     // =========================================
     // MOSTRAR PERFIL
     // =========================================
@@ -175,9 +165,7 @@ class ProfileView {
     loadProfile() {
 
         if (!this.session) {
-
             return;
-
         }
 
 
@@ -210,13 +198,11 @@ class ProfileView {
     }
 
 
-
     // =========================================
     // EVENTOS
     // =========================================
 
     bindEvents() {
-
 
         this.editButton?.addEventListener(
             "click",
@@ -247,8 +233,308 @@ class ProfileView {
             }
         );
 
+
+        this.recoverPasswordButton
+            ?.addEventListener(
+                "click",
+                () => {
+
+                    this.recoverPassword();
+
+                }
+            );
+
     }
 
+
+    // =========================================
+    // RECUPERAR CONTRASEÑA
+    // =========================================
+
+    async recoverPassword() {
+
+        const cliente =
+            ClienteService.getClienteById(
+                this.session.id
+            );
+
+
+        if (!cliente) {
+
+            await Swal.fire({
+
+                icon:
+                    "error",
+
+                title:
+                    "Cuenta no encontrada",
+
+                text:
+                    "No fue posible encontrar los datos de tu cuenta.",
+
+                confirmButtonColor:
+                    "#0875ec"
+
+            });
+
+
+            return;
+
+        }
+
+
+        const result =
+            await Swal.fire({
+
+                icon:
+                    "question",
+
+                title:
+                    "Recuperar contraseña",
+
+                html: `
+
+                    <p style="
+                        margin-bottom:18px;
+                        color:#667389;
+                    ">
+                        Confirma tu usuario y correo
+                        para consultar tu contraseña.
+                    </p>
+
+
+                    <div style="
+                        text-align:left;
+                    ">
+
+                        <label style="
+                            display:block;
+                            margin-bottom:6px;
+                            font-weight:bold;
+                        ">
+                            Usuario
+                        </label>
+
+
+                        <input
+                            id="profileRecoveryUser"
+                            class="swal2-input"
+                            placeholder="Ingresa tu usuario"
+                            style="
+                                width:100%;
+                                margin:0 0 15px 0;
+                            "
+                        >
+
+
+                        <label style="
+                            display:block;
+                            margin-bottom:6px;
+                            font-weight:bold;
+                        ">
+                            Correo electrónico
+                        </label>
+
+
+                        <input
+                            id="profileRecoveryEmail"
+                            type="email"
+                            class="swal2-input"
+                            placeholder="correo@ejemplo.com"
+                            style="
+                                width:100%;
+                                margin:0;
+                            "
+                        >
+
+                    </div>
+
+                `,
+
+                showCancelButton:
+                    true,
+
+                confirmButtonText:
+                    "Verificar",
+
+                cancelButtonText:
+                    "Cancelar",
+
+                confirmButtonColor:
+                    "#0875ec",
+
+                focusConfirm:
+                    false,
+
+
+                preConfirm: () => {
+
+                    const usuario =
+                        document
+                            .getElementById(
+                                "profileRecoveryUser"
+                            )
+                            .value
+                            .trim()
+                            .toLowerCase();
+
+
+                    const correo =
+                        document
+                            .getElementById(
+                                "profileRecoveryEmail"
+                            )
+                            .value
+                            .trim()
+                            .toLowerCase();
+
+
+                    if (
+                        !usuario ||
+                        !correo
+                    ) {
+
+                        Swal.showValidationMessage(
+                            "Debes ingresar usuario y correo."
+                        );
+
+
+                        return false;
+
+                    }
+
+
+                    return {
+
+                        usuario,
+                        correo
+
+                    };
+
+                }
+
+            });
+
+
+        if (!result.isConfirmed) {
+            return;
+        }
+
+
+        const usuarioGuardado =
+            String(
+                cliente.usuario || ""
+            )
+                .trim()
+                .toLowerCase();
+
+
+        const nombreGuardado =
+            String(
+                cliente.nombre || ""
+            )
+                .trim()
+                .toLowerCase();
+
+
+        const correoGuardado =
+            String(
+                cliente.correo || ""
+            )
+                .trim()
+                .toLowerCase();
+
+
+        const coincideUsuario =
+            result.value.usuario ===
+            usuarioGuardado
+            ||
+            result.value.usuario ===
+            nombreGuardado;
+
+
+        const coincideCorreo =
+            result.value.correo ===
+            correoGuardado;
+
+
+        if (
+            !coincideUsuario ||
+            !coincideCorreo
+        ) {
+
+            await Swal.fire({
+
+                icon:
+                    "error",
+
+                title:
+                    "Datos incorrectos",
+
+                text:
+                    "El usuario y correo no corresponden a tu cuenta.",
+
+                confirmButtonColor:
+                    "#0875ec"
+
+            });
+
+
+            return;
+
+        }
+
+
+        await Swal.fire({
+
+            icon:
+                "success",
+
+            title:
+                "Cuenta verificada",
+
+            html: `
+
+                <p>
+                    Tu contraseña actual es:
+                </p>
+
+
+                <div style="
+                    margin-top:15px;
+                    padding:15px;
+                    background:#f2f6fb;
+                    color:#0875ec;
+                    border-radius:8px;
+                    font-size:20px;
+                    font-weight:bold;
+                ">
+
+                    ${cliente.password}
+
+                </div>
+
+
+                <p style="
+                    margin-top:15px;
+                    color:#7e899b;
+                    font-size:12px;
+                ">
+                    Recuerda que TechCart es
+                    una aplicación académica.
+                </p>
+
+            `,
+
+            confirmButtonText:
+                "Entendido",
+
+            confirmButtonColor:
+                "#0875ec"
+
+        });
+
+    }
 
 
     // =========================================
@@ -308,13 +594,9 @@ class ProfileView {
             });
 
 
-
         if (!result.isConfirmed) {
-
             return;
-
         }
-
 
 
         const passwordCorrecta =
@@ -327,9 +609,7 @@ class ProfileView {
             );
 
 
-
         if (!passwordCorrecta) {
-
 
             await Swal.fire({
 
@@ -353,9 +633,7 @@ class ProfileView {
         }
 
 
-
         this.enableEdition();
-
 
 
         Swal.fire({
@@ -378,7 +656,6 @@ class ProfileView {
         });
 
     }
-
 
 
     // =========================================
@@ -408,30 +685,47 @@ class ProfileView {
         ];
 
 
-        inputs.forEach(input => {
+        inputs.forEach(
+            input => {
 
-            input.disabled =
+                if (input) {
+
+                    input.disabled =
+                        false;
+
+                }
+
+            }
+        );
+
+
+        if (this.editButton) {
+
+            this.editButton.hidden =
+                true;
+
+        }
+
+
+        if (this.saveButton) {
+
+            this.saveButton.hidden =
                 false;
 
-        });
+        }
 
 
-        this.editButton.hidden =
-            true;
+        if (this.cancelButton) {
+
+            this.cancelButton.hidden =
+                false;
+
+        }
 
 
-        this.saveButton.hidden =
-            false;
-
-
-        this.cancelButton.hidden =
-            false;
-
-
-        this.nameInput.focus();
+        this.nameInput?.focus();
 
     }
-
 
 
     // =========================================
@@ -461,16 +755,18 @@ class ProfileView {
         ];
 
 
-        inputs.forEach(input => {
+        inputs.forEach(
+            input => {
 
-            if (input) {
+                if (input) {
 
-                input.disabled =
-                    true;
+                    input.disabled =
+                        true;
+
+                }
 
             }
-
-        });
+        );
 
 
         if (this.editButton) {
@@ -499,7 +795,6 @@ class ProfileView {
     }
 
 
-
     // =========================================
     // CANCELAR
     // =========================================
@@ -513,19 +808,15 @@ class ProfileView {
     }
 
 
-
     // =========================================
-    // GUARDAR
+    // GUARDAR CAMBIOS
     // =========================================
 
     async saveChanges() {
 
         if (!this.editing) {
-
             return;
-
         }
-
 
 
         const nuevosDatos = {
@@ -553,9 +844,8 @@ class ProfileView {
         };
 
 
-
         // =====================================
-        // CAMPOS OBLIGATORIOS
+        // CAMPOS
         // =====================================
 
         if (
@@ -564,7 +854,6 @@ class ProfileView {
             !nuevosDatos.correo ||
             !nuevosDatos.direccionEnvio
         ) {
-
 
             Swal.fire({
 
@@ -588,7 +877,6 @@ class ProfileView {
         }
 
 
-
         // =====================================
         // DUPLICADOS
         // =====================================
@@ -605,11 +893,10 @@ class ProfileView {
             );
 
 
-
         if (
-            !disponibilidad.usuarioDisponible
+            !disponibilidad
+                .usuarioDisponible
         ) {
-
 
             Swal.fire({
 
@@ -633,11 +920,10 @@ class ProfileView {
         }
 
 
-
         if (
-            !disponibilidad.correoDisponible
+            !disponibilidad
+                .correoDisponible
         ) {
-
 
             Swal.fire({
 
@@ -661,9 +947,8 @@ class ProfileView {
         }
 
 
-
         // =====================================
-        // CAMBIO CONTRASEÑA
+        // NUEVA CONTRASEÑA
         // =====================================
 
         const newPassword =
@@ -672,7 +957,6 @@ class ProfileView {
 
         const confirmation =
             this.confirmPasswordInput.value;
-
 
 
         if (
@@ -685,7 +969,6 @@ class ProfileView {
                 newPassword !==
                 confirmation
             ) {
-
 
                 Swal.fire({
 
@@ -709,11 +992,15 @@ class ProfileView {
             }
 
 
+            const passwordRegex =
+                /^(?=.*[A-Za-z])(?=.*\d).{6,}$/;
+
 
             if (
-                newPassword.length < 6
+                !passwordRegex.test(
+                    newPassword
+                )
             ) {
-
 
                 Swal.fire({
 
@@ -721,10 +1008,10 @@ class ProfileView {
                         "warning",
 
                     title:
-                        "Contraseña muy corta",
+                        "Contraseña no válida",
 
                     text:
-                        "La nueva contraseña debe tener al menos 6 caracteres.",
+                        "Debe tener mínimo 6 caracteres e incluir una letra y un número.",
 
                     confirmButtonColor:
                         "#0875ec"
@@ -737,16 +1024,14 @@ class ProfileView {
             }
 
 
-
             nuevosDatos.password =
                 newPassword;
 
         }
 
 
-
         // =====================================
-        // CONFIRMACIÓN FINAL
+        // CONFIRMAR
         // =====================================
 
         const confirmationAlert =
@@ -776,9 +1061,9 @@ class ProfileView {
             });
 
 
-
         if (
-            !confirmationAlert.isConfirmed
+            !confirmationAlert
+                .isConfirmed
         ) {
 
             return;
@@ -786,9 +1071,8 @@ class ProfileView {
         }
 
 
-
         // =====================================
-        // ACTUALIZAR LOCALSTORAGE
+        // ACTUALIZAR CLIENTE
         // =====================================
 
         const clienteActualizado =
@@ -801,9 +1085,7 @@ class ProfileView {
             );
 
 
-
         if (!clienteActualizado) {
-
 
             Swal.fire({
 
@@ -825,7 +1107,6 @@ class ProfileView {
             return;
 
         }
-
 
 
         // =====================================
@@ -856,11 +1137,9 @@ class ProfileView {
         );
 
 
-
         this.loadProfile();
 
         this.disableEdition();
-
 
 
         await Swal.fire({
@@ -885,26 +1164,25 @@ class ProfileView {
     }
 
 
-
     // =========================================
-    // ACTUALIZAR TODA LA INTERFAZ
+    // ACTUALIZAR INTERFAZ
     // =========================================
 
     updateInterface() {
 
         if (!this.session) {
-
             return;
-
         }
 
 
         const nombre =
-            this.session.nombre || "Usuario";
+            this.session.nombre ||
+            "Usuario";
 
 
         const correo =
-            this.session.correo || "";
+            this.session.correo ||
+            "";
 
 
         const initial =
@@ -913,88 +1191,79 @@ class ProfileView {
                 .toUpperCase();
 
 
-
-        // NOMBRES
-
         [
-
             "profileName",
-
             "sidebarUserName",
-
             "topbarUserName",
-
             "welcomeUser"
+        ]
+            .forEach(
+                id => {
 
-        ].forEach(id => {
-
-
-            const element =
-                document.getElementById(id);
-
-
-            if (element) {
-
-                element.textContent =
-                    nombre;
-
-            }
-
-        });
+                    const element =
+                        document.getElementById(
+                            id
+                        );
 
 
+                    if (element) {
 
-        // CORREOS
+                        element.textContent =
+                            nombre;
+
+                    }
+
+                }
+            );
+
 
         [
-
             "profileEmail",
-
             "sidebarUserEmail"
+        ]
+            .forEach(
+                id => {
 
-        ].forEach(id => {
-
-
-            const element =
-                document.getElementById(id);
-
-
-            if (element) {
-
-                element.textContent =
-                    correo;
-
-            }
-
-        });
+                    const element =
+                        document.getElementById(
+                            id
+                        );
 
 
+                    if (element) {
 
-        // AVATARES
+                        element.textContent =
+                            correo;
+
+                    }
+
+                }
+            );
+
 
         [
-
             "profileAvatar",
-
             "userAvatar",
-
             "topbarAvatar"
+        ]
+            .forEach(
+                id => {
 
-        ].forEach(id => {
+                    const element =
+                        document.getElementById(
+                            id
+                        );
 
 
-            const element =
-                document.getElementById(id);
+                    if (element) {
 
+                        element.textContent =
+                            initial;
 
-            if (element) {
+                    }
 
-                element.textContent =
-                    initial;
-
-            }
-
-        });
+                }
+            );
 
     }
 
