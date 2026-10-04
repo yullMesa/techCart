@@ -22,6 +22,9 @@ import CartView
 import OrdersView
     from "./OrdersView.js";
 
+import HistoryView
+    from "./HistoryView.js";
+
 import AuthService
     from "../services/AuthService.js";
 
@@ -49,11 +52,6 @@ class PanelApp {
         // =========================================
         // CATEGORÍAS
         // =========================================
-
-        /*
-         * Ahora CategoriesView recibe
-         * directamente ProductsView.
-         */
 
         this.categoriesView =
             new CategoriesView(
@@ -105,11 +103,19 @@ class PanelApp {
         this.ordersView =
             new OrdersView();
 
+
+        // =========================================
+        // HISTORIAL HU-07
+        // =========================================
+
+        this.historyView =
+            new HistoryView();
+
     }
 
 
     // =========================================
-    // INICIAR APP
+    // INICIAR APLICACIÓN
     // =========================================
 
     async init() {
@@ -126,12 +132,22 @@ class PanelApp {
 
 
         // =====================================
-        // COMPONENTES GENERALES
+        // SIDEBAR
         // =====================================
 
         this.sidebar.init();
 
+
+        // =====================================
+        // PERFIL
+        // =====================================
+
         this.profileView.init();
+
+
+        // =====================================
+        // CHATBOT
+        // =====================================
 
         this.chatbot.init();
 
@@ -158,10 +174,17 @@ class PanelApp {
 
 
         // =====================================
-        // ÓRDENES
+        // COMPRAS
         // =====================================
 
         this.ordersView.init();
+
+
+        // =====================================
+        // HISTORIAL
+        // =====================================
+
+        this.historyView.init();
 
 
         // =====================================
@@ -205,7 +228,7 @@ class PanelApp {
 
 
 // =========================================
-// EJECUTAR APP
+// INICIAR
 // =========================================
 
 const app =
