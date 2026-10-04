@@ -2460,7 +2460,101 @@ a {
     }
 
 }
+/* ===================================================== */
+/* HU-08 - CHATBOT INTERACTIVO */
+/* ===================================================== */
 
+.chat-input-area {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        42px;
+
+    gap: 7px;
+
+    padding: 10px;
+
+    border-top: 1px solid #e7ecf2;
+
+    background: white;
+}
+
+
+.chat-input-area input {
+    width: 100%;
+    height: 40px;
+
+    padding: 0 12px;
+
+    border: 1px solid #dce5ef;
+    border-radius: 8px;
+
+    outline: none;
+
+    color: #101b3d;
+
+    font-size: 11px;
+}
+
+
+.chat-input-area input:focus {
+    border-color: #0875ec;
+
+    box-shadow:
+            0 0 0 3px
+            rgba(8, 117, 236, 0.08);
+}
+
+
+.chat-input-area button {
+    width: 42px;
+    height: 40px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #0875ec;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+
+.chat-input-area button:hover {
+    background: #0562ca;
+}
+
+
+.bot-action-message {
+    padding: 7px;
+}
+
+
+.chat-navigation-button {
+    width: 100%;
+
+    padding: 8px 11px;
+
+    border: 1px solid #0875ec;
+    border-radius: 7px;
+
+    background: white;
+
+    color: #0875ec;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+
+.chat-navigation-button:hover {
+    background: #0875ec;
+
+    color: white;
+}
 /* ========================================= */
 /* TABLET PEQUEÑA */
 /* ========================================= */
