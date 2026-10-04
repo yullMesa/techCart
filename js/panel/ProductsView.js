@@ -500,42 +500,70 @@ class ProductsView {
 
     crearCard(producto) {
 
+        // =========================================
+        // POLIMORFISMO
+        // =========================================
+
+        const info =
+            typeof producto.mostrarInfo === "function"
+                ? producto.mostrarInfo()
+                : producto;
+
+
         return `
 
-            <article
-                class="internal-product-card"
+        <article
+            class="internal-product-card"
+        >
+
+            <img
+                src="${info.imagen}"
+                alt="${info.nombre}"
+                onerror="this.style.display='none'"
             >
 
-                <img
-                    src="${producto.imagen}"
-                    alt="${producto.nombre}"
-                    onerror="this.style.display='none'"
-                >
 
-                <h3>
-                    ${producto.nombre}
-                </h3>
+            <h3>
+                ${info.nombre}
+            </h3>
 
-                <p>
-                    ${producto.descripcion}
-                </p>
 
-                <strong>
-                    ${this.formatearPrecio(
-            producto.precio
+            <p>
+                ${info.descripcion}
+            </p>
+
+
+            ${
+            info.especificaciones
+                ? `
+                        <small class="product-specifications">
+                            ${info.especificaciones}
+                        </small>
+                      `
+                : ""
+        }
+
+
+            <strong>
+                ${this.formatearPrecio(
+            info.precio
         )}
-                </strong>
+            </strong>
 
-                <button
-                    type="button"
-                    data-add-cart="${producto.idProducto}"
-                >
-                    🛒 Agregar al carrito
-                </button>
 
-            </article>
+            <button
+                type="button"
+                data-add-cart="${info.idProducto}"
+            >
 
-        `;
+                🛒 Agregar al carrito
+
+            </button>
+
+
+        </article>
+
+    `;
 
     }
 
@@ -592,7 +620,107 @@ class ProductsView {
             );
 
     }
+    // =========================================
+// BUSCAR POR TEXTO
+// =========================================
 
+    buscarPorTexto(
+        termino
+    ) {
+
+        const texto =
+            String(
+                termino || ""
+            )
+                .toLowerCase()
+                .normalize(
+                    "NFD"
+                )
+                .replace(
+                    /[\u0300-\u036f]/g,
+                    ""
+                )
+                .trim();
+
+
+        if (!texto) {
+
+            this.productosFiltrados = [
+                ...this.productos
+            ];
+
+
+            this.renderProductos(
+                this.productosFiltrados
+            );
+
+
+            return this.productosFiltrados;
+
+        }
+
+
+        this.productosFiltrados =
+            this.productos.filter(
+                producto => {
+
+                    const contenido = [
+
+                        producto.nombre,
+                        producto.descripcion,
+                        producto.categoria,
+
+                        producto.procesador,
+                        producto.memoriaRAM,
+                        producto.almacenamiento,
+
+                        producto.sistemaOperativo,
+                        producto.camara,
+                        producto.tipoAccesorio
+
+                    ]
+                        .filter(Boolean)
+                        .join(" ")
+                        .toLowerCase()
+                        .normalize(
+                            "NFD"
+                        )
+                        .replace(
+                            /[\u0300-\u036f]/g,
+                            ""
+                        );
+
+
+                    return contenido.includes(
+                        texto
+                    );
+
+                }
+            );
+
+
+        this.renderProductos(
+            this.productosFiltrados
+        );
+
+
+        const subtitle =
+            document.getElementById(
+                "productsSubtitle"
+            );
+
+
+        if (subtitle) {
+
+            subtitle.textContent =
+                `Resultados para: "${termino}"`;
+
+        }
+
+
+        return this.productosFiltrados;
+
+    }
 }
 
 
