@@ -25,6 +25,9 @@ import OrdersView
 import HistoryView
     from "./HistoryView.js";
 
+import GlobalSearch
+    from "./GlobalSearch.js";
+
 import AuthService
     from "../services/AuthService.js";
 
@@ -47,6 +50,17 @@ class PanelApp {
 
         this.productsView =
             new ProductsView();
+
+
+        // =========================================
+        // BUSCADOR GLOBAL
+        // =========================================
+
+        this.globalSearch =
+            new GlobalSearch(
+                this.router,
+                this.productsView
+            );
 
 
         // =========================================
@@ -105,7 +119,7 @@ class PanelApp {
 
 
         // =========================================
-        // HISTORIAL HU-07
+        // HISTORIAL
         // =========================================
 
         this.historyView =
@@ -131,65 +145,53 @@ class PanelApp {
         }
 
 
-        // =====================================
         // SIDEBAR
-        // =====================================
 
         this.sidebar.init();
 
 
-        // =====================================
         // PERFIL
-        // =====================================
 
         this.profileView.init();
 
 
-        // =====================================
         // CHATBOT
-        // =====================================
 
         this.chatbot.init();
 
 
-        // =====================================
         // PRODUCTOS
-        // =====================================
 
         await this.productsView.init();
 
 
-        // =====================================
+        // BUSCADOR GLOBAL
+        // IMPORTANTE: después de cargar productos
+
+        this.globalSearch.init();
+
+
         // CATEGORÍAS
-        // =====================================
 
         this.categoriesView.init();
 
 
-        // =====================================
         // CARRITO
-        // =====================================
 
         this.cartView.init();
 
 
-        // =====================================
         // COMPRAS
-        // =====================================
 
         this.ordersView.init();
 
 
-        // =====================================
         // HISTORIAL
-        // =====================================
 
         this.historyView.init();
 
 
-        // =====================================
         // VISTA INICIAL
-        // =====================================
 
         this.router.show(
             "inicio"

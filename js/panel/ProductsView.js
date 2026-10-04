@@ -592,7 +592,107 @@ class ProductsView {
             );
 
     }
+    // =========================================
+// BUSCAR POR TEXTO
+// =========================================
 
+    buscarPorTexto(
+        termino
+    ) {
+
+        const texto =
+            String(
+                termino || ""
+            )
+                .toLowerCase()
+                .normalize(
+                    "NFD"
+                )
+                .replace(
+                    /[\u0300-\u036f]/g,
+                    ""
+                )
+                .trim();
+
+
+        if (!texto) {
+
+            this.productosFiltrados = [
+                ...this.productos
+            ];
+
+
+            this.renderProductos(
+                this.productosFiltrados
+            );
+
+
+            return this.productosFiltrados;
+
+        }
+
+
+        this.productosFiltrados =
+            this.productos.filter(
+                producto => {
+
+                    const contenido = [
+
+                        producto.nombre,
+                        producto.descripcion,
+                        producto.categoria,
+
+                        producto.procesador,
+                        producto.memoriaRAM,
+                        producto.almacenamiento,
+
+                        producto.sistemaOperativo,
+                        producto.camara,
+                        producto.tipoAccesorio
+
+                    ]
+                        .filter(Boolean)
+                        .join(" ")
+                        .toLowerCase()
+                        .normalize(
+                            "NFD"
+                        )
+                        .replace(
+                            /[\u0300-\u036f]/g,
+                            ""
+                        );
+
+
+                    return contenido.includes(
+                        texto
+                    );
+
+                }
+            );
+
+
+        this.renderProductos(
+            this.productosFiltrados
+        );
+
+
+        const subtitle =
+            document.getElementById(
+                "productsSubtitle"
+            );
+
+
+        if (subtitle) {
+
+            subtitle.textContent =
+                `Resultados para: "${termino}"`;
+
+        }
+
+
+        return this.productosFiltrados;
+
+    }
 }
 
 
