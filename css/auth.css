@@ -675,6 +675,13 @@ input {
 
 .forgot-password-link {
     border: none;
+/* ENLACES LEGALES */
+/* ========================================= */
+
+.legal-link {
+
+    border: none;
+
     padding: 0;
 
     background: transparent;
@@ -689,6 +696,19 @@ input {
 
 .forgot-password-link:hover {
     text-decoration: underline;
+
+    font: inherit;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+.legal-link:hover {
+
+    text-decoration: underline;
+
 }
 
 /* ========================================= */

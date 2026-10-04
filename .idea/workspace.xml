@@ -10,6 +10,13 @@
       <change beforePath="$PROJECT_DIR$/formulario/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/formulario/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/models/Cliente.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/models/Cliente.js" afterDir="false" />
+    <list default="true" id="e2b0a5cc-824e-442c-b748-4fa52235ce43" name="Changes" comment="fix : de codigo">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/auth.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/auth.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/formulario/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/formulario/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/models/Cliente.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/models/Cliente.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/panel.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +36,7 @@
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="developer_evidence" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -112,6 +120,61 @@
       <entry key="H4" value="41.80304902698396" />
       <entry key="D1" value="45.25647156362197" />
       <entry key="W1" value="45.89264627965377" />
+      <entry key="MS100" value="1.161573340160634" />
+      <entry key="MS500" value="1.912068311818809" />
+      <entry key="S2" value="3.43527810103254" />
+      <entry key="S5" value="4.247316860862149" />
+      <entry key="S10" value="4.598452353262482" />
+      <entry key="S30" value="5.027953097094115" />
+      <entry key="S60" value="5.931226139260946" />
+      <entry key="M2" value="7.415256647527926" />
+      <entry key="M5" value="9.192128009896722" />
+      <entry key="M10" value="10.280402470172609" />
+      <entry key="M15" value="11.22314940165998" />
+      <entry key="M30" value="14.390692913536075" />
+      <entry key="H1" value="19.209529542281008" />
+      <entry key="H2" value="23.767748453456875" />
+      <entry key="H4" value="26.962454652240243" />
+      <entry key="D1" value="30.259178109632593" />
+      <entry key="W1" value="30.892367158413183" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="8.733841554017581E-145" />
+      <entry key="S10" value="1.319747378467004E-72" />
+      <entry key="S30" value="1.7509928560072206E-24" />
+      <entry key="S60" value="2.0095867275831092E-12" />
+      <entry key="M2" value="2.4680401465752883E-6" />
+      <entry key="M5" value="0.012659128226576197" />
+      <entry key="M10" value="0.2568427133006535" />
+      <entry key="M15" value="0.8322285243996369" />
+      <entry key="M30" value="3.4121624759317633" />
+      <entry key="H1" value="7.747998934517441" />
+      <entry key="H2" value="12.021586979236103" />
+      <entry key="H4" value="15.079385664274866" />
+      <entry key="D1" value="18.276483168694632" />
+      <entry key="W1" value="18.894772970539186" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.122005509777095" />
+      <entry key="MS500" value="1.8985956905253984" />
+      <entry key="S2" value="3.429087195569799" />
+      <entry key="S5" value="4.24425260754961" />
+      <entry key="S10" value="4.596793955023756" />
+      <entry key="S30" value="5.02732263012482" />
+      <entry key="S60" value="5.930785526768491" />
+      <entry key="M2" value="7.414929622791767" />
+      <entry key="M5" value="9.20455084280208" />
+      <entry key="M10" value="10.536523519921138" />
+      <entry key="M15" value="12.053783453997132" />
+      <entry key="M30" value="17.7992228941467" />
+      <entry key="H1" value="26.95322689344007" />
+      <entry key="H2" value="35.7859548676214" />
+      <entry key="H4" value="42.03971138154086" />
+      <entry key="D1" value="48.53523029355583" />
+      <entry key="W1" value="49.78707646048353" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -132,6 +195,7 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "HU-02",
+    "git-widget-placeholder": "HU-01",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "list.type.of.created.stylesheet": "CSS",
@@ -159,9 +223,22 @@
       <option name="presentableId" value="Default" />
       <updated>1791063734259</updated>
     </task>
+    <task id="LOCAL-00001" summary="fix : de codigo">
+      <option name="closed" value="true" />
+      <created>1791073826133</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1791073826134</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix : de codigo" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix : de codigo" />
   </component>
 </project>

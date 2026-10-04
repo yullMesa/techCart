@@ -13,10 +13,15 @@ class Cliente {
     ) {
 
         this.id = id;
+
         this.nombre = nombre;
+
         this.correo = correo;
+
         this.direccionEnvio = direccionEnvio;
+
         this.usuario = usuario;
+
         this.password = password;
 
         this.termsAccepted = termsAccepted;
