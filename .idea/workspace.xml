@@ -5,8 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2b0a5cc-824e-442c-b748-4fa52235ce43" name="Changes" comment="&quot;feat: completar HU-09 con diseño responsive y buscador global">
+      <change afterPath="$PROJECT_DIR$/img/productos/gaming-controller-x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/headphones-soundmax.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/laptop-techbook-air.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/laptop-techbook-gamer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/laptop-techbook-pro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/laptop-techbook-studio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/mouse-tech-wireless.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/smartphone-nova-lite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/smartphone-nova-max.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/smartphone-nova-mini.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/smartphone-nova-x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/smartwatch-active.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/smartwatch-fit-pro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/speaker-mini-boom.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/teclado-tech-rgb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/usb-hub-pro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/webcam-vision-pro.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/models/Producto.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/models/Producto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/data/productos.json" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/productos.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +42,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="developer_evidence" />
+        <entry key="$PROJECT_DIR$" value="HU-09" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -129,7 +146,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "#10 on HU-09",
+    "git-widget-placeholder": "developer__evidence",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/yulls/Documents/proyectos/techCart/js/services",

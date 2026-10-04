@@ -138,5 +138,80 @@
     "stock": 25,
     "imagen": "../img/productos/usb-hub-pro.png",
     "tipoAccesorio": "Conectividad"
+  },
+
+  {
+    "tipo": "laptop",
+    "categoria": "laptops",
+    "idProducto": 13,
+    "nombre": "Laptop TechBook Studio",
+    "descripcion": "Laptop diseñada para diseño, edición y creación de contenido.",
+    "precio": 4599900,
+    "stock": 7,
+    "imagen": "../img/productos/laptop-techbook-studio.png",
+    "procesador": "Intel Core i7",
+    "memoriaRAM": "16GB",
+    "almacenamiento": "1TB SSD"
+  },
+  {
+    "tipo": "laptop",
+    "categoria": "laptops",
+    "idProducto": 14,
+    "nombre": "Laptop TechBook Gamer",
+    "descripcion": "Equipo de alto rendimiento para videojuegos y tareas exigentes.",
+    "precio": 5299900,
+    "stock": 6,
+    "imagen": "../img/productos/laptop-techbook-gamer.png",
+    "procesador": "AMD Ryzen 7",
+    "memoriaRAM": "16GB",
+    "almacenamiento": "1TB SSD"
+  },
+  {
+    "tipo": "smartphone",
+    "categoria": "smartphones",
+    "idProducto": 15,
+    "nombre": "Smartphone Nova Max",
+    "descripcion": "Smartphone de gran pantalla y alto rendimiento.",
+    "precio": 3499900,
+    "stock": 12,
+    "imagen": "../img/productos/smartphone-nova-max.png",
+    "sistemaOperativo": "Android",
+    "pantalla": "6.9 pulgadas AMOLED",
+    "camara": "200 MP"
+  },
+  {
+    "tipo": "smartphone",
+    "categoria": "smartphones",
+    "idProducto": 16,
+    "nombre": "Smartphone Nova Mini",
+    "descripcion": "Smartphone compacto para uso diario y movilidad.",
+    "precio": 1399900,
+    "stock": 24,
+    "imagen": "../img/productos/smartphone-nova-mini.png",
+    "sistemaOperativo": "Android",
+    "pantalla": "5.9 pulgadas",
+    "camara": "48 MP"
+  },
+  {
+    "tipo": "accesorio",
+    "categoria": "smartwatches",
+    "idProducto": 17,
+    "nombre": "SmartWatch Active",
+    "descripcion": "Reloj inteligente deportivo con seguimiento de actividad.",
+    "precio": 429900,
+    "stock": 21,
+    "imagen": "../img/productos/smartwatch-active.png",
+    "tipoAccesorio": "Smartwatch deportivo"
+  },
+  {
+    "tipo": "accesorio",
+    "categoria": "audio",
+    "idProducto": 18,
+    "nombre": "SoundBar Tech Cinema",
+    "descripcion": "Barra de sonido Bluetooth para entretenimiento en casa.",
+    "precio": 529900,
+    "stock": 13,
+    "imagen": "../img/productos/soundbar-tech-cinema.png",
+    "tipoAccesorio": "Barra de sonido"
   }
 ]
