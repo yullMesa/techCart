@@ -74,6 +74,16 @@ class Router {
 
             },
 
+            historial: {
+
+                title:
+                    "Historial",
+
+                subtitle:
+                    "Consulta y filtra tus compras anteriores"
+
+            },
+
 
             perfil: {
 

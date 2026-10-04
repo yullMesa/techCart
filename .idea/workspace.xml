@@ -4,12 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2b0a5cc-824e-442c-b748-4fa52235ce43" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/js/data/productos.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/services/ProductService.js" afterDir="false" />
+    <list default="true" id="e2b0a5cc-824e-442c-b748-4fa52235ce43" name="Changes" comment="&quot;feat: completar HU-09 con diseño responsive y buscador global">
+      <change afterPath="$PROJECT_DIR$/img/productos/gaming-controller-x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/headphones-soundmax.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/laptop-techbook-air.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/laptop-techbook-gamer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/laptop-techbook-pro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/laptop-techbook-studio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/mouse-tech-wireless.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/smartphone-nova-lite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/smartphone-nova-max.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/smartphone-nova-mini.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/smartphone-nova-x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/smartwatch-active.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/smartwatch-fit-pro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/speaker-mini-boom.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/teclado-tech-rgb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/usb-hub-pro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/productos/webcam-vision-pro.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/panel/PanelApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/panel/PanelApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/panel/ProductsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/panel/ProductsView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/data/productos.json" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/productos.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,65 +40,92 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="HU-09" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;yullMesa&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/yullMesa/techCart.git&quot;,
+    &quot;accountId&quot;: &quot;f48b1cdb-0b71-4b5d-814f-c152b385f017&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;yullMesa&quot;,
+    &quot;repository&quot;: &quot;techCart&quot;
+  }
+}</component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000000000075326" />
-      <entry key="MS500" value="1.005961950035002" />
-      <entry key="S2" value="1.2778734690833817" />
-      <entry key="S5" value="1.5991545107157306" />
-      <entry key="S10" value="1.7740576466107467" />
-      <entry key="S30" value="1.9423946573323925" />
-      <entry key="S60" value="2.168565674644729" />
-      <entry key="M2" value="2.619577633012446" />
-      <entry key="M5" value="3.2982385768474827" />
-      <entry key="M10" value="4.33024350837311" />
-      <entry key="M15" value="5.72233234750613" />
-      <entry key="M30" value="9.415250175074855" />
-      <entry key="H1" value="13.305981429536109" />
-      <entry key="H2" value="16.194314779652103" />
-      <entry key="H4" value="17.965001083444154" />
-      <entry key="D1" value="19.64075838391505" />
-      <entry key="W1" value="19.948163895095956" />
+      <entry key="MS100" value="1.2115881106558142" />
+      <entry key="MS500" value="2.5186394487026957" />
+      <entry key="S2" value="4.024190517026092" />
+      <entry key="S5" value="4.565363990668604" />
+      <entry key="S10" value="4.774438432065391" />
+      <entry key="S30" value="4.928468261669972" />
+      <entry key="S60" value="5.267999654533975" />
+      <entry key="M2" value="7.448397846227166" />
+      <entry key="M5" value="14.651048126630945" />
+      <entry key="M10" value="21.97830320837049" />
+      <entry key="M15" value="26.58161699700238" />
+      <entry key="M30" value="34.81678400917313" />
+      <entry key="H1" value="42.48398621089089" />
+      <entry key="H2" value="48.20814599591469" />
+      <entry key="H4" value="51.79233050118492" />
+      <entry key="D1" value="55.24990703165014" />
+      <entry key="W1" value="55.8915685041512" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.4444307334697395" />
-      <entry key="MS500" value="0.9490293240471179" />
-      <entry key="S2" value="1.5208450438403494" />
-      <entry key="S5" value="1.77724502929785" />
-      <entry key="S10" value="1.8826162702135472" />
-      <entry key="S30" value="1.9710971987798462" />
-      <entry key="S60" value="2.1321540862503676" />
-      <entry key="M2" value="2.5421907639318393" />
-      <entry key="M5" value="3.2177045571546383" />
-      <entry key="M10" value="4.094854100802725" />
-      <entry key="M15" value="5.271773215762466" />
-      <entry key="M30" value="8.587895749036129" />
-      <entry key="H1" value="12.291873521199225" />
-      <entry key="H2" value="15.141749890546615" />
-      <entry key="H4" value="16.92352320881628" />
-      <entry key="D1" value="18.631328344904283" />
-      <entry key="W1" value="18.946749140931047" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="4.953122585385911E-223" />
+      <entry key="S5" value="1.798311626563421E-89" />
+      <entry key="S10" value="5.988535517020304E-45" />
+      <entry key="S30" value="2.8988627125462886E-15" />
+      <entry key="S60" value="8.176706151711302E-8" />
+      <entry key="M2" value="4.978379944021561E-4" />
+      <entry key="M5" value="0.10575432225129827" />
+      <entry key="M10" value="0.7423597432224381" />
+      <entry key="M15" value="1.6886541286147871" />
+      <entry key="M30" value="4.860475487498919" />
+      <entry key="H1" value="9.24728152669175" />
+      <entry key="H2" value="13.133306103066063" />
+      <entry key="H4" value="15.761218164285314" />
+      <entry key="D1" value="18.411689948214494" />
+      <entry key="W1" value="18.91467863348762" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.44926394911156187" />
-      <entry key="MS500" value="1.2121992841015035" />
-      <entry key="S2" value="2.32649715391813" />
-      <entry key="S5" value="3.116499763987035" />
-      <entry key="S10" value="3.510388654294613" />
-      <entry key="S30" value="3.859870107196259" />
-      <entry key="S60" value="4.269107904615967" />
-      <entry key="M2" value="5.139694282459669" />
-      <entry key="M5" value="6.5028662237337524" />
-      <entry key="M10" value="8.415266467667662" />
-      <entry key="M15" value="10.984468854351901" />
-      <entry key="M30" value="17.994099790602593" />
-      <entry key="H1" value="25.591061719564127" />
-      <entry key="H2" value="31.331819157804382" />
-      <entry key="H4" value="34.88614058476943" />
-      <entry key="D1" value="38.271648226037456" />
-      <entry key="W1" value="38.89484931192102" />
+      <entry key="MS100" value="1.168908839007394" />
+      <entry key="MS500" value="2.499685285194675" />
+      <entry key="S2" value="4.016635950375927" />
+      <entry key="S5" value="4.561941823606402" />
+      <entry key="S10" value="4.772650153631568" />
+      <entry key="S30" value="4.92785251519032" />
+      <entry key="S60" value="5.267645583023496" />
+      <entry key="M2" value="7.448549264017168" />
+      <entry key="M5" value="14.756031204948691" />
+      <entry key="M10" value="22.718625547827273" />
+      <entry key="M15" value="28.266986909995563" />
+      <entry key="M30" value="39.672023944103906" />
+      <entry key="H1" value="51.72609417899497" />
+      <entry key="H2" value="61.33773684827288" />
+      <entry key="H4" value="67.55131186602371" />
+      <entry key="D1" value="73.6611607930913" />
+      <entry key="W1" value="74.80618311246592" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -101,12 +142,14 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "developer__evidence",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/yulls/Documents/proyectos/techCart/js/services",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -116,6 +159,15 @@
     "to.speed.mode.migration.done": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\yulls\Documents\proyectos\techCart\js\services" />
+      <recent name="C:\Users\yulls\Documents\proyectos\techCart\js\panel" />
+      <recent name="C:\Users\yulls\Documents\proyectos\techCart\js\models" />
+      <recent name="C:\Users\yulls\Documents\proyectos\techCart\panel" />
+      <recent name="C:\Users\yulls\Documents\proyectos\techCart\css" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -132,9 +184,58 @@
       <option name="presentableId" value="Default" />
       <updated>1791063734259</updated>
     </task>
+    <task id="LOCAL-00001" summary="fix: repair authentication files after merge conflict">
+      <option name="closed" value="true" />
+      <created>1791077202358</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1791077202358</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: add category filtering and clear filter option">
+      <option name="closed" value="true" />
+      <created>1791079560539</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1791079560539</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: completar HU-06 con orden y recibo descargable en PDF">
+      <option name="closed" value="true" />
+      <created>1791083353964</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1791083353964</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: completar HU-08 con chatbot interactivo y navegación asistida">
+      <option name="closed" value="true" />
+      <created>1791118146861</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1791118146861</updated>
+    </task>
+    <task id="LOCAL-00005" summary="&quot;feat: completar HU-09 con diseño responsive y buscador global">
+      <option name="closed" value="true" />
+      <created>1791119660014</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1791119660014</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix: repair authentication files after merge conflict" />
+    <MESSAGE value="feat: add category filtering and clear filter option" />
+    <MESSAGE value="feat: completar HU-06 con orden y recibo descargable en PDF" />
+    <MESSAGE value="feat: completar HU-08 con chatbot interactivo y navegación asistida" />
+    <MESSAGE value="&quot;feat: completar HU-09 con diseño responsive y buscador global" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;feat: completar HU-09 con diseño responsive y buscador global" />
   </component>
 </project>

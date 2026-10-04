@@ -1,6 +1,7 @@
 [
   {
     "tipo": "laptop",
+    "categoria": "laptops",
     "idProducto": 1,
     "nombre": "Laptop TechBook Pro",
     "descripcion": "Laptop profesional de alto rendimiento.",
@@ -13,6 +14,7 @@
   },
   {
     "tipo": "laptop",
+    "categoria": "laptops",
     "idProducto": 2,
     "nombre": "Laptop TechBook Air",
     "descripcion": "Laptop ligera para estudio y trabajo.",
@@ -25,6 +27,7 @@
   },
   {
     "tipo": "smartphone",
+    "categoria": "smartphones",
     "idProducto": 3,
     "nombre": "Smartphone Nova X",
     "descripcion": "Smartphone premium con pantalla OLED.",
@@ -37,6 +40,7 @@
   },
   {
     "tipo": "smartphone",
+    "categoria": "smartphones",
     "idProducto": 4,
     "nombre": "Smartphone Nova Lite",
     "descripcion": "Smartphone compacto con excelente autonomía.",
@@ -49,6 +53,7 @@
   },
   {
     "tipo": "accesorio",
+    "categoria": "audio",
     "idProducto": 5,
     "nombre": "Audífonos SoundMax",
     "descripcion": "Audífonos inalámbricos con cancelación de ruido.",
@@ -59,6 +64,7 @@
   },
   {
     "tipo": "accesorio",
+    "categoria": "smartwatches",
     "idProducto": 6,
     "nombre": "SmartWatch Fit Pro",
     "descripcion": "Reloj inteligente para salud y actividad física.",
@@ -69,6 +75,7 @@
   },
   {
     "tipo": "accesorio",
+    "categoria": "accesorios",
     "idProducto": 7,
     "nombre": "Mouse Tech Wireless",
     "descripcion": "Mouse inalámbrico ergonómico.",
@@ -79,6 +86,7 @@
   },
   {
     "tipo": "accesorio",
+    "categoria": "gaming",
     "idProducto": 8,
     "nombre": "Teclado Tech RGB",
     "descripcion": "Teclado mecánico RGB para gaming.",
@@ -89,6 +97,7 @@
   },
   {
     "tipo": "accesorio",
+    "categoria": "accesorios",
     "idProducto": 9,
     "nombre": "WebCam Vision Pro",
     "descripcion": "Cámara web Full HD para videollamadas.",
@@ -99,6 +108,7 @@
   },
   {
     "tipo": "accesorio",
+    "categoria": "audio",
     "idProducto": 10,
     "nombre": "Speaker Mini Boom",
     "descripcion": "Parlante Bluetooth compacto.",
@@ -109,6 +119,7 @@
   },
   {
     "tipo": "accesorio",
+    "categoria": "gaming",
     "idProducto": 11,
     "nombre": "Gaming Controller X",
     "descripcion": "Control inalámbrico para videojuegos.",
@@ -119,6 +130,7 @@
   },
   {
     "tipo": "accesorio",
+    "categoria": "accesorios",
     "idProducto": 12,
     "nombre": "USB-C Hub Pro",
     "descripcion": "Hub multipuerto USB-C para laptops.",
@@ -126,5 +138,80 @@
     "stock": 25,
     "imagen": "../img/productos/usb-hub-pro.png",
     "tipoAccesorio": "Conectividad"
+  },
+
+  {
+    "tipo": "laptop",
+    "categoria": "laptops",
+    "idProducto": 13,
+    "nombre": "Laptop TechBook Studio",
+    "descripcion": "Laptop diseñada para diseño, edición y creación de contenido.",
+    "precio": 4599900,
+    "stock": 7,
+    "imagen": "../img/productos/laptop-techbook-studio.png",
+    "procesador": "Intel Core i7",
+    "memoriaRAM": "16GB",
+    "almacenamiento": "1TB SSD"
+  },
+  {
+    "tipo": "laptop",
+    "categoria": "laptops",
+    "idProducto": 14,
+    "nombre": "Laptop TechBook Gamer",
+    "descripcion": "Equipo de alto rendimiento para videojuegos y tareas exigentes.",
+    "precio": 5299900,
+    "stock": 6,
+    "imagen": "../img/productos/laptop-techbook-gamer.png",
+    "procesador": "AMD Ryzen 7",
+    "memoriaRAM": "16GB",
+    "almacenamiento": "1TB SSD"
+  },
+  {
+    "tipo": "smartphone",
+    "categoria": "smartphones",
+    "idProducto": 15,
+    "nombre": "Smartphone Nova Max",
+    "descripcion": "Smartphone de gran pantalla y alto rendimiento.",
+    "precio": 3499900,
+    "stock": 12,
+    "imagen": "../img/productos/smartphone-nova-max.png",
+    "sistemaOperativo": "Android",
+    "pantalla": "6.9 pulgadas AMOLED",
+    "camara": "200 MP"
+  },
+  {
+    "tipo": "smartphone",
+    "categoria": "smartphones",
+    "idProducto": 16,
+    "nombre": "Smartphone Nova Mini",
+    "descripcion": "Smartphone compacto para uso diario y movilidad.",
+    "precio": 1399900,
+    "stock": 24,
+    "imagen": "../img/productos/smartphone-nova-mini.png",
+    "sistemaOperativo": "Android",
+    "pantalla": "5.9 pulgadas",
+    "camara": "48 MP"
+  },
+  {
+    "tipo": "accesorio",
+    "categoria": "smartwatches",
+    "idProducto": 17,
+    "nombre": "SmartWatch Active",
+    "descripcion": "Reloj inteligente deportivo con seguimiento de actividad.",
+    "precio": 429900,
+    "stock": 21,
+    "imagen": "../img/productos/smartwatch-active.png",
+    "tipoAccesorio": "Smartwatch deportivo"
+  },
+  {
+    "tipo": "accesorio",
+    "categoria": "audio",
+    "idProducto": 18,
+    "nombre": "SoundBar Tech Cinema",
+    "descripcion": "Barra de sonido Bluetooth para entretenimiento en casa.",
+    "precio": 529900,
+    "stock": 13,
+    "imagen": "../img/productos/soundbar-tech-cinema.png",
+    "tipoAccesorio": "Barra de sonido"
   }
 ]
