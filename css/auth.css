@@ -669,7 +669,33 @@ input {
     }
 
 }
+/* ========================================= */
+/* ENLACES LEGALES */
+/* ========================================= */
 
+.legal-link {
+
+    border: none;
+
+    padding: 0;
+
+    background: transparent;
+
+    color: #0875ec;
+
+    font: inherit;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+.legal-link:hover {
+
+    text-decoration: underline;
+
+}
 
 /* ========================================= */
 /* MÓVIL */
