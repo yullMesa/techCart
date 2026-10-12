@@ -1,1714 +1,465 @@
 <!DOCTYPE html>
-
 <html lang="es">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>
-        TechCart | Panel
-    </title>
-
-    <link
-            rel="stylesheet"
-            href="../css/panel.css"
-    >
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCart | Panel</title>
+    <link rel="stylesheet" href="../css/panel.css">
 </head>
-
-
 <body>
-
-
 <div class="app-layout">
-
 
     <!-- ========================================= -->
     <!-- SIDEBAR -->
     <!-- ========================================= -->
+    <aside class="sidebar" id="sidebar">
 
-    <aside
-            class="sidebar"
-            id="sidebar"
-    >
-
-
-        <!-- ========================================= -->
         <!-- LOGO -->
-        <!-- ========================================= -->
-
         <div class="sidebar-header">
-
-
-            <a
-                    href="#"
-                    class="sidebar-logo"
-            >
-
+            <a href="#" class="sidebar-logo">
                 🛒
-
-                <span>
-
-                    Tech<strong>Cart</strong>
-
-                </span>
-
+                <span>Tech<strong>Cart</strong></span>
             </a>
-
-
-            <button
-                    type="button"
-                    class="sidebar-close"
-                    id="sidebarClose"
-            >
-
+            <button type="button" class="sidebar-close" id="sidebarClose">
                 ✕
-
             </button>
-
-
         </div>
 
-
-
-        <!-- ========================================= -->
         <!-- USUARIO -->
-        <!-- ========================================= -->
-
         <div class="sidebar-user">
-
-
-            <div
-                    class="user-avatar"
-                    id="userAvatar"
-            >
-
-                U
-
-            </div>
-
-
+            <div class="user-avatar" id="userAvatar">U</div>
             <div>
-
-
-                <strong id="sidebarUserName">
-
-                    Usuario
-
-                </strong>
-
-
-                <small id="sidebarUserEmail">
-
-                    usuario@email.com
-
-                </small>
-
-
+                <strong id="sidebarUserName">Usuario</strong>
+                <small id="sidebarUserEmail">usuario@email.com</small>
             </div>
-
-
         </div>
 
-
-
-        <!-- ========================================= -->
         <!-- MENÚ -->
-        <!-- ========================================= -->
-
         <nav class="sidebar-menu">
-
-
-            <!-- INICIO -->
-
-            <button
-                    type="button"
-                    class="menu-item active"
-                    data-view="inicio"
-            >
-
-                <span class="menu-icon">
-                    🏠
-                </span>
-
-                <span>
-                    Inicio
-                </span>
-
+            <button type="button" class="menu-item active" data-view="inicio">
+                <span class="menu-icon">🏠</span>
+                <span>Inicio</span>
             </button>
 
-
-
-            <!-- PRODUCTOS -->
-
-            <button
-                    type="button"
-                    class="menu-item"
-                    data-view="productos"
-            >
-
-                <span class="menu-icon">
-                    💻
-                </span>
-
-                <span>
-                    Productos
-                </span>
-
+            <button type="button" class="menu-item" data-view="productos">
+                <span class="menu-icon">💻</span>
+                <span>Productos</span>
             </button>
 
-
-
-            <!-- CATEGORÍAS -->
-
-            <button
-                    type="button"
-                    class="menu-item"
-                    data-view="categorias"
-            >
-
-                <span class="menu-icon">
-                    🗂️
-                </span>
-
-                <span>
-                    Categorías
-                </span>
-
+            <button type="button" class="menu-item" data-view="categorias">
+                <span class="menu-icon">🗂️</span>
+                <span>Categorías</span>
             </button>
 
-
-
-            <!-- CARRITO -->
-
-            <button
-                    type="button"
-                    class="menu-item"
-                    data-view="carrito"
-            >
-
-                <span class="menu-icon">
-                    🛒
-                </span>
-
-                <span>
-                    Mi carrito
-                </span>
-
-                <span
-                        class="sidebar-badge"
-                        id="sidebarCartCount"
-                >
-                    0
-                </span>
-
+            <button type="button" class="menu-item" data-view="carrito">
+                <span class="menu-icon">🛒</span>
+                <span>Mi carrito</span>
+                <span class="sidebar-badge" id="sidebarCartCount">0</span>
             </button>
 
-
-
-            <!-- COMPRAS -->
-
-            <button
-                    type="button"
-                    class="menu-item"
-                    data-view="compras"
-            >
-
-                <span class="menu-icon">
-                    📦
-                </span>
-
-                <span>
-                    Mis compras
-                </span>
-
+            <button type="button" class="menu-item" data-view="compras">
+                <span class="menu-icon">📦</span>
+                <span>Mis compras</span>
             </button>
 
-
-
-            <!-- ========================================= -->
             <!-- HISTORIAL HU-07 -->
-            <!-- ========================================= -->
-
-            <button
-                    type="button"
-                    class="menu-item"
-                    data-view="historial"
-            >
-
-                <span class="menu-icon">
-                    🧾
-                </span>
-
-                <span>
-                    Historial
-                </span>
-
+            <button type="button" class="menu-item" data-view="historial">
+                <span class="menu-icon">🧾</span>
+                <span>Historial</span>
             </button>
 
-
-
-            <!-- PERFIL -->
-
-            <button
-                    type="button"
-                    class="menu-item"
-                    data-view="perfil"
-            >
-
-                <span class="menu-icon">
-                    👤
-                </span>
-
-                <span>
-                    Mi perfil
-                </span>
-
+            <button type="button" class="menu-item" data-view="perfil">
+                <span class="menu-icon">👤</span>
+                <span>Mi perfil</span>
             </button>
-
-
         </nav>
 
-
-
-        <!-- ========================================= -->
         <!-- CERRAR SESIÓN -->
-        <!-- ========================================= -->
-
         <div class="sidebar-footer">
-
-
-            <button
-                    type="button"
-                    class="logout-button"
-                    id="logoutButton"
-            >
-
-                <span>
-                    🚪
-                </span>
-
+            <button type="button" class="logout-button" id="logoutButton">
+                <span>🚪</span>
                 Cerrar sesión
-
             </button>
-
-
         </div>
-
-
     </aside>
-
-
 
     <!-- ========================================= -->
     <!-- CONTENIDO PRINCIPAL -->
     <!-- ========================================= -->
-
     <div class="main-area">
 
-
-        <!-- ========================================= -->
         <!-- TOPBAR -->
-        <!-- ========================================= -->
-
         <header class="topbar">
-
-
             <div class="topbar-left">
-
-
-                <button
-                        type="button"
-                        class="menu-toggle"
-                        id="menuToggle"
-                >
-
+                <button type="button" class="menu-toggle" id="menuToggle">
                     ☰
-
                 </button>
-
-
                 <div>
-
-
-                    <h1 id="pageTitle">
-                        Inicio
-                    </h1>
-
-
-                    <p id="pageSubtitle">
-                        Bienvenido a tu espacio TechCart
-                    </p>
-
-
+                    <h1 id="pageTitle">Inicio</h1>
+                    <p id="pageSubtitle">Bienvenido a tu espacio TechCart</p>
                 </div>
-
-
             </div>
 
-
-
-            <!-- ========================================= -->
             <!-- ACCIONES SUPERIORES -->
-            <!-- ========================================= -->
-
             <div class="topbar-search">
-
-                <button
-                        type="button"
-                        id="globalSearchButton"
-                        class="global-search-button"
-                        aria-label="Buscar en TechCart"
-                >
+                <button type="button" id="globalSearchButton" class="global-search-button" aria-label="Buscar en TechCart">
                     🔎
                 </button>
-
-                <input
-                        type="text"
-                        id="globalSearchInput"
-                        placeholder="Buscar en TechCart..."
-                        autocomplete="off"
-                >
-
+                <input type="text" id="globalSearchInput" placeholder="Buscar en TechCart..." autocomplete="off">
             </div>
-
-
         </header>
 
-
-
-        <!-- ========================================= -->
         <!-- SPA -->
-        <!-- ========================================= -->
-
-        <main
-                class="spa-content"
-                id="spaContent"
-        >
-
+        <main class="spa-content" id="spaContent">
 
             <!-- ========================================= -->
             <!-- INICIO -->
             <!-- ========================================= -->
+            <section class="spa-view active-view" id="view-inicio">
 
-            <section
-                    class="spa-view active-view"
-                    id="view-inicio"
-            >
-
-
-                <!-- ========================================= -->
                 <!-- BIENVENIDA -->
-                <!-- ========================================= -->
-
                 <section class="welcome-card">
-
-
                     <div class="welcome-copy">
-
-
-                        <span class="welcome-label">
-                            TECHCART
-                        </span>
-
-
-                        <h2>
-
-                            Hola,
-
-                            <span id="welcomeUser">
-                                Usuario
-                            </span>
-
-                            👋
-
-                        </h2>
-
-
+                        <span class="welcome-label">TECHCART</span>
+                        <h2>Hola, <span id="welcomeUser">Usuario</span> 👋</h2>
                         <p>
-
-                            Explora productos tecnológicos,
-                            administra tu carrito y revisa
-                            tus compras desde un solo lugar.
-
+                            Explora productos tecnológicos, administra tu carrito y revisa tus compras desde un solo lugar.
                         </p>
-
-
-                        <button
-                                type="button"
-                                class="primary-button"
-                                data-view-target="productos"
-                        >
-
+                        <button type="button" class="primary-button" data-view-target="productos">
                             Explorar productos →
-
                         </button>
-
-
                     </div>
-
-
-
                     <div class="welcome-visual">
-
                         💻 📱 🎧
-
                     </div>
-
-
                 </section>
 
-
-
-                <!-- ========================================= -->
                 <!-- RESUMEN -->
-                <!-- ========================================= -->
-
                 <section class="summary-grid">
-
-
-                    <!-- PRODUCTOS CARRITO -->
-
                     <article class="summary-card">
-
-
-                        <div class="summary-icon blue">
-                            🛒
-                        </div>
-
-
+                        <div class="summary-icon blue">🛒</div>
                         <div>
-
-
-                            <small>
-                                Productos en carrito
-                            </small>
-
-
-                            <strong id="dashboardCartCount">
-                                0
-                            </strong>
-
-
+                            <small>Productos en carrito</small>
+                            <strong id="dashboardCartCount">0</strong>
                         </div>
-
-
                     </article>
 
-
-
-                    <!-- COMPRAS -->
-
                     <article class="summary-card">
-
-
-                        <div class="summary-icon green">
-                            📦
-                        </div>
-
-
+                        <div class="summary-icon green">📦</div>
                         <div>
-
-
-                            <small>
-                                Compras realizadas
-                            </small>
-
-
-                            <strong id="dashboardOrdersCount">
-                                0
-                            </strong>
-
-
+                            <small>Compras realizadas</small>
+                            <strong id="dashboardOrdersCount">0</strong>
                         </div>
-
-
                     </article>
 
-
-
-                    <!-- OFERTAS -->
-
                     <article class="summary-card">
-
-
-                        <div class="summary-icon orange">
-                            🏷️
-                        </div>
-
-
+                        <div class="summary-icon orange">🏷️</div>
                         <div>
-
-
-                            <small>
-                                Ofertas disponibles
-                            </small>
-
-
-                            <strong>
-                                4
-                            </strong>
-
-
+                            <small>Ofertas disponibles</small>
+                            <strong>4</strong>
                         </div>
-
-
                     </article>
 
-
-
-                    <!-- DESTACADOS -->
-
                     <article class="summary-card">
-
-
-                        <div class="summary-icon purple">
-                            ⭐
-                        </div>
-
-
+                        <div class="summary-icon purple">⭐</div>
                         <div>
-
-
-                            <small>
-                                Productos destacados
-                            </small>
-
-
-                            <strong>
-                                4
-                            </strong>
-
-
+                            <small>Productos destacados</small>
+                            <strong>4</strong>
                         </div>
-
-
                     </article>
-
-
                 </section>
 
-
-
-                <!-- ========================================= -->
                 <!-- ACCESOS RÁPIDOS -->
-                <!-- ========================================= -->
-
                 <section class="dashboard-section">
-
-
                     <div class="section-title">
-
-
                         <div>
-
-
-                            <h3>
-                                Accesos rápidos
-                            </h3>
-
-
-                            <p>
-                                ¿Qué quieres hacer?
-                            </p>
-
-
+                            <h3>Accesos rápidos</h3>
+                            <p>¿Qué quieres hacer?</p>
                         </div>
-
-
                     </div>
-
-
-
                     <div class="quick-grid">
-
-
-                        <!-- PRODUCTOS -->
-
-                        <button
-                                type="button"
-                                class="quick-card"
-                                data-view-target="productos"
-                        >
-
-                            <span>
-                                💻
-                            </span>
-
-                            <strong>
-                                Ver productos
-                            </strong>
-
-                            <small>
-                                Explora nuestro catálogo
-                            </small>
-
+                        <button type="button" class="quick-card" data-view-target="productos">
+                            <span>💻</span>
+                            <strong>Ver productos</strong>
+                            <small>Explora nuestro catálogo</small>
                         </button>
 
-
-
-                        <!-- CARRITO -->
-
-                        <button
-                                type="button"
-                                class="quick-card"
-                                data-view-target="carrito"
-                        >
-
-                            <span>
-                                🛒
-                            </span>
-
-                            <strong>
-                                Mi carrito
-                            </strong>
-
-                            <small>
-                                Revisa tus productos
-                            </small>
-
+                        <button type="button" class="quick-card" data-view-target="carrito">
+                            <span>🛒</span>
+                            <strong>Mi carrito</strong>
+                            <small>Revisa tus productos</small>
                         </button>
 
-
-
-                        <!-- COMPRAS -->
-
-                        <button
-                                type="button"
-                                class="quick-card"
-                                data-view-target="compras"
-                        >
-
-                            <span>
-                                📦
-                            </span>
-
-                            <strong>
-                                Mis compras
-                            </strong>
-
-                            <small>
-                                Consulta tus órdenes
-                            </small>
-
+                        <button type="button" class="quick-card" data-view-target="compras">
+                            <span>📦</span>
+                            <strong>Mis compras</strong>
+                            <small>Consulta tus órdenes</small>
                         </button>
 
-
-
-                        <!-- HISTORIAL HU-07 -->
-
-                        <button
-                                type="button"
-                                class="quick-card"
-                                data-view-target="historial"
-                        >
-
-                            <span>
-                                🧾
-                            </span>
-
-                            <strong>
-                                Historial
-                            </strong>
-
-                            <small>
-                                Revisa compras anteriores
-                            </small>
-
+                        <button type="button" class="quick-card" data-view-target="historial">
+                            <span>🧾</span>
+                            <strong>Historial</strong>
+                            <small>Revisa compras anteriores</small>
                         </button>
 
-
-
-                        <!-- PERFIL -->
-
-                        <button
-                                type="button"
-                                class="quick-card"
-                                data-view-target="perfil"
-                        >
-
-                            <span>
-                                👤
-                            </span>
-
-                            <strong>
-                                Mi perfil
-                            </strong>
-
-                            <small>
-                                Actualiza tus datos
-                            </small>
-
+                        <button type="button" class="quick-card" data-view-target="perfil">
+                            <span>👤</span>
+                            <strong>Mi perfil</strong>
+                            <small>Actualiza tus datos</small>
                         </button>
-
-
                     </div>
-
-
                 </section>
-
-
             </section>
-
-
 
             <!-- ========================================= -->
             <!-- PRODUCTOS -->
             <!-- ========================================= -->
-
-            <section
-                    class="spa-view"
-                    id="view-productos"
-            >
-
-
+            <section class="spa-view" id="view-productos">
                 <div class="section-title">
-
-
                     <div>
-
-
-                        <h2>
-                            Productos
-                        </h2>
-
-
-                        <p id="productsSubtitle">
-                            Explora nuestro catálogo tecnológico.
-                        </p>
-
-
+                        <h2>Productos</h2>
+                        <p id="productsSubtitle">Explora nuestro catálogo tecnológico.</p>
                     </div>
-
-
                 </div>
-
-
-
-                <div
-                        class="internal-products-grid"
-                        id="productsGrid"
-                >
-                </div>
-
-
+                <div class="internal-products-grid" id="productsGrid"></div>
             </section>
-
-
 
             <!-- ========================================= -->
             <!-- CATEGORÍAS -->
             <!-- ========================================= -->
-
-            <section
-                    class="spa-view"
-                    id="view-categorias"
-            >
-
-
+            <section class="spa-view" id="view-categorias">
                 <div class="section-title">
-
-
                     <div>
-
-
-                        <h2>
-                            Categorías
-                        </h2>
-
-
-                        <p>
-                            Encuentra productos según tus intereses.
-                        </p>
-
-
+                        <h2>Categorías</h2>
+                        <p>Encuentra productos según tus intereses.</p>
                     </div>
-
-
                 </div>
-
-
-
                 <div class="categories-panel">
-
-
-                    <!-- LAPTOPS -->
-
-                    <article
-                            class="category-card"
-                            data-category="laptops"
-                    >
-
-                        <span>
-                            💻
-                        </span>
-
-                        <strong>
-                            Laptops
-                        </strong>
-
+                    <article class="category-card" data-category="laptops">
+                        <span>💻</span>
+                        <strong>Laptops</strong>
                     </article>
 
-
-
-                    <!-- SMARTPHONES -->
-
-                    <article
-                            class="category-card"
-                            data-category="smartphones"
-                    >
-
-                        <span>
-                            📱
-                        </span>
-
-                        <strong>
-                            Smartphones
-                        </strong>
-
+                    <article class="category-card" data-category="smartphones">
+                        <span>📱</span>
+                        <strong>Smartphones</strong>
                     </article>
 
-
-
-                    <!-- ACCESORIOS -->
-
-                    <article
-                            class="category-card"
-                            data-category="accesorios"
-                    >
-
-                        <span>
-                            🎧
-                        </span>
-
-                        <strong>
-                            Accesorios
-                        </strong>
-
+                    <article class="category-card" data-category="accesorios">
+                        <span>🎧</span>
+                        <strong>Accesorios</strong>
                     </article>
 
-
-
-                    <!-- SMARTWATCHES -->
-
-                    <article
-                            class="category-card"
-                            data-category="smartwatches"
-                    >
-
-                        <span>
-                            ⌚
-                        </span>
-
-                        <strong>
-                            Smartwatches
-                        </strong>
-
+                    <article class="category-card" data-category="smartwatches">
+                        <span>⌚</span>
+                        <strong>Smartwatches</strong>
                     </article>
 
-
-
-                    <!-- AUDIO -->
-
-                    <article
-                            class="category-card"
-                            data-category="audio"
-                    >
-
-                        <span>
-                            🔊
-                        </span>
-
-                        <strong>
-                            Audio
-                        </strong>
-
+                    <article class="category-card" data-category="audio">
+                        <span>🔊</span>
+                        <strong>Audio</strong>
                     </article>
 
-
-
-                    <!-- GAMING -->
-
-                    <article
-                            class="category-card"
-                            data-category="gaming"
-                    >
-
-                        <span>
-                            🎮
-                        </span>
-
-                        <strong>
-                            Gaming
-                        </strong>
-
+                    <article class="category-card" data-category="gaming">
+                        <span>🎮</span>
+                        <strong>Gaming</strong>
                     </article>
-
-
                 </div>
-
-
             </section>
-
-
 
             <!-- ========================================= -->
             <!-- CARRITO -->
             <!-- ========================================= -->
-
-            <section
-                    class="spa-view"
-                    id="view-carrito"
-            >
-
-
+            <section class="spa-view" id="view-carrito">
                 <div class="section-title">
-
-
                     <div>
-
-
-                        <h2>
-                            Mi carrito
-                        </h2>
-
-
-                        <p>
-                            Administra los productos seleccionados.
-                        </p>
-
-
+                        <h2>Mi carrito</h2>
+                        <p>Administra los productos seleccionados.</p>
                     </div>
-
-
                 </div>
-
-
-
-                <div id="cartContent">
-                </div>
-
-
+                <div id="cartContent"></div>
             </section>
-
-
 
             <!-- ========================================= -->
             <!-- COMPRAS HU-06 -->
             <!-- ========================================= -->
-
-            <section
-                    class="spa-view"
-                    id="view-compras"
-            >
-
-
+            <section class="spa-view" id="view-compras">
                 <div class="section-title">
-
-
                     <div>
-
-
-                        <h2>
-                            Mis compras
-                        </h2>
-
-
-                        <p>
-                            Consulta tus órdenes realizadas.
-                        </p>
-
-
+                        <h2>Mis compras</h2>
+                        <p>Consulta tus órdenes realizadas.</p>
                     </div>
-
-
                 </div>
-
-
-
-                <div id="ordersContent">
-                </div>
-
-
+                <div id="ordersContent"></div>
             </section>
-
-
 
             <!-- ========================================= -->
             <!-- HISTORIAL HU-07 -->
             <!-- ========================================= -->
-
-            <section
-                    class="spa-view"
-                    id="view-historial"
-            >
-
-
+            <section class="spa-view" id="view-historial">
                 <div class="section-title">
-
-
                     <div>
-
-
-                        <h2>
-                            Historial de compras
-                        </h2>
-
-
-                        <p>
-                            Consulta, filtra y descarga tus compras anteriores.
-                        </p>
-
-
+                        <h2>Historial de compras</h2>
+                        <p>Consulta, filtra y descarga tus compras anteriores.</p>
                     </div>
-
-
                 </div>
 
-
-
-                <!-- ========================================= -->
                 <!-- FILTRO DE FECHAS -->
-                <!-- ========================================= -->
-
                 <div class="history-filters">
-
-
                     <div class="history-filter-field">
-
-
-                        <label for="historyDateFrom">
-                            Desde
-                        </label>
-
-
-                        <input
-                                type="date"
-                                id="historyDateFrom"
-                        >
-
-
+                        <label for="historyDateFrom">Desde</label>
+                        <input type="date" id="historyDateFrom">
                     </div>
-
-
-
                     <div class="history-filter-field">
-
-
-                        <label for="historyDateTo">
-                            Hasta
-                        </label>
-
-
-                        <input
-                                type="date"
-                                id="historyDateTo"
-                        >
-
-
+                        <label for="historyDateTo">Hasta</label>
+                        <input type="date" id="historyDateTo">
                     </div>
-
-
-
-                    <button
-                            type="button"
-                            class="primary-button"
-                            id="historyFilterButton"
-                    >
-
+                    <button type="button" class="primary-button" id="historyFilterButton">
                         🔎 Filtrar
-
                     </button>
-
-
-
-                    <button
-                            type="button"
-                            class="history-clear-button"
-                            id="historyClearButton"
-                    >
-
+                    <button type="button" class="history-clear-button" id="historyClearButton">
                         Limpiar
-
                     </button>
-
-
                 </div>
 
-
-
-                <!-- ========================================= -->
                 <!-- HISTORIAL DINÁMICO -->
-                <!-- ========================================= -->
-
-                <div id="historyContent">
-                </div>
-
-
+                <div id="historyContent"></div>
             </section>
-
-
 
             <!-- ========================================= -->
             <!-- PERFIL -->
             <!-- ========================================= -->
-
-            <section
-                    class="spa-view"
-                    id="view-perfil"
-            >
-
-
+            <section class="spa-view" id="view-perfil">
                 <div class="profile-panel">
 
-
-                    <!-- ================================= -->
                     <!-- INFORMACIÓN DEL USUARIO -->
-                    <!-- ================================= -->
-
                     <div class="profile-header">
-
-
-                        <div
-                                class="profile-avatar"
-                                id="profileAvatar"
-                        >
-                            U
-                        </div>
-
-
+                        <div class="profile-avatar" id="profileAvatar">U</div>
                         <div>
-
-
-                            <h2 id="profileName">
-                                Usuario
-                            </h2>
-
-
-                            <p id="profileEmail">
-                                usuario@email.com
-                            </p>
-
-
+                            <h2 id="profileName">Usuario</h2>
+                            <p id="profileEmail">usuario@email.com</p>
                         </div>
-
-
-                        <button
-                                type="button"
-                                class="edit-profile-button"
-                                id="editProfileButton"
-                        >
-
+                        <button type="button" class="edit-profile-button" id="editProfileButton">
                             ✏️ Cambiar datos
-
                         </button>
-
-
                     </div>
 
-
-
-                    <!-- ================================= -->
                     <!-- FORMULARIO PERFIL -->
-                    <!-- ================================= -->
-
-                    <form
-                            class="profile-form"
-                            id="profileForm"
-                    >
-
-
-                        <!-- NOMBRE -->
-
+                    <form class="profile-form" id="profileForm">
                         <div class="profile-field">
-
-
-                            <label for="profileNameInput">
-                                Nombre
-                            </label>
-
-
-                            <input
-                                    type="text"
-                                    id="profileNameInput"
-                                    disabled
-                            >
-
-
+                            <label for="profileNameInput">Nombre</label>
+                            <input type="text" id="profileNameInput" disabled>
                         </div>
 
-
-
-                        <!-- USUARIO -->
-
                         <div class="profile-field">
-
-
-                            <label for="profileUserInput">
-                                Usuario
-                            </label>
-
-
-                            <input
-                                    type="text"
-                                    id="profileUserInput"
-                                    disabled
-                            >
-
-
+                            <label for="profileUserInput">Usuario</label>
+                            <input type="text" id="profileUserInput" disabled>
                         </div>
 
-
-
-                        <!-- CORREO -->
-
                         <div class="profile-field">
-
-
-                            <label for="profileEmailInput">
-                                Correo electrónico
-                            </label>
-
-
-                            <input
-                                    type="email"
-                                    id="profileEmailInput"
-                                    disabled
-                            >
-
-
+                            <label for="profileEmailInput">Correo electrónico</label>
+                            <input type="email" id="profileEmailInput" disabled>
                         </div>
 
-
-
-                        <!-- DIRECCIÓN -->
-
                         <div class="profile-field">
-
-
-                            <label for="profileAddressInput">
-                                Dirección de envío
-                            </label>
-
-
-                            <input
-                                    type="text"
-                                    id="profileAddressInput"
-                                    disabled
-                            >
-
-
+                            <label for="profileAddressInput">Dirección de envío</label>
+                            <input type="text" id="profileAddressInput" disabled>
                         </div>
 
-
-
-                        <!-- ================================= -->
                         <!-- CAMBIAR CONTRASEÑA -->
-                        <!-- ================================= -->
-
-                        <div
-                                class="password-change-section"
-                                id="passwordChangeSection"
-                        >
-
-
+                        <div class="password-change-section" id="passwordChangeSection">
                             <div class="password-title">
-
-
                                 <div class="password-title-content">
-
-
                                     <div>
-
-
-                                        <strong>
-                                            🔐 Cambiar contraseña
-                                        </strong>
-
-
-                                        <p>
-                                            Déjala vacía si no deseas modificarla.
-                                        </p>
-
-
+                                        <strong>🔐 Cambiar contraseña</strong>
+                                        <p>Déjala vacía si no deseas modificarla.</p>
                                     </div>
-
-
-                                    <button
-                                            type="button"
-                                            id="recoverProfilePasswordButton"
-                                            class="recover-profile-password"
-                                    >
-
+                                    <button type="button" id="recoverProfilePasswordButton" class="recover-profile-password">
                                         🔑 Recuperar contraseña
-
                                     </button>
-
-
                                 </div>
-
-
                             </div>
-
-
-
                             <div class="form-row">
-
-
-                                <!-- NUEVA CONTRASEÑA -->
-
                                 <div class="profile-field">
-
-
-                                    <label for="newPasswordInput">
-                                        Nueva contraseña
-                                    </label>
-
-
-                                    <input
-                                            type="password"
-                                            id="newPasswordInput"
-                                            placeholder="Nueva contraseña"
-                                            disabled
-                                    >
-
-
+                                    <label for="newPasswordInput">Nueva contraseña</label>
+                                    <input type="password" id="newPasswordInput" placeholder="Nueva contraseña" disabled>
                                 </div>
 
-
-
-                                <!-- CONFIRMAR CONTRASEÑA -->
-
                                 <div class="profile-field">
-
-
-                                    <label for="confirmNewPasswordInput">
-                                        Confirmar nueva contraseña
-                                    </label>
-
-
-                                    <input
-                                            type="password"
-                                            id="confirmNewPasswordInput"
-                                            placeholder="Repite la contraseña"
-                                            disabled
-                                    >
-
-
+                                    <label for="confirmNewPasswordInput">Confirmar nueva contraseña</label>
+                                    <input type="password" id="confirmNewPasswordInput" placeholder="Repite la contraseña" disabled>
                                 </div>
-
-
                             </div>
-
-
                         </div>
 
-
-
-                        <!-- ================================= -->
                         <!-- BOTONES PERFIL -->
-                        <!-- ================================= -->
-
-                        <div
-                                class="profile-actions"
-                                id="profileActions"
-                        >
-
-
-                            <button
-                                    type="button"
-                                    class="cancel-profile-button"
-                                    id="cancelProfileButton"
-                                    hidden
-                            >
-
+                        <div class="profile-actions" id="profileActions">
+                            <button type="button" class="cancel-profile-button" id="cancelProfileButton" hidden>
                                 Cancelar
-
                             </button>
-
-
-                            <button
-                                    type="button"
-                                    class="primary-button"
-                                    id="saveProfileButton"
-                                    hidden
-                            >
-
+                            <button type="button" class="primary-button" id="saveProfileButton" hidden>
                                 Guardar cambios
-
                             </button>
-
-
                         </div>
-
-
                     </form>
 
-
                 </div>
-
-
             </section>
 
-
         </main>
-
-
     </div>
-
-
 </div>
-
-
 
 <!-- ========================================= -->
 <!-- OVERLAY MÓVIL -->
 <!-- ========================================= -->
-
-<div
-        class="sidebar-overlay"
-        id="sidebarOverlay"
->
-</div>
-
-
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
 
 <!-- ========================================= -->
 <!-- CHATBOT -->
 <!-- ========================================= -->
-
-<div
-        class="chatbot"
-        id="chatbot"
->
-
-
-    <!-- ========================================= -->
-    <!-- VENTANA CHAT -->
-    <!-- ========================================= -->
-
-    <div
-            class="chat-window"
-            id="chatWindow"
-    >
-
-
+<div class="chatbot" id="chatbot">
+    <div class="chat-window" id="chatWindow">
         <div class="chat-header">
-
-
-            <div class="chat-bot-avatar">
-
-                🤖
-
-            </div>
-
-
+            <div class="chat-bot-avatar">🤖</div>
             <div>
-
-
-                <strong>
-                    TechBot
-                </strong>
-
-
-                <span>
-                    ● En línea
-                </span>
-
-
+                <strong>TechBot</strong>
+                <span>● En línea</span>
             </div>
-
-
-            <button
-                    type="button"
-                    id="closeChat"
-            >
-
-                ✕
-
-            </button>
-
-
+            <button type="button" id="closeChat">✕</button>
         </div>
 
-
-
-        <!-- ========================================= -->
         <!-- MENSAJES -->
-        <!-- ========================================= -->
-
-        <div
-                class="chat-messages"
-                id="chatMessages"
-        >
-
-
+        <div class="chat-messages" id="chatMessages">
             <div class="bot-message">
-
-                👋 ¡Hola!
-
-                Soy TechBot.
-
-                <br><br>
-
-                ¿En qué puedo ayudarte?
-
+                👋 ¡Hola! Soy TechBot.<br><br>¿En qué puedo ayudarte?
             </div>
-
-
         </div>
 
-
-
-        <!-- ========================================= -->
         <!-- OPCIONES CHAT -->
-        <!-- ========================================= -->
-
         <div class="chat-options">
-
-
-            <button
-                    type="button"
-                    data-chat-action="productos"
-            >
-
-                💻 Ver productos
-
-            </button>
-
-
-            <button
-                    type="button"
-                    data-chat-action="carrito"
-            >
-
-                🛒 Mi carrito
-
-            </button>
-
-
-            <button
-                    type="button"
-                    data-chat-action="compras"
-            >
-
-                📦 Mis compras
-
-            </button>
-
-
-            <!-- HU-07 -->
-
-            <button
-                    type="button"
-                    data-chat-action="historial"
-            >
-
-                🧾 Historial
-
-            </button>
-
-
-            <button
-                    type="button"
-                    data-chat-action="envios"
-            >
-
-                🚚 Envíos
-
-            </button>
-
-
-            <button
-                    type="button"
-                    data-chat-action="pagos"
-            >
-
-                💳 Métodos de pago
-
-            </button>
-
-
-            <button
-                    type="button"
-                    data-chat-action="perfil"
-            >
-
-                👤 Mi perfil
-
-            </button>
-
-
+            <button type="button" data-chat-action="productos">💻 Ver productos</button>
+            <button type="button" data-chat-action="carrito">🛒 Mi carrito</button>
+            <button type="button" data-chat-action="compras">📦 Mis compras</button>
+            <button type="button" data-chat-action="historial">🧾 Historial</button>
+            <button type="button" data-chat-action="envios">🚚 Envíos</button>
+            <button type="button" data-chat-action="pagos">💳 Métodos de pago</button>
+            <button type="button" data-chat-action="perfil">👤 Mi perfil</button>
         </div>
-
-
     </div>
 
-
-
-    <!-- ========================================= -->
     <!-- BOTÓN FLOTANTE -->
-    <!-- ========================================= -->
-
-    <button
-            type="button"
-            class="chat-button"
-            id="chatButton"
-            aria-label="Abrir chat"
-    >
-
+    <button type="button" class="chat-button" id="chatButton" aria-label="Abrir chat">
         💬
-
-        <span class="chat-notification">
-            1
-        </span>
-
+        <span class="chat-notification">1</span>
     </button>
-
-
 </div>
 
-
-
 <!-- ========================================= -->
-<!-- SWEETALERT -->
+<!-- SCRIPTS -->
 <!-- ========================================= -->
-
-<script
-        src="https://cdn.jsdelivr.net/npm/sweetalert2@11"
->
-</script>
-
-
-
-<!-- ========================================= -->
-<!-- JSPDF -->
-<!-- ========================================= -->
-
-<script
-        src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js"
->
-</script>
-
-
-
-<!-- ========================================= -->
-<!-- APLICACIÓN -->
-<!-- ========================================= -->
-
-<script
-        type="module"
-        src="../js/panel/PanelApp.js"
->
-</script>
-
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js"></script>
+<script type="module" src="../js/panel/PanelApp.js"></script>
 </body>
-
 </html>

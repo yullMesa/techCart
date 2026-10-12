@@ -1,7 +1,6 @@
 import Producto from "./Producto.js";
 
 class Accesorio extends Producto {
-
     constructor(
         idProducto,
         nombre,
@@ -11,7 +10,6 @@ class Accesorio extends Producto {
         imagen,
         tipoAccesorio
     ) {
-
         super(
             idProducto,
             nombre,
@@ -21,23 +19,15 @@ class Accesorio extends Producto {
             imagen,
             "accesorios"
         );
-
-        this.tipoAccesorio =
-            tipoAccesorio;
+        this.tipoAccesorio = tipoAccesorio;
     }
-
 
     mostrarInfo() {
-
         return {
             ...super.mostrarInfo(),
-
-            especificaciones:
-            this.tipoAccesorio
+            especificaciones: this.tipoAccesorio
         };
-
     }
-
 }
 
 export default Accesorio;
