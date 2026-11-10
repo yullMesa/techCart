@@ -194,6 +194,7 @@ class OrdersView {
           <!-- ========================= -->
           <!-- TOTAL -->
           <!-- ========================= -->
+          ${order.envio ? `<div class="shipping-receipt"><p>🚚 Envío simulado: ${this.formatearPrecio(order.costoEnvio ?? order.envio.costoEnvio)}</p><p>Destino: ${this.escapar(order.envio.destino)} · ${order.envio.modalidad === 'expres' ? 'Exprés' : 'Estándar'}</p><p>Subtotal productos: ${this.formatearPrecio(order.subtotal ?? order.envio.subtotal)}</p></div>` : ''}
           <div class="receipt-total-area">
               <div>
                   <small>Total pagado</small>
@@ -375,10 +376,22 @@ class OrdersView {
         // TOTAL
         // =================================
         y += 5;
+        if (order.envio) {
+            if (y > 235) { pdf.addPage(); y = 20; }
+            pdf.setTextColor(...oscuro);
+            pdf.setFontSize(9);
+            pdf.text(`Subtotal productos: ${this.formatearPrecioPDF(order.subtotal ?? order.envio.subtotal)}`,20,y);
+            y += 7;
+            pdf.text(`Envio simulado: ${this.formatearPrecioPDF(order.costoEnvio ?? order.envio.costoEnvio)}`,20,y);
+            y += 7;
+            pdf.text(`Destino: ${String(order.envio.destino).slice(0,62)}`,20,y);
+            y += 8;
+        }
         pdf.setDrawColor(225, 230, 238);
         pdf.line(20, y, 190, y);
 
         y += 12;
+        if (y > 260) { pdf.addPage(); y = 25; }
         pdf.setFont("helvetica", "bold");
         pdf.setFontSize(12);
         pdf.setTextColor(...oscuro);
@@ -413,6 +426,7 @@ class OrdersView {
         }
     }
 
+    escapar(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
     // =========================================
     // FECHA
     // =========================================

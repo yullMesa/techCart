@@ -1,0 +1,26 @@
+/* TechCart Fix 06: ficha de producto y lectura de tarjetas */
+/* Este archivo se carga después de panel.css, mejoras.css y features05.css. */
+.internal-product-card { gap: 0; }
+.internal-product-card h3 { margin: 0 0 10px; line-height: 1.5; overflow-wrap: anywhere; }
+.internal-product-card p { min-height: 0; margin: 0 0 14px; line-height: 1.65; overflow-wrap: anywhere; }
+.internal-product-card .product-specifications {
+  display: block; min-height: 0; margin: 0 0 16px;
+  color: #465776; font-size: 11px; line-height: 1.65; overflow-wrap: anywhere;
+}
+.internal-product-card .product-card-price {
+  display: block; margin: auto 0 13px !important;
+  padding-top: 9px; color: #0875ec; font-size: 19px; line-height: 1.35;
+}
+.internal-product-card .product-review-summary {
+  margin: 0 0 13px; font-size: 11px; line-height: 1.5;
+}
+.internal-product-card .product-detail-open {
+  display: block; width: 100%; height: auto; min-height: 38px;
+  margin: 0 0 11px; padding: 9px 10px;
+  border: 1px solid #9cc8fb; border-radius: 8px;
+  background: #edf6ff; color: #075fbf; font-weight: 700;
+  white-space: normal; line-height: 1.35; overflow-wrap: anywhere;
+}
+.internal-product-card .product-detail-open:hover { background: #dceeff; }
+.internal-product-card .product-extra-actions { margin-bottom: 10px; }
+/* Los estilos del modal permanecen en features05.css. */

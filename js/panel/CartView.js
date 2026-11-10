@@ -1,3 +1,4 @@
+import EnvioService from "../services/EnvioService.js";
 import StorageService from "../services/StorageService.js";
 import CarritoCompra from "../models/CarritoCompra.js";
 import Orden from "../models/Orden.js";
@@ -7,6 +8,8 @@ class CartView {
         this.container = null;
         this.carrito = new CarritoCompra();
         this.session = StorageService.getSession();
+        this.destinoEnvio = 'medellin';
+        this.modalidadEnvio = 'estandar';
     }
 
     // =========================================
@@ -63,6 +66,12 @@ class CartView {
             }
         });
 
+        this.container.addEventListener('change',event=>{
+            if(event.target.matches('[data-shipping-destination]'))this.destinoEnvio=event.target.value;
+            else if(event.target.matches('[data-shipping-mode]'))this.modalidadEnvio=event.target.value;
+            else return;
+            this.render();
+        });
         window.addEventListener("cart-updated", () => {
             this.cargarCarrito();
             this.render();
@@ -163,7 +172,8 @@ class CartView {
             return;
         }
 
-        const total = this.carrito.calcularTotal();
+        const envio = EnvioService.calcular(this.carrito.calcularTotal(),this.destinoEnvio,this.modalidadEnvio);
+        const total = envio.total;
         const result = await Swal.fire({
             icon: "question",
             title: "Confirmar compra",
@@ -181,6 +191,7 @@ class CartView {
         ">
             ${this.formatearPrecio(total)}
         </p>
+        <p>Productos: ${this.formatearPrecio(envio.subtotal)} · Envío simulado: ${this.formatearPrecio(envio.costoEnvio)}</p>
       `,
             showCancelButton: true,
             confirmButtonText: "Sí, confirmar compra",
@@ -198,7 +209,8 @@ class CartView {
                 producto: { ...item.producto },
                 cantidad: item.cantidad
             })),
-            total
+            total,
+            envio
         );
 
         const ordenGenerada = orden.generarOrden();
@@ -270,10 +282,11 @@ class CartView {
           <div class="cart-products">
               ${productosHtml}
           </div>
-          <div class="cart-summary">
+          ${this.crearSimuladorEnvio()}
+           <div class="cart-summary">
               <div class="cart-total">
-                  <span>Total</span>
-                  <strong>${this.formatearPrecio(this.carrito.calcularTotal())}</strong>
+                  <span>Total con envío estimado</span>
+                  <strong>${this.formatearPrecio(EnvioService.calcular(this.carrito.calcularTotal(),this.destinoEnvio,this.modalidadEnvio).total)}</strong>
               </div>
               <button
                   type="button"
@@ -285,6 +298,20 @@ class CartView {
           </div>
       </div>
     `;
+    }
+
+    crearSimuladorEnvio(){
+        const subtotal=this.carrito.calcularTotal();
+        const estimacion=EnvioService.calcular(subtotal,this.destinoEnvio,this.modalidadEnvio);
+        return `<section class="shipping-panel" aria-label="Simulador de envío">
+            <h3>🚚 Simula tu envío</h3>
+            <p>Tarifas y plazos ficticios para fines académicos. No se realiza ningún envío real.</p>
+            <div class="shipping-fields">
+                <label>Destino<select data-shipping-destination>${EnvioService.destinos().map(d=>`<option value="${d.id}" ${d.id===this.destinoEnvio?'selected':''}>${d.nombre}</option>`).join('')}</select></label>
+                <label>Modalidad<select data-shipping-mode><option value="estandar" ${this.modalidadEnvio==='estandar'?'selected':''}>Estándar</option><option value="expres" ${this.modalidadEnvio==='expres'?'selected':''}>Exprés</option></select></label>
+            </div>
+            <div class="shipping-breakdown"><span>Productos</span><strong>${this.formatearPrecio(subtotal)}</strong><span>Envío simulado</span><strong>${this.formatearPrecio(estimacion.costoEnvio)}</strong><span>Entrega estimada</span><strong>${estimacion.diasEstimados} día(s) hábiles (simulado)</strong></div>
+        </section>`;
     }
 
     // =========================================

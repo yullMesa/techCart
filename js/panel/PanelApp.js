@@ -11,6 +11,7 @@ import GlobalSearch from "./GlobalSearch.js";
 import AuthService from "../services/AuthService.js";
 import ComparadorView from "./ComparadorView.js";
 import ReviewsView from "./ReviewsView.js";
+import ProductDetailView from "./ProductDetailView.js";
 
 class PanelApp {
     constructor() {
@@ -25,6 +26,7 @@ class PanelApp {
         this.productsView = new ProductsView();
         this.comparadorView = new ComparadorView(this.router, this.productsView);
         this.reviewsView = new ReviewsView(this.router, this.productsView);
+        this.productDetailView = new ProductDetailView(this.productsView,this.router);
 
         // =========================================
         // BUSCADOR GLOBAL
@@ -99,6 +101,7 @@ class PanelApp {
         await this.productsView.init();
         this.comparadorView.init();
         this.reviewsView.init();
+        this.productDetailView.init();
 
         // BUSCADOR GLOBAL
         // IMPORTANTE: después de cargar productos

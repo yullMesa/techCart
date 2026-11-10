@@ -3,7 +3,8 @@ class Orden {
     constructor(
         cliente,
         listaProductos,
-        total
+        total,
+        envio = null
     ) {
 
         this.numeroOrden =
@@ -23,6 +24,10 @@ class Orden {
         this.total =
             Number(total) || 0;
 
+
+        this.envio = envio;
+        this.subtotal = envio ? Number(envio.subtotal) : this.total;
+        this.costoEnvio = envio ? Number(envio.costoEnvio) : 0;
 
         this.fecha =
             new Date()
@@ -50,6 +55,9 @@ class Orden {
 
             total:
                 this.total,
+            subtotal: this.subtotal,
+            costoEnvio: this.costoEnvio,
+            envio: this.envio,
 
             fecha:
                 this.fecha,
@@ -77,6 +85,9 @@ class Orden {
 
             total:
                 this.total,
+            subtotal: this.subtotal,
+            costoEnvio: this.costoEnvio,
+            envio: this.envio,
 
             productos:
                 this.listaProductos

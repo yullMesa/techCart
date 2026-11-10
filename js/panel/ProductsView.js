@@ -246,8 +246,9 @@ class ProductsView {
                 `
                 : ""
         }
-          <strong>${this.formatearPrecio(info.precio)}</strong>
+          <strong class="product-card-price">${this.formatearPrecio(info.precio)}</strong>
           <div class="product-review-summary">⭐ ${calificacion.cantidad ? calificacion.promedio.toFixed(1) : "Sin calificaciones"} (${calificacion.cantidad})</div>
+          <button type="button" class="product-detail-open" data-product-details="${info.idProducto}" aria-label="Ver detalles de ${info.nombre}">🔎 Ver detalles del producto</button>
           <div class="product-extra-actions">
             <button type="button" data-compare-product="${info.idProducto}">⚖️ Comparar</button>
             <button type="button" data-review-product="${info.idProducto}">⭐ Calificar / Reseñas</button>

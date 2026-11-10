@@ -1,29 +1,10 @@
-import StorageService from "./StorageService.js";
-
+import ClienteService from "./ClienteService.js";
 class AuthService {
-
-    static isAuthenticated() {
-        return localStorage.getItem("isLoggedIn") === "true";
-    }
-
-    static verificarPassword(clienteId, password) {
-
-        const clientes = StorageService.getClientes();
-
-        const cliente = clientes.find(
-            cliente => String(cliente.id) === String(clienteId)
-        );
-
-        if (!cliente) {
-            return false;
-        }
-
-        return cliente.password === password;
-    }
-
-    static logout() {
-        StorageService.clearSession();
-    }
+ static isAuthenticated(){return localStorage.getItem("isLoggedIn") === "true";}
+ static verificarPassword(clienteId,password){
+  const cliente=ClienteService.getClienteById(clienteId);
+  return Boolean(cliente && typeof password === 'string' && cliente.password === password);
+ }
+ static logout(){localStorage.removeItem('isLoggedIn');localStorage.removeItem('techCartSesion');}
 }
-
 export default AuthService;
