@@ -1,0 +1,33 @@
+/* TechCart 09: diálogo de envío y pago de prueba, aislado del panel. */
+.techbot-modal[hidden]{display:none!important}
+.techbot-modal{position:fixed;inset:0;z-index:6500;display:flex;align-items:center;justify-content:center;padding:18px;font-family:Arial,Helvetica,sans-serif;color:#101b3d}
+.techbot-modal-backdrop{position:absolute;inset:0;background:rgba(9,20,49,.69);backdrop-filter:blur(3px)}
+.techbot-modal-panel{position:relative;z-index:1;width:min(660px,100%);max-height:min(760px,92vh);overflow-y:auto;border:1px solid #dae4f0;border-radius:19px;background:#fff;box-shadow:0 24px 75px rgba(5,17,43,.25)}
+.techbot-modal-header{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;padding:22px 26px;background:linear-gradient(125deg,#0875ec,#13ae9f);color:#fff}
+.techbot-modal-header small{display:block;margin:0 0 8px;font-size:10px;font-weight:700;letter-spacing:.10em;color:#e4f3ff}
+.techbot-modal-header h2{margin:0;font-size:22px;line-height:1.2;color:#fff}
+.techbot-modal-close{flex:0 0 35px;width:35px;height:35px;border:1px solid rgba(255,255,255,.6);border-radius:10px;background:rgba(255,255,255,.15);color:#fff;font-size:17px;cursor:pointer}
+.techbot-modal-close:hover{background:rgba(255,255,255,.3)}
+.techbot-modal-body{padding:25px 26px 28px;display:grid;gap:18px}
+.techbot-notice{margin:0;padding:14px 16px;border-left:4px solid #0875ec;border-radius:9px;background:#eef6ff;color:#354962;font-size:13px;line-height:1.65}
+.techbot-summary{display:flex;flex-direction:column;gap:6px;padding:17px;border:1px solid #e1e9f4;border-radius:12px;background:#f8fbff;overflow-wrap:anywhere}
+.techbot-summary span{font-size:12px;color:#67768d}
+.techbot-summary strong{font-size:19px;color:#0875ec}
+.techbot-summary small{font-size:11px;color:#6d7a8e;line-height:1.5}
+.techbot-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.techbot-form label{display:flex;flex-direction:column;gap:8px;min-width:0;font-size:12px;font-weight:700;color:#243959}
+.techbot-form label span{font-weight:400;color:#65758e}
+.techbot-form select,.techbot-form input{width:100%;min-height:44px;padding:10px 12px;border:1px solid #d4dfed;border-radius:8px;background:#fff;color:#192b47;font:400 13px Arial,Helvetica,sans-serif;outline:none;max-width:none}
+.techbot-form select:focus,.techbot-form input:focus{border-color:#0875ec;box-shadow:0 0 0 3px rgba(8,117,236,.12)}
+.techbot-form label:nth-child(3),.techbot-form .techbot-primary{grid-column:1/-1}
+.techbot-primary{min-height:43px;padding:10px 15px;border:0;border-radius:9px;background:#0875ec;color:white;font-size:13px;font-weight:700;cursor:pointer}
+.techbot-primary:hover{background:#0463cf}.techbot-primary:disabled{opacity:.62;cursor:wait}
+.techbot-result:empty{display:none}
+.techbot-result{padding:14px 16px;border:1px solid #c5eadf;border-radius:11px;background:#effbf7;color:#214d45;font-size:13px;line-height:1.6;overflow-wrap:anywhere}
+.techbot-result strong{display:block;margin-bottom:5px;font-size:14px}
+.techbot-result p{margin:0}
+.techbot-processing{color:#2560a6!important}
+body.techbot-modal-open{overflow:hidden}
+/* El monitor técnico de las versiones previas no pertenece a la UI comercial. */
+#chatWindow .async-trace-toggle,#chatWindow #asyncTracePanel{display:none!important}
+@media(max-width:640px){.techbot-modal{padding:8px}.techbot-modal-panel{max-height:95vh}.techbot-modal-header{padding:18px}.techbot-modal-body{padding:18px}.techbot-modal-header h2{font-size:19px}.techbot-form{grid-template-columns:1fr}.techbot-form label:nth-child(3),.techbot-form .techbot-primary{grid-column:1}}

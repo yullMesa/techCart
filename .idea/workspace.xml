@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2b0a5cc-824e-442c-b748-4fa52235ce43" name="Changes" comment="feat: add product comparison and customer reviews&#10;&#10;- Add interactive product comparator with category filters&#10;- Support comparison of up to 3 products&#10;- Add product search within comparator&#10;- Display technical specifications side by side&#10;- Allow adding compared products directly to cart&#10;- Add customer ratings from 1 to 5 stars&#10;- Add product reviews and average ratings&#10;- Persist reviews using localStorage&#10;- Expand product catalog from 18 to 72 products&#10;- Sync active sidebar navigation with comparator&#10;- Improve responsive UI and product card layouts&#10;- Fix review button text overflow&#10;- Preserve existing cart, orders, history and PDF features">
-      <change afterPath="$PROJECT_DIR$/css/features05.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/panel/ProductDetailView.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/services/EnvioService.js" afterDir="false" />
+    <list default="true" id="e2b0a5cc-824e-442c-b748-4fa52235ce43" name="Changes" comment="feat: add product details, shipping simulator and profile fixes&#10;&#10;- Add product detail modal with images and specifications&#10;- Enable adding products to cart from detail view&#10;- Integrate product comparison and reviews into detail modal&#10;- Add shipping simulator with destination and delivery options&#10;- Calculate shipping costs and final order totals&#10;- Include shipping information in orders and PDF receipts&#10;- Fix password verification for profile editing&#10;- Enable updating customer information and session data&#10;- Improve product card spacing and readability&#10;- Fix product detail modal navigation and event handling&#10;- Add responsive styles for product cards and modal&#10;- Preserve existing cart, order history and comparison features">
+      <change afterPath="$PROJECT_DIR$/css/async07.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/models/Orden.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/models/Orden.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/panel/CartView.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/panel/CartView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/panel/OrdersView.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/panel/OrdersView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/panel/PanelApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/panel/PanelApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/panel/ProfileView.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/panel/ProfileView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/services/AuthService.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/services/AuthService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/panel/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/panel/Chatbot.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/panel/Chatbot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/panel/GlobalSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/panel/GlobalSearch.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,10 +147,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\yulls\Documents\proyectos\Viejo\techCart\css" />
-      <recent name="C:\Users\yulls\Documents\proyectos\Viejo\techCart\js\services" />
       <recent name="C:\Users\yulls\Documents\proyectos\Viejo\techCart\js\panel" />
-      <recent name="C:\Users\yulls\Documents\proyectos\Viejo\techCart\js\models" />
       <recent name="C:\Users\yulls\Documents\proyectos\Viejo\techCart\panel" />
+      <recent name="C:\Users\yulls\Documents\proyectos\Viejo\techCart\js\services" />
+      <recent name="C:\Users\yulls\Documents\proyectos\Viejo\techCart\js\models" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -240,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794270288324</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat: add product details, shipping simulator and profile fixes&#10;&#10;- Add product detail modal with images and specifications&#10;- Enable adding products to cart from detail view&#10;- Integrate product comparison and reviews into detail modal&#10;- Add shipping simulator with destination and delivery options&#10;- Calculate shipping costs and final order totals&#10;- Include shipping information in orders and PDF receipts&#10;- Fix password verification for profile editing&#10;- Enable updating customer information and session data&#10;- Improve product card spacing and readability&#10;- Fix product detail modal navigation and event handling&#10;- Add responsive styles for product cards and modal&#10;- Preserve existing cart, order history and comparison features">
+      <option name="closed" value="true" />
+      <created>1794271990429</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1794271990429</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,6 +255,7 @@
     <MESSAGE value="&quot;feat: completar HU-09 con diseño responsive y buscador global" />
     <MESSAGE value="refactor(code-style): estandarizar formato y mejorar legibilidad en scripts de TechCart&#10;&#10;- Reorganizar la estructura visual y sangrías de los scripts principales (Router, Sidebar, AuthService, ProductService, StorageService, app.js y auth.js).&#10;- Eliminar saltos de línea innecesarios manteniendo intacta la lógica, el comportamiento funcional y las validaciones.&#10;- Consolidar un estilo de código limpio y uniforme en todo el proyecto académico SPA." />
     <MESSAGE value="feat: add product comparison and customer reviews&#10;&#10;- Add interactive product comparator with category filters&#10;- Support comparison of up to 3 products&#10;- Add product search within comparator&#10;- Display technical specifications side by side&#10;- Allow adding compared products directly to cart&#10;- Add customer ratings from 1 to 5 stars&#10;- Add product reviews and average ratings&#10;- Persist reviews using localStorage&#10;- Expand product catalog from 18 to 72 products&#10;- Sync active sidebar navigation with comparator&#10;- Improve responsive UI and product card layouts&#10;- Fix review button text overflow&#10;- Preserve existing cart, orders, history and PDF features" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add product comparison and customer reviews&#10;&#10;- Add interactive product comparator with category filters&#10;- Support comparison of up to 3 products&#10;- Add product search within comparator&#10;- Display technical specifications side by side&#10;- Allow adding compared products directly to cart&#10;- Add customer ratings from 1 to 5 stars&#10;- Add product reviews and average ratings&#10;- Persist reviews using localStorage&#10;- Expand product catalog from 18 to 72 products&#10;- Sync active sidebar navigation with comparator&#10;- Improve responsive UI and product card layouts&#10;- Fix review button text overflow&#10;- Preserve existing cart, orders, history and PDF features" />
+    <MESSAGE value="feat: add product details, shipping simulator and profile fixes&#10;&#10;- Add product detail modal with images and specifications&#10;- Enable adding products to cart from detail view&#10;- Integrate product comparison and reviews into detail modal&#10;- Add shipping simulator with destination and delivery options&#10;- Calculate shipping costs and final order totals&#10;- Include shipping information in orders and PDF receipts&#10;- Fix password verification for profile editing&#10;- Enable updating customer information and session data&#10;- Improve product card spacing and readability&#10;- Fix product detail modal navigation and event handling&#10;- Add responsive styles for product cards and modal&#10;- Preserve existing cart, order history and comparison features" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add product details, shipping simulator and profile fixes&#10;&#10;- Add product detail modal with images and specifications&#10;- Enable adding products to cart from detail view&#10;- Integrate product comparison and reviews into detail modal&#10;- Add shipping simulator with destination and delivery options&#10;- Calculate shipping costs and final order totals&#10;- Include shipping information in orders and PDF receipts&#10;- Fix password verification for profile editing&#10;- Enable updating customer information and session data&#10;- Improve product card spacing and readability&#10;- Fix product detail modal navigation and event handling&#10;- Add responsive styles for product cards and modal&#10;- Preserve existing cart, order history and comparison features" />
   </component>
 </project>

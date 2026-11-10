@@ -1,0 +1,39 @@
+/* TechCart Async 08 — CSS exclusivo del buscador y monitor Event Loop */
+/* No modifica panel.css ni los componentes de compras. */
+.async-search-host {position:relative;overflow:visible}
+.async-search-suggestions {position:absolute;top:calc(100% + 8px);right:0;width:min(400px,85vw);max-height:320px;overflow-y:auto;padding:8px;border:1px solid #dbe5f1;border-radius:12px;background:#fff;box-shadow:0 18px 38px rgba(16,27,61,.16);z-index:2500;font-size:12px;color:#53617a}
+.async-search-suggestions[hidden] {display:none!important}
+.async-search-suggestions button {display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;padding:11px;text-align:left;border:0;border-radius:8px;background:white;color:#101b3d;font-size:12px}
+.async-search-suggestions button:hover,.async-search-suggestions button:focus-visible {background:#eff6ff}
+.async-search-suggestions button strong {font-size:12px;overflow-wrap:anywhere}
+.async-search-suggestions button span {flex-shrink:0;color:#0875ec;font-weight:600}
+
+/* Mantener cabecera de TechBot compacta: avatar | nombre | botón | cerrar */
+#chatWindow .chat-header {display:flex;align-items:center;gap:8px;min-width:0;padding:12px!important}
+#chatWindow .chat-header > div:nth-child(2) {min-width:0;flex:1 1 auto}
+#chatWindow .chat-header > div:nth-child(2) strong {font-size:13px}
+#chatWindow .chat-header > div:nth-child(2) span {font-size:10px}
+#chatWindow .chat-header .async-trace-toggle {display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;margin-left:0;padding:7px 8px;border:1px solid rgba(255,255,255,.42);border-radius:8px;background:rgba(255,255,255,.13);color:white;font-size:10px;font-weight:700;line-height:1.1;white-space:nowrap;max-width:none;width:auto;height:auto}
+#chatWindow .chat-header .async-trace-toggle:hover,#chatWindow .chat-header .async-trace-toggle[aria-expanded="true"] {background:rgba(255,255,255,.24)}
+#chatWindow .chat-header #closeChat {display:flex;align-items:center;justify-content:center;margin-left:0;flex:0 0 22px;width:22px;height:28px;padding:0;border:0;background:transparent;color:white;font-size:18px}
+
+/* El panel se coloca encima de los mensajes y respeta la columna flex del chat */
+#chatWindow .async-trace-panel {display:flex;flex:0 0 auto;flex-direction:column;gap:8px;box-sizing:border-box;width:100%;min-width:0;max-height:200px;margin:0;padding:12px 13px;overflow:auto;border-bottom:1px solid #d8e5f4;background:#f0f6ff;color:#263650;font-family:inherit;font-size:11px;line-height:1.45;overflow-wrap:anywhere}
+#chatWindow .async-trace-panel[hidden] {display:none!important}
+#chatWindow .async-trace-top {display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:7px;width:100%;min-width:0}
+#chatWindow .async-trace-top > strong {font-size:11px;font-weight:700;color:#10254b;line-height:1.3;margin:0}
+#chatWindow .async-trace-actions {display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+#chatWindow .async-trace-actions button {display:inline-flex;align-items:center;justify-content:center;width:auto;min-height:29px;max-width:none;margin:0;padding:5px 9px;border:1px solid #bbd1ed;border-radius:7px;background:#fff;color:#0866d2;font:600 10px/1.2 Arial,Helvetica,sans-serif;white-space:nowrap;cursor:pointer}
+#chatWindow .async-trace-actions button:hover {background:#e3efff}
+#chatWindow .async-trace-help {display:block;margin:0;color:#61718a;font-size:10px;line-height:1.45}
+#chatWindow #asyncTraceList {display:flex;flex-direction:column;gap:5px;min-width:0;margin:0;padding:0;list-style:none;counter-reset:trace}
+#chatWindow #asyncTraceList li {display:block;min-width:0;margin:0;padding:7px 9px;border:1px solid #dfe9f7;border-left:3px solid #0875ec;border-radius:6px;background:#fff;color:#384760;font-size:10px;line-height:1.45;overflow-wrap:anywhere;word-break:normal;white-space:normal}
+#chatWindow #asyncTraceList li strong {display:inline;color:#0b3b87;font-size:10px;font-weight:700}
+#chatWindow .async-typing {color:#667389;font-style:italic}
+
+@media(max-width:700px) {
+  .async-search-suggestions {position:fixed;top:70px;right:12px;width:calc(100vw - 24px)}
+  #chatWindow .chat-header .async-trace-toggle {padding:6px;font-size:9px}
+  #chatWindow .async-trace-panel {max-height:180px;padding:10px}
+}
+@media(max-width:365px) {#chatWindow .chat-header .async-trace-toggle {font-size:0}#chatWindow .chat-header .async-trace-toggle::after {content:"🧪";font-size:14px}}
