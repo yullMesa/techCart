@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2b0a5cc-824e-442c-b748-4fa52235ce43" name="Changes" comment="feat: add product details, shipping simulator and profile fixes&#10;&#10;- Add product detail modal with images and specifications&#10;- Enable adding products to cart from detail view&#10;- Integrate product comparison and reviews into detail modal&#10;- Add shipping simulator with destination and delivery options&#10;- Calculate shipping costs and final order totals&#10;- Include shipping information in orders and PDF receipts&#10;- Fix password verification for profile editing&#10;- Enable updating customer information and session data&#10;- Improve product card spacing and readability&#10;- Fix product detail modal navigation and event handling&#10;- Add responsive styles for product cards and modal&#10;- Preserve existing cart, order history and comparison features">
-      <change afterPath="$PROJECT_DIR$/css/async07.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/panel/Chatbot.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/panel/Chatbot.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/panel/GlobalSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/panel/GlobalSearch.js" afterDir="false" />
-    </list>
+    <list default="true" id="e2b0a5cc-824e-442c-b748-4fa52235ce43" name="Changes" comment="feat: add async payment and shipping simulations to TechBot&#10;&#10;- Remove technical Event Loop monitor from chatbot UI&#10;- Add interactive payment method selection&#10;- Support credit, debit, checking and savings account options&#10;- Implement simulated asynchronous payment processing&#10;- Display pending payment verification status&#10;- Add interactive shipping consultation&#10;- Calculate estimated shipping costs and delivery times&#10;- Integrate customer address from profile&#10;- Expand chatbot window for payment and shipping forms&#10;- Implement Promises, async/await and Web API timers&#10;- Improve chatbot responsive UI and user experience&#10;- Preserve existing shopping cart and order functionality" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -134,7 +129,7 @@
     "git-widget-placeholder": "master",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/yulls/Documents/proyectos/Viejo/techCart/css",
+    "last_opened_file_path": "C:/Users/yulls/Documents/proyectos/Viejo/techCart/js/panel",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -146,8 +141,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\yulls\Documents\proyectos\Viejo\techCart\css" />
       <recent name="C:\Users\yulls\Documents\proyectos\Viejo\techCart\js\panel" />
+      <recent name="C:\Users\yulls\Documents\proyectos\Viejo\techCart\css" />
       <recent name="C:\Users\yulls\Documents\proyectos\Viejo\techCart\panel" />
       <recent name="C:\Users\yulls\Documents\proyectos\Viejo\techCart\js\services" />
       <recent name="C:\Users\yulls\Documents\proyectos\Viejo\techCart\js\models" />
@@ -241,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794271990429</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="feat: add async payment and shipping simulations to TechBot&#10;&#10;- Remove technical Event Loop monitor from chatbot UI&#10;- Add interactive payment method selection&#10;- Support credit, debit, checking and savings account options&#10;- Implement simulated asynchronous payment processing&#10;- Display pending payment verification status&#10;- Add interactive shipping consultation&#10;- Calculate estimated shipping costs and delivery times&#10;- Integrate customer address from profile&#10;- Expand chatbot window for payment and shipping forms&#10;- Implement Promises, async/await and Web API timers&#10;- Improve chatbot responsive UI and user experience&#10;- Preserve existing shopping cart and order functionality">
+      <option name="closed" value="true" />
+      <created>1794273681205</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1794273681205</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,6 +259,7 @@
     <MESSAGE value="refactor(code-style): estandarizar formato y mejorar legibilidad en scripts de TechCart&#10;&#10;- Reorganizar la estructura visual y sangrías de los scripts principales (Router, Sidebar, AuthService, ProductService, StorageService, app.js y auth.js).&#10;- Eliminar saltos de línea innecesarios manteniendo intacta la lógica, el comportamiento funcional y las validaciones.&#10;- Consolidar un estilo de código limpio y uniforme en todo el proyecto académico SPA." />
     <MESSAGE value="feat: add product comparison and customer reviews&#10;&#10;- Add interactive product comparator with category filters&#10;- Support comparison of up to 3 products&#10;- Add product search within comparator&#10;- Display technical specifications side by side&#10;- Allow adding compared products directly to cart&#10;- Add customer ratings from 1 to 5 stars&#10;- Add product reviews and average ratings&#10;- Persist reviews using localStorage&#10;- Expand product catalog from 18 to 72 products&#10;- Sync active sidebar navigation with comparator&#10;- Improve responsive UI and product card layouts&#10;- Fix review button text overflow&#10;- Preserve existing cart, orders, history and PDF features" />
     <MESSAGE value="feat: add product details, shipping simulator and profile fixes&#10;&#10;- Add product detail modal with images and specifications&#10;- Enable adding products to cart from detail view&#10;- Integrate product comparison and reviews into detail modal&#10;- Add shipping simulator with destination and delivery options&#10;- Calculate shipping costs and final order totals&#10;- Include shipping information in orders and PDF receipts&#10;- Fix password verification for profile editing&#10;- Enable updating customer information and session data&#10;- Improve product card spacing and readability&#10;- Fix product detail modal navigation and event handling&#10;- Add responsive styles for product cards and modal&#10;- Preserve existing cart, order history and comparison features" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add product details, shipping simulator and profile fixes&#10;&#10;- Add product detail modal with images and specifications&#10;- Enable adding products to cart from detail view&#10;- Integrate product comparison and reviews into detail modal&#10;- Add shipping simulator with destination and delivery options&#10;- Calculate shipping costs and final order totals&#10;- Include shipping information in orders and PDF receipts&#10;- Fix password verification for profile editing&#10;- Enable updating customer information and session data&#10;- Improve product card spacing and readability&#10;- Fix product detail modal navigation and event handling&#10;- Add responsive styles for product cards and modal&#10;- Preserve existing cart, order history and comparison features" />
+    <MESSAGE value="feat: add async payment and shipping simulations to TechBot&#10;&#10;- Remove technical Event Loop monitor from chatbot UI&#10;- Add interactive payment method selection&#10;- Support credit, debit, checking and savings account options&#10;- Implement simulated asynchronous payment processing&#10;- Display pending payment verification status&#10;- Add interactive shipping consultation&#10;- Calculate estimated shipping costs and delivery times&#10;- Integrate customer address from profile&#10;- Expand chatbot window for payment and shipping forms&#10;- Implement Promises, async/await and Web API timers&#10;- Improve chatbot responsive UI and user experience&#10;- Preserve existing shopping cart and order functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add async payment and shipping simulations to TechBot&#10;&#10;- Remove technical Event Loop monitor from chatbot UI&#10;- Add interactive payment method selection&#10;- Support credit, debit, checking and savings account options&#10;- Implement simulated asynchronous payment processing&#10;- Display pending payment verification status&#10;- Add interactive shipping consultation&#10;- Calculate estimated shipping costs and delivery times&#10;- Integrate customer address from profile&#10;- Expand chatbot window for payment and shipping forms&#10;- Implement Promises, async/await and Web API timers&#10;- Improve chatbot responsive UI and user experience&#10;- Preserve existing shopping cart and order functionality" />
   </component>
 </project>
