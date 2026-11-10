@@ -16,6 +16,8 @@ class Router {
                 title: "Categorías",
                 subtitle: "Encuentra productos por categoría"
             },
+            comparador: { title: "Comparador de productos", subtitle: "Compara características de tus productos favoritos" },
+            resenas: { title: "Calificaciones", subtitle: "Consulta opiniones y califica productos" },
             carrito: {
                 title: "Mi carrito",
                 subtitle: "Administra los productos seleccionados"
@@ -50,6 +52,13 @@ class Router {
         }
 
         selectedView.classList.add("active-view");
+        // Sincroniza el sidebar incluso si la navegación proviene de una tarjeta.
+        document.querySelectorAll('.sidebar-menu [data-view]').forEach(button => {
+            const activo = button.dataset.view === viewName || (viewName === 'resenas' && button.dataset.view === 'productos');
+            button.classList.toggle('active', activo);
+            if (activo) button.setAttribute('aria-current', 'page');
+            else button.removeAttribute('aria-current');
+        });
         this.updateHeader(viewName);
     }
 

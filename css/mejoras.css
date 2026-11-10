@@ -1,0 +1,43 @@
+/* TechCart: comparador y reseñas. Complemento para panel.css */
+.product-extra-actions { display:flex; flex-wrap:wrap; gap:8px; margin:10px 0; }
+.product-extra-actions button { flex:1; min-width:120px; border:1px solid #a8c8ec; border-radius:7px; padding:9px 8px; background:#f4f9ff; color:#0759ae; cursor:pointer; font-weight:600; }
+.product-extra-actions button:hover { background:#e4f1ff; }
+.product-review-summary { padding:7px 0; color:#56637b; font-size:13px; }
+.compare-toolbar {display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:14px; margin-bottom:14px;}
+.compare-toolbar button {border:1px solid #cbd5e1;background:white;border-radius:7px;padding:9px 14px;cursor:pointer;}
+.compare-scroll {overflow-x:auto;border:1px solid #e3e8f0;border-radius:12px;background:white;}
+.compare-table {width:100%;border-collapse:collapse;min-width:580px;text-align:left;}
+.compare-table th,.compare-table td {border-bottom:1px solid #edf0f5;padding:16px;vertical-align:top;}
+.compare-table thead th {background:#f2f7fd;color:#0c2351;}
+.compare-table thead th button {margin-left:10px;border:0;background:transparent;cursor:pointer;color:#6f7c90;}
+.compare-empty,.review-panel {background:white;border:1px solid #e4eaf2;border-radius:12px;padding:24px;}
+.review-panel {max-width:800px;}
+.review-form {display:grid;gap:14px;padding:20px 0;}
+.review-form label {display:grid;gap:6px;font-weight:600;}
+.review-form select,.review-form textarea {padding:10px;border:1px solid #ccd5e3;border-radius:8px;width:100%;font:inherit;}
+.review-form button {justify-self:start;}
+.review-item {border-top:1px solid #e5eaf1;padding:15px 0;}
+.review-item span {color:#ef9b16;}
+.review-item p {overflow-wrap:anywhere;margin:8px 0;}
+.review-item small {color:#667085;}
+@media(max-width:600px) {.review-panel {padding:14px;} .compare-table th,.compare-table td {padding:10px;}}
+
+/* TechCart UX04: evitar desbordamiento del texto en las tarjetas. */
+.internal-product-card { min-width:0; }
+.internal-product-card .product-extra-actions { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; width:100%; }
+.internal-product-card .product-extra-actions button {
+    width:100%; min-width:0; height:auto; min-height:44px; padding:8px 5px;
+    line-height:1.3; white-space:normal; overflow-wrap:anywhere;
+    text-align:center; font-size:11px; display:flex; align-items:center; justify-content:center;
+}
+/* Un texto largo escrito en una reseña tampoco debe sobresalir. */
+#view-resenas, #reviewsContent, #reviewsContent .review-panel, #reviewsContent .review-form {min-width:0;max-width:100%;}
+#reviewsContent .review-product-header > div {min-width:0;overflow-wrap:anywhere;}
+#reviewsContent .review-item, #reviewsContent .review-item p {overflow-wrap:anywhere;word-break:break-word;}
+#reviewsContent textarea {box-sizing:border-box;max-width:100%;min-width:0;}
+/* CTA para pasar directamente del comparador al carrito. */
+#view-comparador .compare-cart-row th, #view-comparador .compare-cart-row td {background:#f6faff;vertical-align:middle;}
+#view-comparador .compare-add-cart {display:inline-flex;align-items:center;justify-content:center;white-space:normal;min-height:40px;padding:9px 12px;border:0;border-radius:8px;background:#0875ec;color:white;font-weight:700;cursor:pointer;}
+#view-comparador .compare-add-cart:hover {background:#0562ca;}
+#view-comparador .compare-add-cart:disabled {opacity:.5;cursor:not-allowed;}
+@media(max-width:600px) {.internal-product-card .product-extra-actions{grid-template-columns:repeat(2,minmax(0,1fr));}}

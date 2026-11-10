@@ -9,6 +9,8 @@ import OrdersView from "./OrdersView.js";
 import HistoryView from "./HistoryView.js";
 import GlobalSearch from "./GlobalSearch.js";
 import AuthService from "../services/AuthService.js";
+import ComparadorView from "./ComparadorView.js";
+import ReviewsView from "./ReviewsView.js";
 
 class PanelApp {
     constructor() {
@@ -21,6 +23,8 @@ class PanelApp {
         // PRODUCTOS
         // =========================================
         this.productsView = new ProductsView();
+        this.comparadorView = new ComparadorView(this.router, this.productsView);
+        this.reviewsView = new ReviewsView(this.router, this.productsView);
 
         // =========================================
         // BUSCADOR GLOBAL
@@ -93,6 +97,8 @@ class PanelApp {
 
         // PRODUCTOS
         await this.productsView.init();
+        this.comparadorView.init();
+        this.reviewsView.init();
 
         // BUSCADOR GLOBAL
         // IMPORTANTE: después de cargar productos

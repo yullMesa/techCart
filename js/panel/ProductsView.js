@@ -1,5 +1,6 @@
 import ProductService from "../services/ProductService.js";
 import StorageService from "../services/StorageService.js";
+import ResenaService from "../services/ResenaService.js";
 
 class ProductsView {
     constructor() {
@@ -27,6 +28,7 @@ class ProductsView {
         this.renderProductos(this.productos);
         this.bindEvents();
         this.actualizarContadores();
+        window.addEventListener("reviews-updated", () => this.renderProductos(this.productosFiltrados || (this.currentCategory ? this.productos.filter(p => p.categoria === this.currentCategory) : this.productos)));
     }
 
     // ===============================
@@ -224,6 +226,8 @@ class ProductsView {
                 ? producto.mostrarInfo()
                 : producto;
 
+        const calificacion = ResenaService.resumen(info.idProducto);
+
         return `
       <article class="internal-product-card">
           <img
@@ -243,6 +247,11 @@ class ProductsView {
                 : ""
         }
           <strong>${this.formatearPrecio(info.precio)}</strong>
+          <div class="product-review-summary">⭐ ${calificacion.cantidad ? calificacion.promedio.toFixed(1) : "Sin calificaciones"} (${calificacion.cantidad})</div>
+          <div class="product-extra-actions">
+            <button type="button" data-compare-product="${info.idProducto}">⚖️ Comparar</button>
+            <button type="button" data-review-product="${info.idProducto}">⭐ Calificar / Reseñas</button>
+          </div>
           <button
               type="button"
               data-add-cart="${info.idProducto}"

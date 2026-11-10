@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechCart | Panel</title>
     <link rel="stylesheet" href="../css/panel.css">
+    <link rel="stylesheet" href="../css/mejoras.css">
 </head>
 <body>
 <div class="app-layout">
@@ -45,6 +46,8 @@
                 <span class="menu-icon">💻</span>
                 <span>Productos</span>
             </button>
+
+            <button type="button" class="menu-item" data-view="comparador"><span class="menu-icon">⚖️</span><span>Comparador</span></button>
 
             <button type="button" class="menu-item" data-view="categorias">
                 <span class="menu-icon">🗂️</span>
@@ -223,6 +226,10 @@
                 </div>
                 <div class="internal-products-grid" id="productsGrid"></div>
             </section>
+
+            <!-- COMPARADOR Y RESEÑAS -->
+            <section class="spa-view" id="view-comparador"><div class="section-title"><div><h2>Comparador de productos</h2><p>Elige hasta tres artículos del mismo tipo.</p></div></div><div id="comparisonContent"></div></section>
+            <section class="spa-view" id="view-resenas"><div class="section-title"><div><h2>Calificaciones y reseñas</h2><p>Comparte tu opinión sobre los productos.</p></div></div><div id="reviewsContent"></div></section>
 
             <!-- ========================================= -->
             <!-- CATEGORÍAS -->

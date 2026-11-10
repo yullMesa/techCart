@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2b0a5cc-824e-442c-b748-4fa52235ce43" name="Changes" comment="refactor(code-style): estandarizar formato y mejorar legibilidad en scripts de TechCart&#10;&#10;- Reorganizar la estructura visual y sangrías de los scripts principales (Router, Sidebar, AuthService, ProductService, StorageService, app.js y auth.js).&#10;- Eliminar saltos de línea innecesarios manteniendo intacta la lógica, el comportamiento funcional y las validaciones.&#10;- Consolidar un estilo de código limpio y uniforme en todo el proyecto académico SPA." />
+    <list default="true" id="e2b0a5cc-824e-442c-b748-4fa52235ce43" name="Changes" comment="refactor(code-style): estandarizar formato y mejorar legibilidad en scripts de TechCart&#10;&#10;- Reorganizar la estructura visual y sangrías de los scripts principales (Router, Sidebar, AuthService, ProductService, StorageService, app.js y auth.js).&#10;- Eliminar saltos de línea innecesarios manteniendo intacta la lógica, el comportamiento funcional y las validaciones.&#10;- Consolidar un estilo de código limpio y uniforme en todo el proyecto académico SPA.">
+      <change afterPath="$PROJECT_DIR$/css/mejoras.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/models/ComparadorProductos.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/models/Resena.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/panel/ComparadorView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/panel/ReviewsView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/services/ComparadorService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/services/ResenaService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/panel.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/panel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/data/productos.json" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/productos.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/panel/PanelApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/panel/PanelApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/panel/ProductsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/panel/ProductsView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/panel/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/panel/Router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/panel/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,35 +132,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/yulls/Documents/proyectos/techCart/js/services&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "master",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/yulls/Documents/proyectos/Viejo/techCart/css",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\yulls\Documents\proyectos\techCart\js\services" />
-      <recent name="C:\Users\yulls\Documents\proyectos\techCart\js\panel" />
-      <recent name="C:\Users\yulls\Documents\proyectos\techCart\js\models" />
-      <recent name="C:\Users\yulls\Documents\proyectos\techCart\panel" />
-      <recent name="C:\Users\yulls\Documents\proyectos\techCart\css" />
+      <recent name="C:\Users\yulls\Documents\proyectos\Viejo\techCart\css" />
+      <recent name="C:\Users\yulls\Documents\proyectos\Viejo\techCart\js\panel" />
+      <recent name="C:\Users\yulls\Documents\proyectos\Viejo\techCart\js\data" />
+      <recent name="C:\Users\yulls\Documents\proyectos\Viejo\techCart\js\services" />
+      <recent name="C:\Users\yulls\Documents\proyectos\Viejo\techCart\js\models" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -212,7 +227,15 @@
       <option name="project" value="LOCAL" />
       <updated>1791768871012</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="refactor(code-style): estandarizar formato y mejorar legibilidad en scripts de TechCart&#10;&#10;- Reorganizar la estructura visual y sangrías de los scripts principales (Router, Sidebar, AuthService, ProductService, StorageService, app.js y auth.js).&#10;- Eliminar saltos de línea innecesarios manteniendo intacta la lógica, el comportamiento funcional y las validaciones.&#10;- Consolidar un estilo de código limpio y uniforme en todo el proyecto académico SPA.">
+      <option name="closed" value="true" />
+      <created>1791769073779</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1791769073779</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
